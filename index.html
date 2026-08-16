@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fast2Fix Service Centre | Home Appliance Repair</title>
+<title>Fast2Fix Service Centre | Home Appliance Repair Service</title>
 
-<meta name="description" content="Fast2Fix Service Centre - Professional home appliance repair and service for AC, refrigerator, washing machine, geyser, microwave, chimney, TV and RO.">
+<meta name="description" content="Fast2Fix Service Centre provides professional home appliance repair and service for AC, refrigerator, washing machine, geyser, microwave, chimney, TV and water purifier.">
 
 <style>
 *{
@@ -33,7 +33,7 @@ a{
 /* ================= HEADER ================= */
 
 header{
-  background:linear-gradient(135deg,#071b52,#0646a8);
+  background:linear-gradient(135deg,#061b50,#075dcc);
   color:#fff;
   padding:15px 5%;
   display:flex;
@@ -42,22 +42,21 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  box-shadow:0 3px 12px rgba(0,0,0,.2);
 }
 
 .logo{
   font-size:25px;
   font-weight:800;
-  letter-spacing:.5px;
 }
 
-.logo .red{
+.logo-red{
   color:#ff2020;
 }
 
 nav a{
-  color:#fff;
-  margin-left:20px;
+  color:white;
+  margin-left:18px;
   font-size:14px;
   font-weight:bold;
 }
@@ -65,7 +64,6 @@ nav a{
 /* ================= HERO ================= */
 
 .hero{
-  position:relative;
   background:#06152e;
   overflow:hidden;
 }
@@ -73,7 +71,6 @@ nav a{
 .hero-image{
   position:relative;
   width:100%;
-  background:#06152e;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -87,49 +84,42 @@ nav a{
   display:block;
 }
 
-/* Dark transparent layer */
-
 .hero-overlay{
   position:absolute;
   inset:0;
   background:linear-gradient(
     to bottom,
-    rgba(0,0,0,.12),
-    rgba(0,0,0,.30)
+    rgba(0,0,0,.08),
+    rgba(0,0,0,.35)
   );
 }
-
-/* Hero text */
 
 .hero-text{
   position:absolute;
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
-  width:90%;
+  width:95%;
   text-align:center;
   color:white;
-  text-shadow:0 3px 12px rgba(0,0,0,.75);
+  text-shadow:0 3px 15px rgba(0,0,0,.8);
 }
 
 .hero-text h1{
   font-size:48px;
   font-weight:800;
-  letter-spacing:.5px;
-  margin-bottom:5px;
+  margin-bottom:4px;
 }
 
-.hero-text h1 .red{
-  color:#ff2525;
+.hero-text h1 span{
+  color:#ff2020;
 }
 
 .hero-text p{
   font-size:20px;
-  font-weight:500;
+  font-weight:bold;
   letter-spacing:1px;
 }
-
-/* Hero buttons */
 
 .hero-buttons{
   text-align:center;
@@ -139,29 +129,29 @@ nav a{
 
 .btn{
   display:inline-block;
-  border:0;
-  border-radius:8px;
   padding:13px 23px;
   margin:5px;
-  color:#fff;
+  border:0;
+  border-radius:8px;
+  color:white;
   font-size:15px;
   font-weight:bold;
   cursor:pointer;
 }
 
 .call{
-  background:#0866d8;
+  background:#075dcc;
 }
 
 .whatsapp{
-  background:#0bbf5a;
+  background:#08ad4d;
 }
 
 .booking{
-  background:#ed1c24;
+  background:#e51c28;
 }
 
-/* ================= GENERAL SECTION ================= */
+/* ================= SECTIONS ================= */
 
 .section{
   padding:60px 6%;
@@ -181,20 +171,24 @@ nav a{
 
 /* ================= SERVICES ================= */
 
+.services{
+  background:#fff;
+}
+
 .services-grid{
-  max-width:1150px;
+  max-width:1200px;
   margin:auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:20px;
+  gap:22px;
 }
 
 .service-card{
   background:#fff;
-  padding:25px 18px;
-  border-radius:13px;
-  box-shadow:0 3px 14px rgba(0,0,0,.09);
-  border-top:4px solid #075dcc;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 16px rgba(0,0,0,.11);
+  border-bottom:4px solid #075dcc;
   transition:.25s;
 }
 
@@ -202,9 +196,26 @@ nav a{
   transform:translateY(-5px);
 }
 
-.service-card h3{
+.service-card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  display:block;
+}
+
+.service-content{
+  padding:18px 15px 20px;
+}
+
+.service-content h3{
   color:#073e9e;
-  margin-bottom:8px;
+  font-size:19px;
+  margin-bottom:5px;
+}
+
+.service-content p{
+  color:#666;
+  font-size:14px;
 }
 
 /* ================= BRANCHES ================= */
@@ -231,7 +242,7 @@ nav a{
 
 .branch-front{
   width:100%;
-  height:230px;
+  height:240px;
   object-fit:cover;
   display:block;
 }
@@ -242,12 +253,12 @@ nav a{
 
 .branch-content h3{
   color:#073e9e;
-  font-size:23px;
+  font-size:24px;
 }
 
 .open{
   display:inline-block;
-  background:#0baa49;
+  background:#08a847;
   color:white;
   padding:4px 12px;
   border-radius:20px;
@@ -265,7 +276,7 @@ nav a{
 
 .branch-gallery img{
   width:100%;
-  height:80px;
+  height:85px;
   object-fit:cover;
   border-radius:6px;
 }
@@ -273,7 +284,7 @@ nav a{
 /* ================= MANAGEMENT ================= */
 
 .management{
-  background:#fff;
+  background:white;
 }
 
 .management-grid{
@@ -284,26 +295,31 @@ nav a{
   gap:20px;
 }
 
-.manager-card{
-  background:#f5f8ff;
-  padding:27px 20px;
-  border-radius:13px;
+.manager{
+  background:#f3f7ff;
+  padding:28px 20px;
+  border-radius:14px;
   border-bottom:4px solid #075dcc;
+  box-shadow:0 3px 12px rgba(0,0,0,.06);
 }
 
-.manager-card h3{
+.manager h3{
   color:#073e9e;
   font-size:21px;
 }
 
-.manager-card p{
+.manager p{
   color:#555;
 }
 
 /* ================= WORK GALLERY ================= */
 
+.work{
+  background:#f5f7fb;
+}
+
 .work-gallery{
-  max-width:1150px;
+  max-width:1200px;
   margin:auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -314,54 +330,63 @@ nav a{
   width:100%;
   height:210px;
   object-fit:cover;
-  border-radius:11px;
+  border-radius:12px;
   box-shadow:0 3px 12px rgba(0,0,0,.12);
+  background:white;
 }
 
-/* ================= SERVICE AREAS ================= */
+/* ================= LOCATIONS ================= */
 
-.area-section{
+.locations{
   background:#edf4ff;
 }
 
-.area-list{
+.location-list{
   max-width:1000px;
   margin:auto;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:10px;
+  gap:12px;
 }
 
-.area{
-  background:#fff;
-  border:1px solid #d8e2f2;
-  padding:10px 17px;
-  border-radius:25px;
-  font-weight:bold;
+.location{
+  background:white;
   color:#073e9e;
+  border:1px solid #d6e1f3;
+  border-radius:25px;
+  padding:10px 18px;
+  font-weight:bold;
 }
 
 /* ================= CONTACT ================= */
 
 .contact{
-  background:linear-gradient(135deg,#061a50,#0646a8);
+  background:linear-gradient(135deg,#061b50,#075dcc);
   color:white;
   text-align:center;
   padding:55px 20px;
 }
 
 .contact h2{
+  color:white;
   font-size:31px;
   margin-bottom:10px;
 }
 
-.contact p{
-  margin:7px;
+.phone-list{
+  margin:20px auto;
+  max-width:450px;
 }
 
-.contact .btn{
-  margin-top:15px;
+.phone-list a{
+  display:block;
+  color:white;
+  background:rgba(255,255,255,.12);
+  padding:9px;
+  margin:6px;
+  border-radius:7px;
+  font-weight:bold;
 }
 
 /* ================= FOOTER ================= */
@@ -378,8 +403,8 @@ footer{
 
 .floating{
   position:fixed;
-  right:18px;
-  bottom:18px;
+  right:15px;
+  bottom:15px;
   z-index:1500;
   display:flex;
   flex-direction:column;
@@ -387,23 +412,23 @@ footer{
 }
 
 .float{
-  width:55px;
-  height:55px;
+  width:53px;
+  height:53px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   color:white;
-  font-size:24px;
+  font-size:23px;
   box-shadow:0 3px 12px rgba(0,0,0,.3);
 }
 
 .float-call{
-  background:#0866d8;
+  background:#075dcc;
 }
 
 .float-wa{
-  background:#0bbf5a;
+  background:#08ad4d;
 }
 
 /* ================= BOOKING POPUP ================= */
@@ -422,7 +447,7 @@ footer{
   position:relative;
   max-width:460px;
   margin:4% auto;
-  background:#fff;
+  background:white;
   border-radius:15px;
   padding:28px;
 }
@@ -433,7 +458,7 @@ footer{
   margin-bottom:5px;
 }
 
-.modal-box p{
+.modal-box > p{
   text-align:center;
   color:#666;
   margin-bottom:15px;
@@ -461,7 +486,7 @@ footer{
 
 .submit{
   width:100%;
-  background:#0bbf5a;
+  background:#08ad4d;
   color:white;
   border:0;
   padding:14px;
@@ -474,7 +499,7 @@ footer{
 
 /* ================= MOBILE ================= */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
   .services-grid{
     grid-template-columns:repeat(2,1fr);
@@ -482,12 +507,7 @@ footer{
 
   .branch-grid{
     grid-template-columns:1fr;
-    max-width:600px;
-  }
-
-  .management-grid{
-    grid-template-columns:1fr;
-    max-width:600px;
+    max-width:650px;
   }
 
   .work-gallery{
@@ -499,30 +519,24 @@ footer{
 @media(max-width:600px){
 
   header{
-    flex-direction:column;
-    gap:8px;
-    padding:13px 8px;
-  }
-
-  .logo{
-    font-size:21px;
+    padding:12px 8px;
+    justify-content:center;
   }
 
   nav{
     display:none;
   }
 
-  .hero-text{
-    top:47%;
+  .logo{
+    font-size:22px;
   }
 
   .hero-text h1{
-    font-size:28px;
+    font-size:29px;
   }
 
   .hero-text p{
     font-size:13px;
-    letter-spacing:.5px;
   }
 
   .hero-image img{
@@ -533,12 +547,12 @@ footer{
   }
 
   .hero-buttons{
-    padding:14px 8px 20px;
+    padding:13px 5px 20px;
   }
 
   .btn{
-    padding:12px 18px;
-    font-size:14px;
+    padding:11px 16px;
+    font-size:13px;
   }
 
   .section{
@@ -550,39 +564,64 @@ footer{
   }
 
   .services-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .service-card img{
+    height:135px;
+  }
+
+  .service-content{
+    padding:13px 8px 16px;
+  }
+
+  .service-content h3{
+    font-size:16px;
+  }
+
+  .service-content p{
+    font-size:12px;
   }
 
   .branch-grid{
     grid-template-columns:1fr;
   }
 
+  .branch-front{
+    height:220px;
+  }
+
+  .management-grid{
+    grid-template-columns:1fr;
+  }
+
   .work-gallery{
     grid-template-columns:repeat(2,1fr);
+    gap:10px;
   }
 
   .work-gallery img{
     height:160px;
   }
 
-  .branch-front{
-    height:210px;
-  }
-
-  .floating{
-    right:12px;
-    bottom:12px;
-  }
-
-  .float{
-    width:50px;
-    height:50px;
-    font-size:21px;
-  }
-
   .modal-box{
-    margin:6% auto;
-    padding:23px 17px;
+    margin:5% auto;
+    padding:23px 16px;
+  }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:380px){
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card img{
+    height:190px;
   }
 
 }
@@ -597,7 +636,7 @@ footer{
 <header>
 
   <div class="logo">
-    Fast<span class="red">2</span>Fix Service Centre
+    Fast<span class="logo-red">2</span>Fix Service Centre
   </div>
 
   <nav>
@@ -626,7 +665,7 @@ footer{
     <div class="hero-text">
 
       <h1>
-        Fast<span class="red">2</span>Fix Service Centre
+        Fast<span>2</span>Fix Service Centre
       </h1>
 
       <p>
@@ -666,7 +705,7 @@ footer{
 
 <!-- ================= SERVICES ================= -->
 
-<section class="section" id="services">
+<section class="section services" id="services">
 
   <h2>Our Services</h2>
 
@@ -677,61 +716,158 @@ footer{
 
   <div class="services-grid">
 
-    <div class="service-card">
-      <h3>❄️ AC Repair & Service</h3>
-      <p>
-        AC repair, service, installation and gas-related services.
-      </p>
-    </div>
 
     <div class="service-card">
-      <h3>🧊 Refrigerator Repair</h3>
-      <p>
-        Refrigerator repair and maintenance for major brands.
-      </p>
+
+      <img
+        src="ac1.jpeg"
+        alt="AC Repair Service">
+
+      <div class="service-content">
+
+        <h3>❄️ AC Repair & Service</h3>
+
+        <p>
+          AC repair, service, installation and gas service.
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="service-card">
-      <h3>🌀 Washing Machine</h3>
-      <p>
-        Front load, top load and semi-automatic washing machine service.
-      </p>
-    </div>
 
     <div class="service-card">
-      <h3>🔥 Geyser Repair</h3>
-      <p>
-        Electric geyser repair, service and installation.
-      </p>
+
+      <img
+        src="fr1.jpeg"
+        alt="Refrigerator Repair Service">
+
+      <div class="service-content">
+
+        <h3>🧊 Refrigerator</h3>
+
+        <p>
+          Refrigerator repair and maintenance service.
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="service-card">
-      <h3>📺 LED TV Repair</h3>
-      <p>
-        LED TV inspection, repair and technical service.
-      </p>
-    </div>
 
     <div class="service-card">
-      <h3>🍽️ Microwave Repair</h3>
-      <p>
-        Microwave oven repair and maintenance service.
-      </p>
+
+      <img
+        src="wm1.jpeg"
+        alt="Washing Machine Repair">
+
+      <div class="service-content">
+
+        <h3>🌀 Washing Machine</h3>
+
+        <p>
+          Front load, top load and semi automatic service.
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="service-card">
-      <h3>🏠 Chimney Repair</h3>
-      <p>
-        Kitchen chimney repair, service and maintenance.
-      </p>
-    </div>
 
     <div class="service-card">
-      <h3>💧 RO / Water Purifier</h3>
-      <p>
-        RO and water purifier repair and service.
-      </p>
+
+      <img
+        src="gr1.jpeg"
+        alt="Geyser Repair">
+
+      <div class="service-content">
+
+        <h3>🔥 Geyser Repair</h3>
+
+        <p>
+          Geyser repair, service and installation.
+        </p>
+
+      </div>
+
     </div>
+
+
+    <div class="service-card">
+
+      <img
+        src="mw1.jpeg"
+        alt="Microwave Repair">
+
+      <div class="service-content">
+
+        <h3>🍽️ Microwave Oven</h3>
+
+        <p>
+          Microwave oven repair and service.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <img
+        src="chimney1.jpeg"
+        alt="Chimney Repair">
+
+      <div class="service-content">
+
+        <h3>🏠 Chimney</h3>
+
+        <p>
+          Kitchen chimney repair and maintenance.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <img
+        src="tv1.jpeg"
+        alt="LED TV Repair">
+
+      <div class="service-content">
+
+        <h3>📺 LED TV</h3>
+
+        <p>
+          LED TV repair and technical service.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <img
+        src="aqua1.jpeg"
+        alt="RO Water Purifier">
+
+      <div class="service-content">
+
+        <h3>💧 RO / Water Purifier</h3>
+
+        <p>
+          RO and water purifier repair service.
+        </p>
+
+      </div>
+
+    </div>
+
 
   </div>
 
@@ -881,7 +1017,8 @@ footer{
 
   <div class="management-grid">
 
-    <div class="manager-card">
+
+    <div class="manager">
 
       <h3>Reyaan Khan</h3>
 
@@ -896,7 +1033,7 @@ footer{
     </div>
 
 
-    <div class="manager-card">
+    <div class="manager">
 
       <h3>Sameer</h3>
 
@@ -911,7 +1048,7 @@ footer{
     </div>
 
 
-    <div class="manager-card">
+    <div class="manager">
 
       <h3>Mehak</h3>
 
@@ -925,76 +1062,112 @@ footer{
 
     </div>
 
+
   </div>
 
 </section>
 
 
-<!-- ================= WORK PHOTOS ================= -->
+<!-- ================= WORK GALLERY ================= -->
 
-<section class="section">
+<section class="section work">
 
   <h2>Our Work</h2>
 
   <p class="section-sub">
-    Professional Appliance Repair & Service Work
+    Repair & Service Work by Fast2Fix Technicians
   </p>
 
 
   <div class="work-gallery">
 
-    <img src="ac1.jpeg" alt="AC Repair Work">
-    <img src="ac2.jpeg" alt="AC Repair Work">
-    <img src="ac3.jpeg" alt="AC Repair Work">
+    <img src="ac1.jpeg" alt="AC Repair">
+    <img src="ac2.jpeg" alt="AC Repair">
+    <img src="ac3.jpeg" alt="AC Repair">
+    <img src="ac4.jpeg" alt="AC Repair">
 
-    <img src="fr1.jpeg" alt="Refrigerator Repair Work">
-    <img src="fr2.jpeg" alt="Refrigerator Repair Work">
-    <img src="fr3.jpeg" alt="Refrigerator Repair Work">
+    <img src="ac5.jpeg" alt="AC Repair">
+    <img src="ac6.jpeg" alt="AC Repair">
+    <img src="ac7.jpeg" alt="AC Repair">
+    <img src="ac8.jpeg" alt="AC Repair">
 
-    <img src="wm1.jpeg" alt="Washing Machine Repair Work">
-    <img src="wm2.jpeg" alt="Washing Machine Repair Work">
-    <img src="wm3.jpeg" alt="Washing Machine Repair Work">
+    <img src="ac9.jpeg" alt="AC Repair">
 
-    <img src="gr1.jpeg" alt="Geyser Repair Work">
-    <img src="gr2.jpeg" alt="Geyser Repair Work">
+    <img src="fr1.jpeg" alt="Refrigerator Repair">
+    <img src="fr2.jpeg" alt="Refrigerator Repair">
+    <img src="fr3.jpeg" alt="Refrigerator Repair">
+    <img src="fr4.jpeg" alt="Refrigerator Repair">
 
-    <img src="mw1.jpeg" alt="Microwave Repair Work">
-    <img src="mw2.jpeg" alt="Microwave Repair Work">
+    <img src="fr5.jpeg" alt="Refrigerator Repair">
+    <img src="fr6.jpeg" alt="Refrigerator Repair">
+    <img src="fr7.jpeg" alt="Refrigerator Repair">
+    <img src="fr8.jpeg" alt="Refrigerator Repair">
 
-    <img src="tv1.jpeg" alt="TV Repair Work">
-    <img src="tv2.jpeg" alt="TV Repair Work">
+    <img src="fr9.jpeg" alt="Refrigerator Repair">
 
-    <img src="chimney1.jpeg" alt="Chimney Repair Work">
-    <img src="aqua1.jpeg" alt="Water Purifier Repair Work">
+    <img src="wm1.jpeg" alt="Washing Machine Repair">
+    <img src="wm2.jpeg" alt="Washing Machine Repair">
+    <img src="wm3.jpeg" alt="Washing Machine Repair">
+    <img src="wm4.jpeg" alt="Washing Machine Repair">
+
+    <img src="wm5.jpeg" alt="Washing Machine Repair">
+
+    <img src="gr1.jpeg" alt="Geyser Repair">
+    <img src="gr2.jpeg" alt="Geyser Repair">
+    <img src="gr3.jpeg" alt="Geyser Repair">
+    <img src="gr4.jpeg" alt="Geyser Repair">
+
+    <img src="gr5.jpeg" alt="Geyser Repair">
+
+    <img src="mw1.jpeg" alt="Microwave Repair">
+    <img src="mw2.jpeg" alt="Microwave Repair">
+    <img src="mw3.jpeg" alt="Microwave Repair">
+    <img src="mw4.jpeg" alt="Microwave Repair">
+
+    <img src="tv1.jpeg" alt="TV Repair">
+    <img src="tv2.jpeg" alt="TV Repair">
+    <img src="tv3.jpeg" alt="TV Repair">
+    <img src="tv4.jpeg" alt="TV Repair">
+
+    <img src="tv5.jpeg" alt="TV Repair">
+
+    <img src="chimney1.jpeg" alt="Chimney Repair">
+    <img src="chimney2.jpeg" alt="Chimney Repair">
+    <img src="chimney3.jpeg" alt="Chimney Repair">
+    <img src="chimney4.jpeg" alt="Chimney Repair">
+
+    <img src="aqua1.jpeg" alt="Water Purifier Repair">
+    <img src="aqua2.jpeg" alt="Water Purifier Repair">
+    <img src="aqua3.jpeg" alt="Water Purifier Repair">
+    <img src="aqua4.jpeg" alt="Water Purifier Repair">
 
   </div>
 
 </section>
 
 
-<!-- ================= SERVICE AREAS ================= -->
+<!-- ================= SERVICE LOCATIONS ================= -->
 
-<section class="section area-section">
+<section class="section locations">
 
-  <h2>Service Areas</h2>
+  <h2>Service Locations</h2>
 
   <p class="section-sub">
-    Service enquiries accepted from multiple locations
+    Fast2Fix Service Centre
   </p>
 
 
-  <div class="area-list">
+  <div class="location-list">
 
-    <span class="area">Dhanbad</span>
-    <span class="area">Bokaro</span>
-    <span class="area">Kharagpur</span>
-    <span class="area">Jamshedpur</span>
-    <span class="area">Ranchi</span>
-    <span class="area">Asansol</span>
-    <span class="area">Jharkhand</span>
-    <span class="area">Bihar</span>
-    <span class="area">West Bengal</span>
-    <span class="area">India</span>
+    <span class="location">📍 Dhanbad</span>
+    <span class="location">📍 Bokaro</span>
+    <span class="location">📍 Kharagpur</span>
+    <span class="location">📍 Jamshedpur</span>
+    <span class="location">📍 Ranchi</span>
+    <span class="location">📍 Asansol</span>
+    <span class="location">📍 Jharkhand</span>
+    <span class="location">📍 Bihar</span>
+    <span class="location">📍 West Bengal</span>
 
   </div>
 
@@ -1013,20 +1186,26 @@ footer{
     Home Appliance Repair & Service
   </p>
 
-  <p>
-    📞 <a href="tel:9234227337" style="color:white;">
-      9234227337
-    </a>
-  </p>
 
-  <p>
-    💬 <a
-      href="https://wa.me/918434746494"
-      target="_blank"
-      style="color:white;">
-      8434746494
+  <div class="phone-list">
+
+    <a href="tel:9234227337">
+      📞 9234227337
     </a>
-  </p>
+
+    <a href="https://wa.me/918434746494" target="_blank">
+      💬 WhatsApp: 8434746494
+    </a>
+
+    <a href="tel:8804022021">
+      📞 8804022021
+    </a>
+
+    <a href="tel:7050129203">
+      📞 7050129203
+    </a>
+
+  </div>
 
 
   <a
@@ -1090,166 +1269,4 @@ footer{
   <div class="modal-box">
 
     <span
-      class="close"
-      onclick="closeBooking()">
-      ×
-    </span>
-
-
-    <h2>
-      🔧 Book a Service
-    </h2>
-
-    <p>
-      Enter your details and service requirement.
-    </p>
-
-
-    <form
-      onsubmit="sendBooking(); return false;">
-
-      <input
-        type="text"
-        id="name"
-        placeholder="Your Name"
-        required>
-
-
-      <input
-        type="tel"
-        id="phone"
-        placeholder="Mobile Number"
-        maxlength="10"
-        pattern="[0-9]{10}"
-        required>
-
-
-      <input
-        type="text"
-        id="address"
-        placeholder="Address / Area"
-        required>
-
-
-      <select id="city" required>
-
-        <option value="">
-          Select City / Area
-        </option>
-
-        <option>Dhanbad</option>
-        <option>Bokaro</option>
-        <option>Kharagpur</option>
-        <option>Jamshedpur</option>
-        <option>Ranchi</option>
-        <option>Asansol</option>
-        <option>Other</option>
-
-      </select>
-
-
-      <select id="service" required>
-
-        <option value="">
-          Select Appliance
-        </option>
-
-        <option>AC Repair / Service</option>
-        <option>Refrigerator Repair</option>
-        <option>Washing Machine Repair</option>
-        <option>Geyser Repair</option>
-        <option>Microwave Oven Repair</option>
-        <option>Chimney Repair</option>
-        <option>LED TV Repair</option>
-        <option>RO / Water Purifier</option>
-        <option>Other</option>
-
-      </select>
-
-
-      <textarea
-        id="problem"
-        rows="3"
-        placeholder="Describe your problem">
-      </textarea>
-
-
-      <button
-        class="submit"
-        type="submit">
-        💬 Submit Booking
-      </button>
-
-    </form>
-
-  </div>
-
-</div>
-
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script>
-
-function openBooking(){
-
-  document.getElementById("bookingModal").style.display="block";
-
-}
-
-
-function closeBooking(){
-
-  document.getElementById("bookingModal").style.display="none";
-
-}
-
-
-function sendBooking(){
-
-  var name =
-    document.getElementById("name").value;
-
-  var phone =
-    document.getElementById("phone").value;
-
-  var address =
-    document.getElementById("address").value;
-
-  var city =
-    document.getElementById("city").value;
-
-  var service =
-    document.getElementById("service").value;
-
-  var problem =
-    document.getElementById("problem").value;
-
-
-  var message =
-    "Fast2Fix Service Booking\n\n" +
-    "Name: " + name + "\n" +
-    "Mobile: " + phone + "\n" +
-    "Address/Area: " + address + "\n" +
-    "City: " + city + "\n" +
-    "Appliance: " + service + "\n" +
-    "Problem: " + problem;
-
-
-  var whatsappURL =
-    "https://wa.me/918434746494?text=" +
-    encodeURIComponent(message);
-
-
-  window.open(
-    whatsappURL,
-    "_blank"
-  );
-
-}
-
-
-window.onclick=function(event){
-
-  var modal =
-    document.getElementById("b
+      cla
