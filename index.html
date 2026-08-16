@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast2Fix Service Centre</title>
+
+  <title>Fast2Fix Service Centre | Home Appliance Repair Across India</title>
+
+  <meta name="description" content="Fast2Fix Service Centre provides professional home appliance repair and service including AC, refrigerator, washing machine, geyser, microwave, chimney, TV and more across India.">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -34,12 +42,43 @@
     }
 
     .hero h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 10px;
     }
 
+    .hero p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      margin: 7px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
+
+    .call {
+      background: #007bff;
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+
     .services {
-      padding: 30px 20px;
+      padding: 35px 20px;
+    }
+
+    .services h2 {
+      margin-bottom: 25px;
     }
 
     .card {
@@ -51,10 +90,25 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .why {
+      background: white;
+      padding: 35px 20px;
+    }
+
+    .why p {
+      max-width: 650px;
+      margin: 10px auto;
+      line-height: 1.7;
+    }
+
     .contact {
       background: #111;
       color: white;
-      padding: 30px 20px;
+      padding: 35px 20px;
     }
 
     .contact a {
@@ -69,49 +123,317 @@
       padding: 15px;
       font-size: 14px;
     }
+
+    /* POPUP */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+      padding: 20px;
+    }
+
+    .popup {
+      background: white;
+      max-width: 430px;
+      margin: 5% auto;
+      padding: 25px;
+      border-radius: 12px;
+      position: relative;
+      text-align: left;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    }
+
+    .popup h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .popup p {
+      text-align: center;
+      color: #555;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .popup input,
+    .popup select,
+    .popup textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 7px;
+      background: #25D366;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .book-btn {
+      position: fixed;
+      right: 15px;
+      bottom: 20px;
+      z-index: 999;
+      background: #ff6600;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Fast2Fix Service Centre</h1>
-    <p>Fast • Reliable • Professional Service</p>
-  </header>
+<header>
+  <h1>Fast2Fix Service Centre</h1>
+  <p>Fast • Reliable • Professional Home Appliance Service</p>
+</header>
 
-  <section class="hero">
-    <h2>Welcome to Fast2Fix</h2>
-    <p>Fast2Fix Service Centre Provides trusted and reliable service across india.</p>
-  </section>
+<section class="hero">
+  <h2>Welcome to Fast2Fix</h2>
 
-  <section class="services">
-    <h2>Our Services</h2>
+  <p>
+    Professional home appliance repair and service for AC,
+    refrigerator, washing machine, geyser, microwave, chimney,
+    TV and more.
+  </p>
 
-    <div class="card">
-      <h3>Fast2Fix Service Centre</h3>
-      <p>Professional repair and maintenance services.</p>
-    </div>
+  <p>
+    <strong>Service available across India.</strong>
+  </p>
 
-    <div class="card">
-      <h3>Service Across India</h3>
-      <p>Quick service with quality workmanship.</p>
-    </div>
+  <div class="buttons">
+    <a class="btn call" href="tel:9234227337">📞 Call Now</a>
 
-    <div class="card">
-      <h3>Customer Fast2fix</h3>
-      <p>Friendly support for all your service needs.</p>
-    </div>
-  </section>
+    <a class="btn whatsapp"
+       href="https://wa.me/918434746494"
+       target="_blank">
+       💬 WhatsApp Us
+    </a>
+  </div>
+</section>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Fast2Fix Service Centre</p>
-   <p>Contact us for service, support and enquiries across India.</p>
-  </section>
+<section class="services">
+  <h2>Our Services</h2>
 
-  <footer>
-    © 2026 Fast2Fix Service Centre. All Rights Reserved.
-  </footer>
+  <div class="card">
+    <h3>❄️ AC Repair & Service</h3>
+    <p>AC repair, servicing, installation and maintenance.</p>
+  </div>
+
+  <div class="card">
+    <h3>🧊 Refrigerator Repair</h3>
+    <p>Professional refrigerator repair and maintenance service.</p>
+  </div>
+
+  <div class="card">
+    <h3>🧺 Washing Machine Repair</h3>
+    <p>Front load, top load and semi-automatic washing machine service.</p>
+  </div>
+
+  <div class="card">
+    <h3>🔥 Geyser Repair</h3>
+    <p>Electric geyser repair and maintenance service.</p>
+  </div>
+
+  <div class="card">
+    <h3>🍽️ Microwave Oven Repair</h3>
+    <p>Microwave oven inspection, repair and maintenance.</p>
+  </div>
+
+  <div class="card">
+    <h3>🏠 Chimney Repair</h3>
+    <p>Kitchen chimney repair, service and maintenance.</p>
+  </div>
+
+  <div class="card">
+    <h3>📺 TV Repair</h3>
+    <p>TV repair and technical service.</p>
+  </div>
+
+  <div class="card">
+    <h3>💧 Water Purifier Repair</h3>
+    <p>RO and water purifier repair and service.</p>
+  </div>
+</section>
+
+<section class="why">
+  <h2>Why Choose Fast2Fix?</h2>
+
+  <p>✔ Professional service</p>
+  <p>✔ Experienced technicians</p>
+  <p>✔ Quality workmanship</p>
+  <p>✔ Transparent service process</p>
+  <p>✔ Convenient booking through WhatsApp</p>
+  <p>✔ Service support across India</p>
+</section>
+
+<section class="contact">
+  <h2>Contact Fast2Fix</h2>
+
+  <p>📞 <a href="tel:9234227337">9234227337</a></p>
+
+  <p>💬 <a href="https://wa.me/918434746494" target="_blank">
+    WhatsApp: 8434746494
+  </a></p>
+
+  <p>8804022021</p>
+  <p>7050129203</p>
+
+  <p>For service, booking and enquiries, contact Fast2Fix Service Centre.</p>
+</section>
+
+<footer>
+  © 2026 Fast2Fix Service Centre. All Rights Reserved.
+</footer>
+
+
+<!-- BOOKING POPUP -->
+
+<div id="bookingPopup" class="popup-overlay">
+
+  <div class="popup">
+
+    <span class="close" onclick="closePopup()">×</span>
+
+    <h2>🔧 Book a Service</h2>
+
+    <p>Fill your details and send us your service request.</p>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
+
+      <input
+        type="tel"
+        id="mobile"
+        placeholder="Mobile Number"
+        pattern="[0-9]{10}"
+        maxlength="10"
+        required>
+
+      <textarea
+        id="address"
+        placeholder="Your Address"
+        rows="3"
+        required></textarea>
+
+      <select id="state" required>
+        <option value="">Select State</option>
+        <option>Jharkhand</option>
+        <option>Bihar</option>
+        <option>West Bengal</option>
+        <option>Odisha</option>
+        <option>Delhi</option>
+        <option>Uttar Pradesh</option>
+        <option>Other State</option>
+      </select>
+
+      <input
+        type="text"
+        id="city"
+        placeholder="City / Area"
+        required>
+
+      <select id="service" required>
+        <option value="">Select Appliance / Service</option>
+        <option>AC Repair & Service</option>
+        <option>Refrigerator Repair</option>
+        <option>Washing Machine Repair</option>
+        <option>Geyser Repair</option>
+        <option>Microwave Oven Repair</option>
+        <option>Chimney Repair</option>
+        <option>TV Repair</option>
+        <option>Water Purifier Repair</option>
+        <option>Other</option>
+      </select>
+
+      <button class="submit-btn" type="submit">
+        💬 Submit Booking on WhatsApp
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+
+<a href="#" class="book-btn" onclick="openPopup(); return false;">
+  🔧 Book Service
+</a>
+
+
+<script>
+
+  function openPopup() {
+    document.getElementById("bookingPopup").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("bookingPopup").style.display = "none";
+  }
+
+  function sendWhatsApp() {
+
+    var name = document.getElementById("name").value;
+    var mobile = document.getElementById("mobile").value;
+    var address = document.getElementById("address").value;
+    var state = document.getElementById("state").value;
+    var city = document.getElementById("city").value;
+    var service = document.getElementById("service").value;
+
+    var message =
+      "🔧 *Fast2Fix Service Booking*%0A%0A" +
+      "👤 Name: " + encodeURIComponent(name) + "%0A" +
+      "📱 Mobile: " + encodeURIComponent(mobile) + "%0A" +
+      "📍 Address: " + encodeURIComponent(address) + "%0A" +
+      "🏙️ State: " + encodeURIComponent(state) + "%0A" +
+      "📌 City/Area: " + encodeURIComponent(city) + "%0A" +
+      "🛠️ Service: " + encodeURIComponent(service);
+
+    var whatsappURL =
+      "https://wa.me/918434746494?text=" + message;
+
+    window.open(whatsappURL, "_blank");
+  }
+
+  /* Website open hone ke 2 second baad popup */
+  window.onload = function() {
+    setTimeout(function() {
+      openPopup();
+    }, 2000);
+  };
+
+</script>
 
 </body>
 </html>
