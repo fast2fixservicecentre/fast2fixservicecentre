@@ -6,7 +6,7 @@
 
 <title>Fast2Fix Service Centre | Home Appliance Repair</title>
 
-<meta name="description" content="Fast2Fix Service Centre - Professional AC, refrigerator, washing machine, geyser, microwave, chimney, TV and RO repair services.">
+<meta name="description" content="Fast2Fix Service Centre provides professional AC, refrigerator, washing machine, geyser, microwave, chimney, TV and RO repair services across India.">
 
 <style>
 *{
@@ -56,11 +56,11 @@ nav a{
   font-size:15px;
 }
 
-/* HERO SLIDER */
+/* HERO */
 
 .hero{
   position:relative;
-  min-height:570px;
+  min-height:620px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -68,70 +68,27 @@ nav a{
   color:white;
   padding:40px 20px;
   overflow:hidden;
-  background:#111;
-}
 
-.hero-slides{
-  position:absolute;
-  inset:0;
-  z-index:0;
-}
+  background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("hero1.jpeg");
 
-.hero-slides img{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:0;
-  animation:heroSlide 32s infinite;
-}
-
-.hero-slides img:nth-child(1){animation-delay:0s;}
-.hero-slides img:nth-child(2){animation-delay:4s;}
-.hero-slides img:nth-child(3){animation-delay:8s;}
-.hero-slides img:nth-child(4){animation-delay:12s;}
-.hero-slides img:nth-child(5){animation-delay:16s;}
-.hero-slides img:nth-child(6){animation-delay:20s;}
-.hero-slides img:nth-child(7){animation-delay:24s;}
-.hero-slides img:nth-child(8){animation-delay:28s;}
-
-@keyframes heroSlide{
-  0%{
-    opacity:0;
-    transform:scale(1.08);
-  }
-  5%{
-    opacity:1;
-  }
-  12%{
-    opacity:1;
-    transform:scale(1);
-  }
-  17%{
-    opacity:0;
-  }
-  100%{
-    opacity:0;
-  }
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.60);
-  z-index:1;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .hero-content{
   position:relative;
   z-index:2;
   max-width:900px;
+  width:100%;
 }
 
 .hero h1{
   font-size:50px;
   margin-bottom:15px;
+  text-shadow:0 3px 10px rgba(0,0,0,.7);
 }
 
 .hero h1 span{
@@ -141,6 +98,7 @@ nav a{
 .hero p{
   font-size:20px;
   margin-bottom:12px;
+  text-shadow:0 2px 6px rgba(0,0,0,.8);
 }
 
 .btn{
@@ -466,7 +424,8 @@ footer{
   }
 
   .hero{
-    min-height:570px;
+    min-height:560px;
+    background-position:center center;
   }
 
   .hero h1{
@@ -548,19 +507,6 @@ footer{
 <!-- HERO -->
 
 <section class="hero" id="home">
-
-  <div class="hero-slides">
-
-    <img src="ac1.jpeg" alt="AC Repair Service">
-    <img src="fr1.jpeg" alt="Refrigerator Repair Service">
-    <img src="wm1.jpeg" alt="Washing Machine Repair Service">
-    <img src="gr1.jpeg" alt="Geyser Repair Service">
-    <img src="mw1.jpeg" alt="Microwave Oven Repair Service">
-    <img src="chimney1.jpeg" alt="Chimney Repair Service">
-    <img src="tv1.jpeg" alt="TV Repair Service">
-    <img src="aqua1.jpeg" alt="Water Purifier Repair Service">
-
-  </div>
 
   <div class="hero-content">
 
@@ -687,21 +633,34 @@ footer{
   <img src="ac1.jpeg" alt="AC Repair Work">
   <img src="ac2.jpeg" alt="AC Service Work">
   <img src="ac3.jpeg" alt="AC Technician Work">
+  <img src="ac4.jpeg" alt="AC Repair Work">
 
   <img src="fr1.jpeg" alt="Refrigerator Repair">
   <img src="fr2.jpeg" alt="Fridge Service">
+  <img src="fr3.jpeg" alt="Fridge Repair">
+  <img src="fr4.jpeg" alt="Fridge Service">
 
   <img src="wm1.jpeg" alt="Washing Machine Repair">
   <img src="wm2.jpeg" alt="Washing Machine Service">
+  <img src="wm3.jpeg" alt="Washing Machine Repair">
+  <img src="wm4.jpeg" alt="Washing Machine Service">
 
   <img src="gr1.jpeg" alt="Geyser Repair">
   <img src="gr2.jpeg" alt="Geyser Service">
+  <img src="gr3.jpeg" alt="Geyser Repair">
+  <img src="gr4.jpeg" alt="Geyser Service">
 
   <img src="mw1.jpeg" alt="Microwave Repair">
+  <img src="mw2.jpeg" alt="Microwave Service">
+
   <img src="chimney1.jpeg" alt="Chimney Repair">
+  <img src="chimney2.jpeg" alt="Chimney Service">
 
   <img src="tv1.jpeg" alt="TV Repair">
+  <img src="tv2.jpeg" alt="TV Service">
+
   <img src="aqua1.jpeg" alt="RO Repair">
+  <img src="aqua2.jpeg" alt="RO Service">
 
 </div>
 
@@ -850,13 +809,11 @@ footer{
 <!-- FOOTER -->
 
 <footer>
-
 © 2026 Fast2Fix Service Centre. All Rights Reserved.
-
 </footer>
 
 
-<!-- FLOATING CALL + WHATSAPP -->
+<!-- FLOATING BUTTONS -->
 
 <div class="floating">
 
@@ -886,9 +843,7 @@ footer{
 
     <span class="close" onclick="closePopup()">×</span>
 
-    <h2>
-      🔧 Book a Service
-    </h2>
+    <h2>🔧 Book a Service</h2>
 
     <p>
       Fill your details and send your request.
@@ -971,15 +926,11 @@ footer{
 <script>
 
 function openPopup(){
-
   document.getElementById("bookingPopup").style.display="block";
-
 }
 
 function closePopup(){
-
   document.getElementById("bookingPopup").style.display="none";
-
 }
 
 function sendWhatsApp(){
@@ -1016,21 +967,7 @@ function sendWhatsApp(){
     encodeURIComponent(message);
 
   window.open(url,"_blank");
-
 }
-
-
-/* Website open hone ke 2 second baad popup */
-
-window.onload=function(){
-
-  setTimeout(function(){
-
-    openPopup();
-
-  },2000);
-
-};
 
 </script>
 
