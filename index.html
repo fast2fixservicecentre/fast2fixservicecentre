@@ -4,133 +4,330 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fast2Fix Service Centre | Home Appliance Repair</title>
+<title>Fast2Fix Service Centre | AC, Fridge, Washing Machine Repair</title>
 
-<meta name="description" content="Fast2Fix Service Centre provides professional AC, refrigerator, washing machine, geyser, microwave, chimney, TV and water purifier repair services.">
+<meta name="description" content="Fast2Fix Service Centre provides professional AC, refrigerator, washing machine, geyser, microwave, chimney, LED TV and RO repair services.">
 
 <style>
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:85px;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#f5f7fa;
-  color:#222;
-  line-height:1.6;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.55;
 }
 
-header{
-  background:#111;
-  color:white;
-  padding:18px 6%;
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:92%;
+  max-width:1250px;
+  margin:auto;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+  background:#061a3a;
+  color:#fff;
+  padding:8px 0;
+  font-size:13px;
+}
+
+.topbar-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:15px;
+}
+
+.topbar a{
+  color:#fff;
+  font-weight:700;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  background:#fff;
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:2000;
+  box-shadow:0 4px 20px rgba(0,0,0,.12);
 }
 
-.logo{
-  font-size:25px;
-  font-weight:bold;
+.nav-inner{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
 
-.logo span{
-  color:#ff2b2b;
+.logo-text{
+  font-size:27px;
+  font-weight:900;
+  white-space:nowrap;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
+.logo-text .fast{
+  color:#0867df;
+}
+
+.logo-text .twofix{
+  color:#e71920;
+}
+
+.logo-text .service{
+  color:#172033;
+  margin-left:6px;
+  font-size:21px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.nav-links a{
   font-size:15px;
+  font-weight:800;
+  color:#172033;
+  transition:.2s;
 }
+
+.nav-links a:hover{
+  color:#e71920;
+}
+
+.nav-book{
+  color:#fff!important;
+  padding:12px 20px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#0867df,#e71920);
+  box-shadow:0 5px 15px rgba(8,103,223,.25);
+}
+
+.mobile-menu{
+  display:none;
+  border:0;
+  background:#071d45;
+  color:#fff;
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  font-size:22px;
+}
+
+/* ================= HERO ================= */
 
 .hero{
-  background:linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.68)),
-  url("ac1.jpeg") center/cover;
-  min-height:550px;
+  position:relative;
+  min-height:650px;
+  overflow:hidden;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
-  color:white;
-  padding:40px 20px;
+  background:#071936;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:.78;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,18,45,.72),
+      rgba(3,18,45,.42),
+      rgba(3,18,45,.55)
+    );
 }
 
 .hero-content{
-  max-width:850px;
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:#fff;
+  max-width:950px;
+  margin:auto;
+  padding:75px 0;
 }
 
-.hero h1{
-  font-size:48px;
-  margin-bottom:15px;
+.hero-title{
+  font-size:58px;
+  line-height:1.05;
+  font-weight:950;
+  text-shadow:0 4px 15px rgba(0,0,0,.65);
+  margin-bottom:18px;
 }
 
-.hero h1 span{
-  color:#ff3333;
+.hero-title .blue{
+  color:#21a7ff;
 }
 
-.hero p{
-  font-size:21px;
-  margin-bottom:25px;
+.hero-title .red{
+  color:#ff3540;
+}
+
+.hero-subtitle{
+  font-size:23px;
+  font-weight:800;
+  text-shadow:0 3px 10px #000;
+  margin-bottom:12px;
+}
+
+.hero-description{
+  font-size:17px;
+  font-weight:600;
+  max-width:780px;
+  margin:0 auto 28px;
+  text-shadow:0 3px 10px #000;
+}
+
+.services-line{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:30px;
+}
+
+.service-tag{
+  padding:9px 15px;
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:30px;
+  background:rgba(0,0,0,.25);
+  backdrop-filter:blur(2px);
+  font-weight:800;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:13px;
 }
 
 .btn{
-  display:inline-block;
-  padding:14px 24px;
-  margin:6px;
-  border-radius:7px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  border:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-width:155px;
+  padding:14px 22px;
+  border:0;
+  border-radius:10px;
+  color:#fff;
   font-size:16px;
+  font-weight:900;
+  cursor:pointer;
+  transition:.25s;
 }
 
-.call{
-  background:#087cff;
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
-.whatsapp{
-  background:#20c968;
+.btn-call{
+  background:#0877e8;
 }
 
-.booking{
-  background:#ff6b00;
+.btn-whatsapp{
+  background:#12a84a;
 }
+
+.btn-book{
+  background:#e71920;
+}
+
+/* SVG ICONS */
+
+.icon{
+  width:19px;
+  height:19px;
+  fill:currentColor;
+}
+
+/* ================= SECTIONS ================= */
 
 section{
-  padding:65px 6%;
+  padding:70px 0;
 }
 
 .section-title{
   text-align:center;
-  font-size:32px;
-  margin-bottom:35px;
+  margin-bottom:40px;
 }
 
-.services-grid{
+.section-title h2{
+  font-size:38px;
+  color:#071d45;
+  margin-bottom:8px;
+  font-weight:900;
+}
+
+.section-title h2 span{
+  color:#e71920;
+}
+
+.section-title p{
+  color:#687386;
+}
+
+/* ================= SERVICES ================= */
+
+#services{
+  background:#f5f7fb;
+}
+
+.service-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:20px;
+  gap:22px;
 }
 
 .service-card{
-  background:white;
-  border-radius:12px;
+  background:#fff;
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 3px 12px rgba(0,0,0,.1);
+  box-shadow:0 7px 25px rgba(0,0,0,.09);
+  cursor:pointer;
   transition:.3s;
+  border:1px solid #e7ebf2;
 }
 
 .service-card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 
 .service-card img{
@@ -139,744 +336,975 @@ section{
   object-fit:cover;
 }
 
-.service-card div{
+.service-content{
   padding:18px;
-  text-align:center;
 }
 
 .service-card h3{
-  margin-bottom:8px;
+  color:#071d45;
+  font-size:20px;
+  margin-bottom:7px;
 }
 
+.service-card p{
+  color:#687386;
+  font-size:14px;
+}
+
+.click-text{
+  color:#0867df;
+  font-size:13px;
+  font-weight:900;
+  margin-top:10px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:#fff;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-img{
+  width:100%;
+  max-height:500px;
+  object-fit:cover;
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,.16);
+}
+
+.about h2{
+  color:#071d45;
+  font-size:38px;
+  margin-bottom:16px;
+}
+
+.about h2 span{
+  color:#e71920;
+}
+
+.about p{
+  color:#596579;
+  margin-bottom:15px;
+}
+
+.points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:22px;
+}
+
+.point{
+  background:#f1f6ff;
+  border-left:4px solid #0867df;
+  border-radius:8px;
+  padding:13px;
+  font-weight:800;
+}
+
+/* ================= BRANCHES ================= */
+
+.branches{
+  background:#eef4fb;
+}
+
+.branch-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.branch-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 28px rgba(0,0,0,.1);
+}
+
+.branch-front{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.branch-body{
+  padding:21px;
+}
+
+.branch-badge{
+  display:inline-block;
+  background:#eaf3ff;
+  color:#075bd8;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.branch-body h3{
+  color:#071d45;
+  font-size:24px;
+  margin-bottom:7px;
+}
+
+.branch-body h3 span{
+  color:#e71920;
+}
+
+.branch-body p{
+  color:#667085;
+  font-size:14px;
+}
+
+.branch-actions{
+  display:flex;
+  gap:8px;
+  margin-top:16px;
+}
+
+.branch-actions a{
+  flex:1;
+  text-align:center;
+  padding:10px 7px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:900;
+}
+
+.branch-call{
+  background:#0867df;
+  color:#fff;
+}
+
+.branch-wa{
+  background:#12a84a;
+  color:#fff;
+}
+
+.branch-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+  padding:0 12px 12px;
+}
+
+.branch-gallery img{
+  width:100%;
+  height:85px;
+  object-fit:cover;
+  border-radius:7px;
+}
+
+/* ================= MANAGEMENT ================= */
+
+.team{
+  background:#fff;
+}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.team-card{
+  background:#f5f8fd;
+  border-radius:16px;
+  padding:28px 15px;
+  text-align:center;
+  border-top:5px solid #0867df;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.team-card:nth-child(2){
+  border-top-color:#e71920;
+}
+
+.team-card:nth-child(3){
+  border-top-color:#16a34a;
+}
+
+.team-card:nth-child(4){
+  border-top-color:#7c3aed;
+}
+
+.team-icon{
+  width:68px;
+  height:68px;
+  margin:auto auto 14px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0867df,#e71920);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+}
+
+.team-card h3{
+  color:#071d45;
+  margin-bottom:4px;
+}
+
+.team-card p{
+  color:#697586;
+  font-weight:700;
+  font-size:14px;
+}
+
+/* ================= GALLERY ================= */
+
 .gallery{
-  background:white;
+  background:#f5f7fb;
 }
 
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  gap:14px;
+}
+
+.gallery-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:13px;
+  cursor:pointer;
+  background:#ddd;
 }
 
 .gallery-grid img{
+  display:block;
   width:100%;
-  height:210px;
+  height:220px;
   object-fit:cover;
-  border-radius:10px;
+  transition:.3s;
 }
 
-.why{
-  background:#111;
-  color:white;
+.gallery-item:hover img{
+  transform:scale(1.07);
+}
+
+/* ================= LOCATIONS ================= */
+
+.locations{
+  background:#fff;
+}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+
+.location-card{
+  background:#f4f7fc;
+  border:1px solid #e2e8f0;
+  border-radius:13px;
+  padding:18px 10px;
+  text-align:center;
+  font-weight:900;
+  color:#071d45;
+  transition:.2s;
+}
+
+.location-card:hover{
+  background:#0867df;
+  color:#fff;
+  transform:translateY(-4px);
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  background:linear-gradient(120deg,#061a3a,#0867df);
+  color:#fff;
   text-align:center;
 }
 
-.why-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.why-box{
-  background:#1e1e1e;
-  padding:25px;
-  border-radius:10px;
-}
-
-.why-box h3{
+.cta h2{
+  font-size:40px;
   margin-bottom:10px;
 }
 
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  text-align:center;
+.cta p{
+  margin-bottom:25px;
+  font-size:17px;
 }
 
-.step{
-  background:white;
-  padding:25px;
-  border-radius:10px;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
-
-.areas{
-  background:white;
-  text-align:center;
-}
-
-.area-list{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-}
-
-.area{
-  background:#f0f0f0;
-  padding:10px 18px;
-  border-radius:25px;
-  font-weight:bold;
-}
+/* ================= CONTACT ================= */
 
 .contact{
-  background:#111;
-  color:white;
-  text-align:center;
+  background:#eef4fb;
 }
 
-.contact h2{
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:#fff;
+  padding:25px;
+  border-radius:17px;
+  box-shadow:0 7px 25px rgba(0,0,0,.08);
+}
+
+.contact-card h3{
+  color:#071d45;
   margin-bottom:15px;
 }
 
+.contact-number{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 0;
+  border-bottom:1px solid #e5e7eb;
+  font-weight:800;
+}
+
+.contact-number:last-child{
+  border-bottom:0;
+}
+
+.contact-number a{
+  color:#0867df;
+}
+
+/* ================= FOOTER ================= */
+
 footer{
-  background:#000;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
+  background:#04132f;
+  color:#fff;
+  padding:45px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:35px;
+}
+
+footer h3{
+  margin-bottom:12px;
+}
+
+footer p,
+footer li{
+  color:#c7d0df;
   font-size:14px;
 }
 
-/* Floating Buttons */
+footer ul{
+  list-style:none;
+}
+
+footer li{
+  margin-bottom:7px;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.15);
+  margin-top:25px;
+  padding-top:18px;
+  text-align:center;
+  color:#aebbd0;
+  font-size:13px;
+}
+
+/* ================= FLOATING DESKTOP ================= */
 
 .floating{
   position:fixed;
   right:18px;
-  bottom:20px;
-  z-index:2000;
+  bottom:18px;
+  z-index:2500;
   display:flex;
   flex-direction:column;
   gap:10px;
 }
 
 .float-btn{
-  width:55px;
-  height:55px;
+  width:54px;
+  height:54px;
   border-radius:50%;
+  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:white;
-  text-decoration:none;
-  font-size:25px;
-  box-shadow:0 3px 10px rgba(0,0,0,.3);
+  box-shadow:0 5px 18px rgba(0,0,0,.25);
 }
 
 .float-call{
-  background:#087cff;
+  background:#0867df;
 }
 
-.float-whatsapp{
-  background:#20c968;
+.float-wa{
+  background:#12a84a;
 }
 
-/* Popup */
+/* ================= MOBILE BOTTOM BAR ================= */
+
+.mobile-bottom{
+  display:none;
+}
+
+/* ================= POPUPS ================= */
 
 .popup-overlay{
-  display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.7);
-  z-index:9999;
-  padding:20px;
-  overflow:auto;
+  z-index:5000;
+  background:rgba(0,0,0,.72);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
 }
 
 .popup{
-  background:white;
-  max-width:450px;
-  margin:4% auto;
-  padding:28px;
-  border-radius:14px;
+  width:100%;
+  max-width:520px;
+  max-height:92vh;
+  overflow-y:auto;
+  background:#fff;
+  border-radius:20px;
   position:relative;
+  box-shadow:0 25px 80px rgba(0,0,0,.45);
+  animation:popup .25s ease;
 }
 
-.close{
+@keyframes popup{
+  from{
+    transform:scale(.85);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+.popup-head{
+  background:linear-gradient(135deg,#071d45,#0867df);
+  color:#fff;
+  text-align:center;
+  padding:25px 20px;
+}
+
+.popup-head h2{
+  font-size:26px;
+}
+
+.popup-head p{
+  font-size:14px;
+}
+
+.close-popup{
   position:absolute;
-  right:15px;
-  top:8px;
-  font-size:30px;
+  top:10px;
+  right:12px;
+  width:37px;
+  height:37px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  color:#071d45;
+  font-size:24px;
   cursor:pointer;
 }
 
-.popup h2{
-  text-align:center;
-  margin-bottom:8px;
+.popup-body{
+  padding:22px;
 }
 
-.popup p{
-  text-align:center;
-  color:#666;
-  margin-bottom:15px;
+.popup-body label{
+  display:block;
+  font-size:14px;
+  font-weight:800;
+  margin:10px 0 5px;
 }
 
-.popup input,
-.popup textarea,
-.popup select{
+.popup-body input,
+.popup-body select,
+.popup-body textarea{
   width:100%;
   padding:12px;
-  margin:7px 0;
-  border:1px solid #ccc;
-  border-radius:6px;
+  border:1px solid #d4d9e2;
+  border-radius:8px;
   font-size:15px;
+  outline:none;
 }
 
-.submit{
+.popup-body input:focus,
+.popup-body select:focus,
+.popup-body textarea:focus{
+  border-color:#0867df;
+}
+
+.popup-submit{
   width:100%;
-  background:#20c968;
-  color:white;
   border:0;
   padding:14px;
-  border-radius:7px;
-  font-weight:bold;
+  margin-top:15px;
+  border-radius:9px;
+  background:#12a84a;
+  color:#fff;
   font-size:16px;
-  margin-top:8px;
+  font-weight:900;
+  cursor:pointer;
 }
 
-/* Mobile */
+/* SERVICE DETAIL POPUP */
 
-@media(max-width:900px){
+.service-detail{
+  max-width:650px;
+}
 
-  header{
-    flex-direction:column;
-    gap:10px;
+.brand-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:15px;
+}
+
+.brand-btn{
+  padding:11px 6px;
+  border:1px solid #dbe3ef;
+  border-radius:9px;
+  background:#f7faff;
+  color:#071d45;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.brand-btn:hover,
+.brand-btn.selected{
+  background:#0867df;
+  color:#fff;
+  border-color:#0867df;
+}
+
+.service-detail-actions{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+}
+
+.service-detail-actions a,
+.service-detail-actions button{
+  flex:1;
+  border:0;
+  border-radius:9px;
+  padding:13px 8px;
+  color:#fff;
+  text-align:center;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.detail-call{
+  background:#0867df;
+}
+
+.detail-wa{
+  background:#12a84a;
+}
+
+.detail-book{
+  background:#e71920;
+}
+
+/* GALLERY POPUP */
+
+.image-popup{
+  max-width:900px;
+  background:transparent;
+  box-shadow:none;
+}
+
+.image-popup img{
+  display:block;
+  width:100%;
+  max-height:85vh;
+  object-fit:contain;
+  border-radius:12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1050px){
+
+  .nav-links{
+    gap:14px;
   }
 
-  nav a{
-    margin:0 7px;
-    font-size:13px;
+  .service-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .team-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .location-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+}
+
+@media(max-width:850px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .mobile-menu{
+    display:block;
+  }
+
+  .nav-inner{
+    min-height:68px;
   }
 
   .hero{
-    min-height:500px;
+    min-height:650px;
   }
 
-  .hero h1{
-    font-size:36px;
+  .hero-title{
+    font-size:45px;
   }
 
-  .hero p{
-    font-size:17px;
+  .about-grid{
+    grid-template-columns:1fr;
   }
 
-  .services-grid{
-    grid-template-columns:repeat(2,1fr);
+  .branch-grid{
+    grid-template-columns:1fr 1fr;
   }
 
   .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
   }
 
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
+  .contact-grid{
+    grid-template-columns:1fr;
   }
 
-  .steps{
-    grid-template-columns:repeat(2,1fr);
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
   }
 }
 
 @media(max-width:600px){
 
-  header{
-    padding:15px 10px;
+  body{
+    padding-bottom:72px;
   }
 
-  .logo{
-    font-size:22px;
+  .container{
+    width:92%;
   }
 
-  nav{
-    display:none;
+  .topbar{
+    font-size:11px;
   }
 
-  section{
-    padding:45px 15px;
+  .topbar-inner{
+    flex-direction:column;
+    gap:2px;
   }
 
-  .hero{
-    min-height:520px;
+  .logo-text{
+    font-size:21px;
   }
 
-  .hero h1{
-    font-size:32px;
-  }
-
-  .hero p{
+  .logo-text .service{
     font-size:16px;
   }
 
-  .btn{
-    display:block;
-    width:90%;
-    margin:9px auto;
+  .hero{
+    min-height:680px;
   }
 
-  .services-grid{
+  .hero-bg{
+    opacity:.82;
+  }
+
+  .hero-overlay{
+    background:rgba(3,18,45,.42);
+  }
+
+  .hero-content{
+    padding:55px 0;
+  }
+
+  .hero-title{
+    font-size:35px;
+    line-height:1.08;
+  }
+
+  .hero-subtitle{
+    font-size:18px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .services-line{
+    gap:7px;
+  }
+
+  .service-tag{
+    font-size:12px;
+    padding:7px 10px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    width:100%;
+    max-width:340px;
+    margin:auto;
+  }
+
+  .hero-buttons .btn{
+    width:100%;
+  }
+
+  section{
+    padding:50px 0;
+  }
+
+  .section-title h2{
+    font-size:29px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .branch-grid{
+    grid-template-columns:1fr;
+  }
+
+  .team-grid{
     grid-template-columns:1fr;
   }
 
   .gallery-grid{
     grid-template-columns:1fr 1fr;
+    gap:8px;
   }
 
   .gallery-grid img{
-    height:160px;
+    height:150px;
   }
 
-  .why-grid{
+  .location-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .points{
     grid-template-columns:1fr;
   }
 
-  .steps{
+  .cta h2{
+    font-size:29px;
+  }
+
+  .footer-grid{
     grid-template-columns:1fr;
   }
 
-  .section-title{
-    font-size:27px;
+  .floating{
+    display:none;
   }
 
-  .popup{
-    margin:5% auto;
-    padding:22px 17px;
+  /* MOBILE BOTTOM */
+  .mobile-bottom{
+    display:grid;
+    grid-template-columns:1fr 1fr 1.25fr;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:65px;
+    background:#fff;
+    z-index:4500;
+    box-shadow:0 -4px 20px rgba(0,0,0,.18);
   }
+
+  .mobile-bottom a,
+  .mobile-bottom button{
+    border:0;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2px;
+    font-weight:900;
+    font-size:12px;
+    cursor:pointer;
+  }
+
+  .mobile-call{
+    background:#0867df;
+  }
+
+  .mobile-wa{
+    background:#12a84a;
+  }
+
+  .mobile-book{
+    background:#e71920;
+  }
+
+  .mobile-bottom .icon{
+    width:21px;
+    height:21px;
+  }
+
+  .brand-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .service-detail-actions{
+    flex-direction:column;
+  }
+}
+
+/* MOBILE NAV OPEN */
+
+.mobile-nav{
+  display:none;
+  background:#fff;
+  padding:10px 4%;
+  box-shadow:0 8px 15px rgba(0,0,0,.1);
+}
+
+.mobile-nav.active{
+  display:block;
+}
+
+.mobile-nav a{
+  display:block;
+  padding:12px;
+  border-bottom:1px solid #eee;
+  font-weight:800;
+  color:#071d45;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Fast<span>2</span>Fix Service Centre</div>
+<!-- ================= SVG DEFINITIONS ================= -->
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Our Work</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<svg style="display:none">
+  <symbol id="phoneIcon" viewBox="0 0 24 24">
+    <path d="M6.6 10.8c1.5 3 3.6 4.8 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2l3.5 1.5c.4.2.7.6.7 1v3.2c0 .6-.5 1.1-1.1 1.1C10.3 21.8 2.2 13.7 2.2 3.1 2.2 2.5 2.7 2 3.3 2h3.2c.4 0 .8.3 1 .7L9 6.2c.2.4.1.9-.2 1.2L6.6 9.6v1.2z"/>
+  </symbol>
 
+  <symbol id="waIcon" viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.5-1.1 1-1.6 1.1-.4.1-1 .2-1.6 0-2.5-.9-4.1-2.3-5.5-4.3-1.2-1.7-1.8-3.8-.7-5.1.3-.4.7-.7 1.1-.7h.8c.2 0 .4.1.5.4l.9 2.1c.1.3.1.5-.1.7l-.6.8c-.2.2-.2.4 0 .7.6 1 1.4 1.8 2.4 2.4.3.2.5.2.7-.1l.8-.9c.2-.2.4-.3.7-.2l2.1 1c.3.1.4.3.4.5 0 .5 0 1-.2 1.6z"/>
+  </symbol>
+</svg>
 
-<!-- HERO -->
+<!-- ================= TOP BAR ================= -->
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div>⚡ Fast2Fix Service Centre</div>
+
+    <div>
+      📞 <a href="tel:+919234227337">9234 227 337</a>
+      &nbsp; | &nbsp;
+      WhatsApp:
+      <a href="https://wa.me/918434746494" target="_blank">84347 46494</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+  <div class="container nav-inner">
+
+    <a href="#home" class="logo-text">
+      <span class="fast">Fast</span><span class="twofix">2Fix</span>
+      <span class="service">Service Centre</span>
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#branches">Branches</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#locations">Locations</a>
+
+      <a href="javascript:void(0)" class="nav-book" onclick="openBooking()">
+        📅 Book Service
+      </a>
+
+    </div>
+
+    <button class="mobile-menu" onclick="toggleMobileNav()">☰</button>
+
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="closeMobileNav()">Home</a>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#branches" onclick="closeMobileNav()">Branches</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
+    <a href="#locations" onclick="closeMobileNav()">Locations</a>
+    <a href="javascript:void(0)" onclick="closeMobileNav();openBooking()">📅 Book Service</a>
+  </div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
-  <div class="hero-content">
 
-    <h1>Fast<span>2</span>Fix Service Centre</h1>
+  <!-- Background only - NO BLUR -->
+  <img class="hero-bg" src="hero2.jpeg" alt="Fast2Fix Service Centre">
 
-    <p>
-      Fast, Reliable & Professional Home Appliance Repair Service
-    </p>
+  <div class="hero-overlay"></div>
 
-    <p>
-      AC • Refrigerator • Washing Machine • Geyser • Microwave • Chimney • TV • RO
-    </p>
+  <div class="container hero-content">
 
-    <a class="btn call" href="tel:9234227337">
-      📞 Call Now
-    </a>
+    <h1 class="hero-title">
+      <span class="blue">Fast</span><span class="red">2Fix</span>
+      <span> Service Centre</span>
+    </h1>
 
-    <a class="btn whatsapp"
-       href="https://wa.me/918434746494"
-       target="_blank">
-      💬 WhatsApp
-    </a>
-
-    <button class="btn booking" onclick="openPopup()">
-      🔧 Book a Service
-    </button>
-
-  </div>
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2 class="section-title">Our Services</h2>
-
-<div class="services-grid">
-
-  <div class="service-card">
-    <img src="ac1.jpeg" alt="AC Repair Service">
-    <div>
-      <h3>❄️ AC Repair & Service</h3>
-      <p>Professional AC repair, service and installation.</p>
+    <div class="hero-subtitle">
+      Fast • Reliable • Professional Home Appliance Repair
     </div>
-  </div>
 
-  <div class="service-card">
-    <img src="fr1.jpeg" alt="Refrigerator Repair">
-    <div>
-      <h3>🧊 Refrigerator Repair</h3>
-      <p>Reliable refrigerator repair and maintenance.</p>
+    <div class="hero-description">
+      Expert technicians for AC, Refrigerator, Washing Machine and all major
+      home appliances.
     </div>
-  </div>
 
-  <div class="service-card">
-    <img src="wm1.jpeg" alt="Washing Machine Repair">
-    <div>
-      <h3>🧺 Washing Machine</h3>
-      <p>Front load, top load and semi automatic repair.</p>
-    </div>
-  </div>
+    <div class="services-line">
 
-  <div class="service-card">
-    <img src="gr1.jpeg" alt="Geyser Repair">
-    <div>
-      <h3>🔥 Geyser Repair</h3>
-      <p>Electric geyser repair and maintenance.</p>
-    </div>
-  </div>
-
-  <div class="service-card">
-    <img src="mw1.jpeg" alt="Microwave Repair">
-    <div>
-      <h3>🍽️ Microwave Oven</h3>
-      <p>Microwave inspection and professional repair.</p>
-    </div>
-  </div>
-
-  <div class="service-card">
-    <img src="chimney1.jpeg" alt="Kitchen Chimney Repair">
-    <div>
-      <h3>🏠 Chimney Repair</h3>
-      <p>Kitchen chimney service and maintenance.</p>
-    </div>
-  </div>
-
-  <div class="service-card">
-    <img src="tv1.jpeg" alt="TV Repair">
-    <div>
-      <h3>📺 TV Repair</h3>
-      <p>Professional TV repair and technical service.</p>
-    </div>
-  </div>
-
-  <div class="service-card">
-    <img src="aqua1.jpeg" alt="RO Water Purifier Repair">
-    <div>
-      <h3>💧 RO / Water Purifier</h3>
-      <p>RO and water purifier repair and service.</p>
-    </div>
-  </div>
-
-</div>
-</section>
-
-
-<!-- OUR WORK -->
-
-<section class="gallery" id="gallery">
-
-<h2 class="section-title">Our Work</h2>
-
-<div class="gallery-grid">
-
-  <img src="ac1.jpeg" alt="Fast2Fix AC Work">
-  <img src="ac2.jpeg" alt="Fast2Fix AC Service">
-  <img src="ac3.jpeg" alt="AC Repair Work">
-
-  <img src="fr1.jpeg" alt="Refrigerator Repair">
-  <img src="fr2.jpeg" alt="Fridge Service">
-
-  <img src="wm1.jpeg" alt="Washing Machine Repair">
-  <img src="wm2.jpeg" alt="Washing Machine Service">
-
-  <img src="gr1.jpeg" alt="Geyser Repair">
-  <img src="gr2.jpeg" alt="Geyser Service">
-
-  <img src="mw1.jpeg" alt="Microwave Repair">
-  <img src="chimney1.jpeg" alt="Chimney Repair">
-
-  <img src="tv1.jpeg" alt="TV Repair">
-  <img src="aqua1.jpeg" alt="Water Purifier Repair">
-
-</div>
-
-</section>
-
-
-<!-- WHY CHOOSE -->
-
-<section class="why">
-
-<h2 class="section-title">Why Choose Fast2Fix?</h2>
-
-<div class="why-grid">
-
-  <div class="why-box">
-    <h3>👨‍🔧 Professional Technicians</h3>
-    <p>Experienced technicians for home appliance services.</p>
-  </div>
-
-  <div class="why-box">
-    <h3>⚡ Quick Response</h3>
-    <p>Easy booking and quick service response.</p>
-  </div>
-
-  <div class="why-box">
-    <h3>🔧 Quality Work</h3>
-    <p>Professional repair and maintenance service.</p>
-  </div>
-
-  <div class="why-box">
-    <h3>📞 Customer Support</h3>
-    <p>Easy support through phone and WhatsApp.</p>
-  </div>
-
-</div>
-</section>
-
-
-<!-- HOW IT WORKS -->
-
-<section>
-
-<h2 class="section-title">How It Works</h2>
-
-<div class="steps">
-
-  <div class="step">
-    <h3>1️⃣ Book</h3>
-    <p>Submit your service request.</p>
-  </div>
-
-  <div class="step">
-    <h3>2️⃣ Confirm</h3>
-    <p>Our team contacts you.</p>
-  </div>
-
-  <div class="step">
-    <h3>3️⃣ Visit</h3>
-    <p>Technician visits as applicable.</p>
-  </div>
-
-  <div class="step">
-    <h3>4️⃣ Service</h3>
-    <p>Appliance service or repair is completed.</p>
-  </div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICE AREAS -->
-
-<section class="areas">
-
-<h2 class="section-title">Service Areas</h2>
-
-<p style="margin-bottom:25px;">
-Fast2Fix accepts service enquiries from customers across India.
-</p>
-
-<div class="area-list">
-
-<span class="area">Dhanbad</span>
-<span class="area">Bokaro</span>
-<span class="area">Jamshedpur</span>
-<span class="area">Ranchi</span>
-<span class="area">Kharagpur</span>
-<span class="area">Asansol</span>
-<span class="area">Patna</span>
-<span class="area">Kolkata</span>
-<span class="area">Jharkhand</span>
-<span class="area">Bihar</span>
-<span class="area">West Bengal</span>
-<span class="area">India</span>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2>Contact Fast2Fix Service Centre</h2>
-
-<p>📞 <a href="tel:9234227337" style="color:white;">
-9234227337
-</a></p>
-
-<p>
-💬 WhatsApp:
-<a href="https://wa.me/918434746494"
-target="_blank"
-style="color:white;">
-8434746494
-</a>
-</p>
-
-<p>8804022021</p>
-<p>7050129203</p>
-
-<br>
-
-<button class="btn booking" onclick="openPopup()">
-🔧 Book a Service
-</button>
-
-</section>
-
-
-<footer>
-
-© 2026 Fast2Fix Service Centre. All Rights Reserved.
-
-</footer>
-
-
-<!-- FLOATING CALL + WHATSAPP -->
-
-<div class="floating">
-
-<a class="float-btn float-call"
-href="tel:9234227337"
-title="Call Fast2Fix">
-📞
-</a>
-
-<a class="float-btn float-whatsapp"
-href="https://wa.me/918434746494"
-target="_blank"
-title="WhatsApp Fast2Fix">
-💬
-</a>
-
-</div>
-
-
-<!-- BOOKING POPUP -->
-
-<div class="popup-overlay" id="bookingPopup">
-
-<div class="popup">
-
-<span class="close" onclick="closePopup()">×</span>
-
-<h2>🔧 Book a Service</h2>
-
-<p>Fill your details and contact us on WhatsApp.</p>
-
-<form onsubmit="sendWhatsApp(); return false;">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required>
-
-<input
-type="tel"
-id="mobile"
-placeholder="Mobile Number"
-maxlength="10"
-required>
-
-<textarea
-id="address"
-placeholder="Full Address"
-rows="3"
-required></textarea>
-
-<select id="state" required>
-
-<option value="">Select State</option>
-<option>Jharkhand</option>
-<option>Bihar</option>
-<option>West Bengal</option>
-<option>Odisha</option>
-<option>Uttar Pradesh</option>
-<option>Delhi</option>
-<option>Maharashtra</option>
-<option>Other</option>
-
-</select>
-
-<input
-type="text"
-id="city"
-placeholder="City / Area"
-required>
-
-<select id="service" required>
-
-<option value="">Select Appliance</option>
-<option>AC Repair & Service</option>
-<option>Refrigerator Repair</option>
-<option>Washing Machine Repair</option>
-<option>Geyser Repair</option>
-<option>Microwave Oven Repair</option>
-<option>Chimney Repair</option>
-<option>TV Repair</option>
-<option>RO / Water Purifier</option>
-<option>Other</option>
-
-</select>
-
-<button class="submit" type="submit">
-💬 Submit Booking on WhatsApp
-</button>
-
-</form>
-
-</div>
-</div>
-
-
-<script>
-
-function openPopup(){
-  document.getElementById("bookingPopup").style.display="block";
-}
-
-function closePopup(){
-  document.getElementById("bookingPopup").style.display="none";
-}
-
-function sendWhatsApp(){
-
-  var name=document.getElementById("name").value;
-  var mobile=document.getElementById("mobile").value;
-  var address=document.getElementById("address").value;
-  var state=document.getElementById("state").value;
-  var city=document.getElementById("city").value;
-  var service=document.getElementById("service").value;
-
-  var message =
-  "Fast2Fix Service Booking\n\n" +
-  "Name: " + name + "\n" +
-  "Mobile: " + mobile + "\n" +
-  "Address: " + address + "\n" +
-  "State: " + state + "\n" +
-  "City/Area: " + city + "\n" +
-  "Appliance: " + service;
-
-  var url =
-  "https://wa.me/918434746494?text=" +
-  encodeURIComponent(message);
-
-  window.open(url,"_blank");
-}
-
-/* Website open hone ke 2 second baad popup */
-
-window.onload=function(){
-
-  setTimeout(function(){
-    openPopup();
-  },2000);
-
-};
-
-</script>
-
-</body>
-</html>
+      <div class="service-tag">❄️ AC</div>
+      <div class="service-tag">🧊 Refrigerator</div>
