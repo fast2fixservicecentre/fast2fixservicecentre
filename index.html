@@ -43,17 +43,49 @@ header{
 .logo{
   font-size:25px;
   font-weight:bold;
+  white-space:nowrap;
 }
 
-.logo span{
+.logo .fast{
+  color:#087cff;
+}
+
+.logo .twofix{
   color:#ff3030;
 }
 
 nav a{
   color:white;
   text-decoration:none;
-  margin-left:20px;
-  font-size:15px;
+  margin-left:22px;
+  font-size:18px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+nav a:nth-child(1){
+  color:#00c6ff;
+}
+
+nav a:nth-child(2){
+  color:#20c968;
+}
+
+nav a:nth-child(3){
+  color:#ffb000;
+}
+
+nav a:nth-child(4){
+  color:#ff4d6d;
+}
+
+nav a:nth-child(5){
+  color:#a970ff;
+}
+
+nav a:hover{
+  transform:scale(1.08);
+  filter:brightness(1.2);
 }
 
 /* HERO */
@@ -71,7 +103,7 @@ nav a{
 
   background-image:
     linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-    url("hero1.jpeg");
+    url("hero2.jpeg");
 
   background-size:cover;
   background-position:center;
@@ -485,12 +517,10 @@ footer{
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
   <div class="logo">
-    Fast<span>2</span>Fix Service Centre
+    <span class="fast">Fast</span><span class="twofix">2Fix</span> Service Centre
   </div>
 
   <nav>
@@ -502,9 +532,6 @@ footer{
   </nav>
 
 </header>
-
-
-<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -539,9 +566,6 @@ footer{
   </div>
 
 </section>
-
-
-<!-- SERVICES -->
 
 <section id="services">
 
@@ -619,9 +643,6 @@ footer{
 
 </section>
 
-
-<!-- OUR WORK -->
-
 <section class="gallery" id="gallery">
 
 <h2 class="section-title">
@@ -666,9 +687,6 @@ footer{
 
 </section>
 
-
-<!-- WHY CHOOSE US -->
-
 <section class="why">
 
 <h2 class="section-title">
@@ -700,9 +718,6 @@ footer{
 </div>
 
 </section>
-
-
-<!-- HOW IT WORKS -->
 
 <section>
 
@@ -736,9 +751,6 @@ footer{
 
 </section>
 
-
-<!-- SERVICE AREAS -->
-
 <section class="areas" id="areas">
 
 <h2 class="section-title">
@@ -767,9 +779,6 @@ footer{
 </div>
 
 </section>
-
-
-<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -805,15 +814,9 @@ footer{
 
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
 © 2026 Fast2Fix Service Centre. All Rights Reserved.
 </footer>
-
-
-<!-- FLOATING BUTTONS -->
 
 <div class="floating">
 
@@ -833,9 +836,6 @@ footer{
   </a>
 
 </div>
-
-
-<!-- BOOKING POPUP -->
 
 <div class="popup-overlay" id="bookingPopup">
 
@@ -922,7 +922,6 @@ footer{
 
 </div>
 
-
 <script>
 
 function openPopup(){
@@ -973,3 +972,4 @@ function sendWhatsApp(){
 
 </body>
 </html>
+```1
