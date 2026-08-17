@@ -169,6 +169,92 @@ transition:.3s
 
 .gallery-grid img:hover{transform:scale(1.03)}
 
+
+/* OUR BRANCHES */
+
+.branches{
+background:#f5f7fa;
+}
+
+.branches-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.branch-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.12);
+transition:.3s;
+cursor:pointer;
+}
+
+.branch-card:hover{
+transform:translateY(-6px);
+box-shadow:0 8px 22px rgba(0,0,0,.18);
+}
+
+.branch-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.branch-content{
+padding:20px;
+text-align:center;
+}
+
+.branch-content h3{
+font-size:23px;
+margin-bottom:6px;
+}
+
+.branch-type{
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+background:#087cff;
+color:white;
+font-size:14px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.branch-content p{
+margin:5px 0;
+color:#555;
+}
+
+.branch-gallery{
+display:none;
+padding:15px;
+background:#fafafa;
+}
+
+.branch-gallery img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.branch-close{
+background:#222;
+color:white;
+border:0;
+padding:8px 18px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+
+/* WHY */
+
 .why{
 background:#111;
 color:white
@@ -388,10 +474,27 @@ font-weight:bold
 }
 
 @media(max-width:1000px){
-.services-grid{grid-template-columns:repeat(2,1fr)}
-.gallery-grid{grid-template-columns:repeat(3,1fr)}
-.why-grid{grid-template-columns:repeat(2,1fr)}
-.steps{grid-template-columns:repeat(2,1fr)}
+
+.services-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.gallery-grid{
+grid-template-columns:repeat(3,1fr)
+}
+
+.branches-grid{
+grid-template-columns:1fr 1fr
+}
+
+.why-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr)
+}
+
 }
 
 @media(max-width:600px){
@@ -422,15 +525,33 @@ section{padding:45px 15px}
 
 .section-title{font-size:27px}
 
-.services-grid{grid-template-columns:1fr}
+.services-grid{
+grid-template-columns:1fr
+}
 
-.gallery-grid{grid-template-columns:1fr 1fr}
+.gallery-grid{
+grid-template-columns:1fr 1fr
+}
 
-.gallery-grid img{height:160px}
+.gallery-grid img{
+height:160px
+}
 
-.why-grid{grid-template-columns:1fr}
+.branches-grid{
+grid-template-columns:1fr
+}
 
-.steps{grid-template-columns:1fr}
+.branch-card img{
+height:210px
+}
+
+.why-grid{
+grid-template-columns:1fr
+}
+
+.steps{
+grid-template-columns:1fr
+}
 
 .popup{
 margin:5% auto;
@@ -456,6 +577,7 @@ font-size:14px
 width:52px;
 height:52px
 }
+
 }
 </style>
 </head>
@@ -478,6 +600,7 @@ height:52px
 
 </header>
 
+
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -497,6 +620,7 @@ target="_blank">💬 WhatsApp</a>
 <button class="btn booking" onclick="openPopup()">🔧 Book a Service</button>
 
 </div>
+
 </section>
 
 
@@ -571,6 +695,7 @@ target="_blank">💬 WhatsApp</a>
 </div>
 
 </div>
+
 </section>
 
 
@@ -613,6 +738,126 @@ target="_blank">💬 WhatsApp</a>
 <img src="aqua2.jpeg">
 
 </div>
+
+</section>
+
+
+<!-- OUR BRANCHES -->
+
+<section class="branches" id="branches">
+
+<h2 class="section-title">Our Branches</h2>
+
+<div class="branches-grid">
+
+
+<!-- DHANBAD -->
+
+<div class="branch-card" onclick="toggleBranch('dhanbadGallery')">
+
+<img src="dh1.jpeg" alt="Fast2Fix Dhanbad Zonal Branch">
+
+<div class="branch-content">
+
+<span class="branch-type">Zonal Branch</span>
+
+<h3>Dhanbad</h3>
+
+<p>📍 Naya Bazar, Dhanbad</p>
+
+<p>Fast2Fix Service Centre Zonal Branch</p>
+
+</div>
+
+<div class="branch-gallery" id="dhanbadGallery">
+
+<img src="dh1.jpeg" alt="Dhanbad Branch">
+<img src="dh2.jpeg" alt="Dhanbad Branch">
+<img src="dh3.jpeg" alt="Dhanbad Branch">
+<img src="dh4.jpeg" alt="Dhanbad Branch">
+
+<button class="branch-close"
+onclick="closeBranch(event,'dhanbadGallery')">
+Close Photos
+</button>
+
+</div>
+
+</div>
+
+
+<!-- BOKARO -->
+
+<div class="branch-card" onclick="toggleBranch('bokaroGallery')">
+
+<img src="bk2.jpeg" alt="Fast2Fix Bokaro Branch">
+
+<div class="branch-content">
+
+<span class="branch-type">Branch Office</span>
+
+<h3>Bokaro</h3>
+
+<p>📍 City Centre, Bokaro</p>
+
+<p>Fast2Fix Service Centre Branch Office</p>
+
+</div>
+
+<div class="branch-gallery" id="bokaroGallery">
+
+<img src="bk1.jpeg" alt="Bokaro Branch">
+<img src="bk2.jpeg" alt="Bokaro Branch">
+<img src="bk3.jpeg" alt="Bokaro Branch">
+<img src="bk4.jpeg" alt="Bokaro Branch">
+<img src="bk5.jpeg" alt="Bokaro Branch">
+
+<button class="branch-close"
+onclick="closeBranch(event,'bokaroGallery')">
+Close Photos
+</button>
+
+</div>
+
+</div>
+
+
+<!-- KHARAGPUR -->
+
+<div class="branch-card" onclick="toggleBranch('kharagpurGallery')">
+
+<img src="kp1.jpeg" alt="Fast2Fix Kharagpur Service Branch">
+
+<div class="branch-content">
+
+<span class="branch-type">Service Branch</span>
+
+<h3>Kharagpur</h3>
+
+<p>📍 Kharagpur, West Bengal</p>
+
+<p>Fast2Fix Service Centre Service Branch</p>
+
+</div>
+
+<div class="branch-gallery" id="kharagpurGallery">
+
+<img src="kp1.jpeg" alt="Kharagpur Branch">
+<img src="kp2.jpeg" alt="Kharagpur Branch">
+<img src="kp3.jpeg" alt="Kharagpur Branch">
+<img src="kp4.jpeg" alt="Kharagpur Branch">
+
+<button class="branch-close"
+onclick="closeBranch(event,'kharagpurGallery')">
+Close Photos
+</button>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
@@ -643,6 +888,7 @@ target="_blank">💬 WhatsApp</a>
 </div>
 
 </div>
+
 </section>
 
 
@@ -673,6 +919,7 @@ target="_blank">💬 WhatsApp</a>
 </div>
 
 </div>
+
 </section>
 
 
@@ -700,6 +947,7 @@ Fast2Fix accepts service enquiries from customers across India.
 <span class="area">India</span>
 
 </div>
+
 </section>
 
 
@@ -714,6 +962,7 @@ WhatsApp: 8434746494
 </a></p>
 
 <p>8804022021</p>
+
 <p>7050129203</p>
 
 <button class="btn booking" onclick="openPopup()">
@@ -757,6 +1006,7 @@ target="_blank">💬</a>
 <button class="back-btn" onclick="closeBrands()">Close</button>
 
 </div>
+
 </div>
 
 
@@ -791,6 +1041,7 @@ rows="3"
 required></textarea>
 
 <select id="state" required>
+
 <option value="">Select State</option>
 <option>Jharkhand</option>
 <option>Bihar</option>
@@ -800,6 +1051,7 @@ required></textarea>
 <option>Delhi</option>
 <option>Maharashtra</option>
 <option>Other</option>
+
 </select>
 
 <input type="text"
@@ -824,7 +1076,9 @@ required>
 </button>
 
 </form>
+
 </div>
+
 </div>
 
 
@@ -946,34 +1200,19 @@ document.getElementById("bookingPopup").style.display="none";
 }
 
 
-function sendWhatsApp(){
+/* BRANCH PHOTOS */
 
-var name=document.getElementById("name").value;
-var mobile=document.getElementById("mobile").value;
-var address=document.getElementById("address").value;
-var state=document.getElementById("state").value;
-var city=document.getElementById("city").value;
-var brand=document.getElementById("selectedBrand").value;
-var service=document.getElementById("selectedAppliance").value;
+function toggleBranch(id){
 
-var message=
-"Fast2Fix Service Booking\n\n"+
-"Name: "+name+"\n"+
-"Mobile: "+mobile+"\n"+
-"Address: "+address+"\n"+
-"State: "+state+"\n"+
-"City/Area: "+city+"\n"+
-"Appliance/Service: "+service+"\n"+
-"Brand: "+brand;
+var gallery=document.getElementById(id);
 
-var url=
-"https://wa.me/918434746494?text="+
-encodeURIComponent(message);
-
-window.open(url,"_blank");
+if(gallery.style.display==="block"){
+gallery.style.display="none";
+}else{
+gallery.style.display="block";
 }
 
-</script>
+}
 
-</body>
-</html>
+
+functio
