@@ -27,9 +27,6 @@ color:#222;
 line-height:1.6;
 }
 
-
-/* HEADER */
-
 header{
 background:#111;
 color:white;
@@ -64,36 +61,13 @@ font-size:15px;
 font-weight:bold;
 }
 
-nav a:nth-child(1){
-color:#00c6ff;
-}
-
-nav a:nth-child(2){
-color:#20c968;
-}
-
-nav a:nth-child(3){
-color:#ffb000;
-}
-
-nav a:nth-child(4){
-color:#ff4d6d;
-}
-
-nav a:nth-child(5){
-color:#a970ff;
-}
-
-nav a:nth-child(6){
-color:#00d9ff;
-}
-
-nav a:nth-child(7){
-color:#ff8c00;
-}
-
-
-/* HERO */
+nav a:nth-child(1){color:#00c6ff;}
+nav a:nth-child(2){color:#20c968;}
+nav a:nth-child(3){color:#ffb000;}
+nav a:nth-child(4){color:#ff4d6d;}
+nav a:nth-child(5){color:#a970ff;}
+nav a:nth-child(6){color:#00d9ff;}
+nav a:nth-child(7){color:#ff8c00;}
 
 .hero{
 position:relative;
@@ -105,11 +79,9 @@ text-align:center;
 color:white;
 padding:40px 20px;
 overflow:hidden;
-
 background-image:
 linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
 url("hero2.jpeg");
-
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
@@ -151,20 +123,9 @@ font-size:16px;
 cursor:pointer;
 }
 
-.call{
-background:#087cff;
-}
-
-.whatsapp{
-background:#20c968;
-}
-
-.booking{
-background:#ff6800;
-}
-
-
-/* SECTIONS */
+.call{background:#087cff;}
+.whatsapp{background:#20c968;}
+.booking{background:#ff6800;}
 
 section{
 padding:65px 6%;
@@ -492,21 +453,10 @@ color:#ddd;
 font-size:14px;
 }
 
-.why-box:nth-child(1){
-border-top:4px solid #087cff;
-}
-
-.why-box:nth-child(2){
-border-top:4px solid #20c968;
-}
-
-.why-box:nth-child(3){
-border-top:4px solid #ff6800;
-}
-
-.why-box:nth-child(4){
-border-top:4px solid #ff3030;
-}
+.why-box:nth-child(1){border-top:4px solid #087cff;}
+.why-box:nth-child(2){border-top:4px solid #20c968;}
+.why-box:nth-child(3){border-top:4px solid #ff6800;}
+.why-box:nth-child(4){border-top:4px solid #ff3030;}
 
 
 /* HOW IT WORKS */
@@ -603,16 +553,11 @@ font-size:25px;
 box-shadow:0 3px 10px rgba(0,0,0,.3);
 }
 
-.float-call{
-background:#087cff;
-}
-
-.float-whatsapp{
-background:#20c968;
-}
+.float-call{background:#087cff;}
+.float-whatsapp{background:#20c968;}
 
 
-/* BOOKING POPUP */
+/* POPUPS */
 
 .popup-overlay{
 display:none;
@@ -898,11 +843,8 @@ height:52px;
 </style>
 </head>
 
-
 <body>
 
-
-<!-- HEADER -->
 
 <header>
 
@@ -911,27 +853,17 @@ height:52px;
 </div>
 
 <nav>
-
 <a href="#home">Home</a>
-
 <a href="#services">Services</a>
-
 <a href="#gallery">Our Work</a>
-
 <a href="#areas">Areas</a>
-
 <a href="#branches">Our Branches</a>
-
 <a href="#about">About</a>
-
 <a href="#contact">Contact</a>
-
 </nav>
 
 </header>
 
-
-<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -977,7 +909,6 @@ Our Services
 </h2>
 
 <div class="services-grid">
-
 
 <div class="service-card"
 onclick="openBrands('AC Repair & Service')">
@@ -1123,7 +1054,6 @@ RO and water purifier repair and service.
 
 </div>
 
-
 </div>
 
 </section>
@@ -1184,11 +1114,8 @@ Our Work
 Our Branches
 </h2>
 
-
 <div class="branches-grid">
 
-
-<!-- DHANBAD -->
 
 <div class="branch-card"
 onclick="toggleBranch('dhanbadGallery')">
@@ -1202,13 +1129,9 @@ alt="Fast2Fix Dhanbad Zonal Branch">
 Zonal Branch
 </span>
 
-<h3>
-Dhanbad
-</h3>
+<h3>Dhanbad</h3>
 
-<p>
-📍 Naya Bazar, Dhanbad
-</p>
+<p>📍 Naya Bazar, Dhanbad</p>
 
 <p>
 Fast2Fix Service Centre Zonal Branch
@@ -1216,35 +1139,23 @@ Fast2Fix Service Centre Zonal Branch
 
 </div>
 
-
 <div class="branch-gallery"
 id="dhanbadGallery">
 
-<img src="dh1.jpeg"
-alt="Dhanbad Branch">
-
-<img src="dh2.jpeg"
-alt="Dhanbad Branch">
-
-<img src="dh3.jpeg"
-alt="Dhanbad Branch">
-
-<img src="dh4.jpeg"
-alt="Dhanbad Branch">
+<img src="dh1.jpeg" alt="Dhanbad Branch">
+<img src="dh2.jpeg" alt="Dhanbad Branch">
+<img src="dh3.jpeg" alt="Dhanbad Branch">
+<img src="dh4.jpeg" alt="Dhanbad Branch">
 
 <button class="branch-close"
 onclick="closeBranch(event,'dhanbadGallery')">
-
 Close Photos
-
 </button>
 
 </div>
 
 </div>
 
-
-<!-- BOKARO -->
 
 <div class="branch-card"
 onclick="toggleBranch('bokaroGallery')">
@@ -1258,13 +1169,9 @@ alt="Fast2Fix Bokaro Branch">
 Branch Office
 </span>
 
-<h3>
-Bokaro
-</h3>
+<h3>Bokaro</h3>
 
-<p>
-📍 City Centre, Bokaro
-</p>
+<p>📍 City Centre, Bokaro</p>
 
 <p>
 Fast2Fix Service Centre Branch Office
@@ -1272,38 +1179,24 @@ Fast2Fix Service Centre Branch Office
 
 </div>
 
-
 <div class="branch-gallery"
 id="bokaroGallery">
 
-<img src="bk1.jpeg"
-alt="Bokaro Branch">
-
-<img src="bk2.jpeg"
-alt="Bokaro Branch">
-
-<img src="bk3.jpeg"
-alt="Bokaro Branch">
-
-<img src="bk4.jpeg"
-alt="Bokaro Branch">
-
-<img src="bk5.jpeg"
-alt="Bokaro Branch">
+<img src="bk1.jpeg" alt="Bokaro Branch">
+<img src="bk2.jpeg" alt="Bokaro Branch">
+<img src="bk3.jpeg" alt="Bokaro Branch">
+<img src="bk4.jpeg" alt="Bokaro Branch">
+<img src="bk5.jpeg" alt="Bokaro Branch">
 
 <button class="branch-close"
 onclick="closeBranch(event,'bokaroGallery')">
-
 Close Photos
-
 </button>
 
 </div>
 
 </div>
 
-
-<!-- KHARAGPUR -->
 
 <div class="branch-card"
 onclick="toggleBranch('kharagpurGallery')">
@@ -1317,13 +1210,9 @@ alt="Fast2Fix Kharagpur Service Branch">
 Service Branch
 </span>
 
-<h3>
-Kharagpur
-</h3>
+<h3>Kharagpur</h3>
 
-<p>
-📍 Kharagpur, West Bengal
-</p>
+<p>📍 Kharagpur, West Bengal</p>
 
 <p>
 Fast2Fix Service Centre Service Branch
@@ -1331,33 +1220,22 @@ Fast2Fix Service Centre Service Branch
 
 </div>
 
-
 <div class="branch-gallery"
 id="kharagpurGallery">
 
-<img src="kp1.jpeg"
-alt="Kharagpur Branch">
-
-<img src="kp2.jpeg"
-alt="Kharagpur Branch">
-
-<img src="kp3.jpeg"
-alt="Kharagpur Branch">
-
-<img src="kp4.jpeg"
-alt="Kharagpur Branch">
+<img src="kp1.jpeg" alt="Kharagpur Branch">
+<img src="kp2.jpeg" alt="Kharagpur Branch">
+<img src="kp3.jpeg" alt="Kharagpur Branch">
+<img src="kp4.jpeg" alt="Kharagpur Branch">
 
 <button class="branch-close"
 onclick="closeBranch(event,'kharagpurGallery')">
-
 Close Photos
-
 </button>
 
 </div>
 
 </div>
-
 
 </div>
 
@@ -1370,23 +1248,15 @@ Close Photos
 Our Management Team
 </h2>
 
-
 <div class="management-grid">
-
 
 <div class="management-card">
 
-<div class="management-icon">
-👤
-</div>
+<div class="management-icon">👤</div>
 
-<h3>
-Mr. Reyaan Khan
-</h3>
+<h3>Mr. Reyaan Khan</h3>
 
-<span>
-Founder & Owner
-</span>
+<span>Founder & Owner</span>
 
 <p>
 Founder and Owner of Fast2Fix Service Centre,
@@ -1399,17 +1269,11 @@ growth and management.
 
 <div class="management-card">
 
-<div class="management-icon">
-👨‍💼
-</div>
+<div class="management-icon">👨‍💼</div>
 
-<h3>
-Mr. Sameer
-</h3>
+<h3>Mr. Sameer</h3>
 
-<span>
-Operations Manager
-</span>
+<span>Operations Manager</span>
 
 <p>
 Handles daily business operations, technicians,
@@ -1421,17 +1285,11 @@ service work and overall operational activities.
 
 <div class="management-card">
 
-<div class="management-icon">
-👩‍💼
-</div>
+<div class="management-icon">👩‍💼</div>
 
-<h3>
-Mrs. Mehak
-</h3>
+<h3>Mrs. Mehak</h3>
 
-<span>
-Office & Accounts Manager
-</span>
+<span>Office & Accounts Manager</span>
 
 <p>
 Manages office work, service job assignments,
@@ -1440,7 +1298,6 @@ customer coordination and payment collection.
 
 </div>
 
-
 </div>
 
 </div>
@@ -1448,12 +1305,11 @@ customer coordination and payment collection.
 </section>
 
 
-<!-- ABOUT FAST2FIX -->
+<!-- ABOUT -->
 
 <section class="about-fast2fix" id="about">
 
 <div class="about-container">
-
 
 <div class="about-image">
 
@@ -1461,7 +1317,6 @@ customer coordination and payment collection.
 alt="Fast2Fix Service Centre">
 
 </div>
-
 
 <div class="about-content">
 
@@ -1489,7 +1344,6 @@ we aim to provide dependable home appliance repair and
 maintenance services.
 </p>
 
-
 <div class="about-contact">
 
 <p>
@@ -1507,13 +1361,9 @@ target="_blank">
 </a>
 </p>
 
-<p>
-📞 8804022021
-</p>
+<p>📞 8804022021</p>
 
-<p>
-📞 7050129203
-</p>
+<p>📞 7050129203</p>
 
 </div>
 
@@ -1532,15 +1382,11 @@ target="_blank">
 Why Choose Fast2Fix?
 </h2>
 
-
 <div class="why-grid">
-
 
 <div class="why-box">
 
-<span class="why-icon">
-👨‍🔧
-</span>
+<span class="why-icon">👨‍🔧</span>
 
 <h3>
 Professional Technicians
@@ -1555,9 +1401,7 @@ Experienced technicians for reliable home appliance repair and service.
 
 <div class="why-box">
 
-<span class="why-icon">
-⚡
-</span>
+<span class="why-icon">⚡</span>
 
 <h3>
 Quick Response
@@ -1572,9 +1416,7 @@ Easy booking and quick response for your appliance service requirements.
 
 <div class="why-box">
 
-<span class="why-icon">
-🔧
-</span>
+<span class="why-icon">🔧</span>
 
 <h3>
 Quality Work
@@ -1584,4 +1426,32 @@ Quality Work
 Professional repair work with focus on quality and customer satisfaction.
 </p>
 
-</d
+</div>
+
+
+<div class="why-box">
+
+<span class="why-icon">⭐</span>
+
+<h3>
+Customer Satisfaction
+</h3>
+
+<p>
+We focus on dependable service and customer satisfaction.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section>
+
+<h2 class="section-title">
+How It Works
+</h2>
