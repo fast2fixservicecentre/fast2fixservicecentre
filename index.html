@@ -6,7 +6,7 @@
 
 <title>Fast2Fix Service Centre | AC, Fridge, Washing Machine Repair</title>
 
-<meta name="description" content="Fast2Fix Service Centre provides professional home appliance repair and service for AC, Refrigerator, Washing Machine, Geyser, Microwave, Chimney, LED TV and RO. Branches in Dhanbad, Bokaro and Kharagpur.">
+<meta name="description" content="Fast2Fix Service Centre provides professional AC, refrigerator, washing machine, geyser, microwave, chimney, LED TV and RO repair services.">
 
 <style>
 *{
@@ -21,24 +21,45 @@ html{
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-  line-height:1.5;
+  background:#f5f8fc;
+  color:#14213d;
+  line-height:1.55;
 }
 
 a{
   text-decoration:none;
 }
 
+button{
+  font-family:inherit;
+}
+
 .container{
   width:92%;
-  max-width:1200px;
+  max-width:1250px;
   margin:auto;
 }
 
-/* TOP BAR */
+/* =========================
+   COLORS
+========================= */
+
+:root{
+  --blue:#075bd8;
+  --dark:#061b41;
+  --red:#e71920;
+  --green:#12a84a;
+  --light:#f5f8fc;
+  --text:#14213d;
+  --muted:#667085;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
 .topbar{
-  background:#061b41;
+  background:linear-gradient(90deg,#04142f,#071f4b);
   color:#fff;
   padding:8px 0;
   font-size:13px;
@@ -52,69 +73,86 @@ a{
 }
 
 .topbar a{
-  color:white;
+  color:#fff;
+  font-weight:700;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar{
-  background:white;
+  background:rgba(255,255,255,.97);
   position:sticky;
   top:0;
-  z-index:1000;
-  box-shadow:0 3px 15px rgba(0,0,0,.12);
+  z-index:2000;
+  box-shadow:0 4px 20px rgba(0,0,0,.12);
+  backdrop-filter:blur(10px);
 }
 
 .nav-inner{
   min-height:78px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:20px;
-}
-
-.logo{
-  display:flex;
   align-items:center;
-  gap:10px;
 }
 
-.logo img{
-  width:190px;
-  max-width:45vw;
-  height:auto;
+.brand-name{
+  font-size:27px;
+  font-weight:950;
+  letter-spacing:-1px;
+  white-space:nowrap;
+}
+
+.brand-name .fast{
+  color:var(--blue);
+}
+
+.brand-name .fix{
+  color:var(--red);
+}
+
+.brand-name .service{
+  color:#14213d;
+  font-size:19px;
+  margin-left:5px;
 }
 
 .nav-links{
   display:flex;
-  gap:22px;
   align-items:center;
+  gap:20px;
 }
 
 .nav-links a{
-  color:#172033;
-  font-weight:700;
-  font-size:15px;
+  color:#14213d;
+  font-weight:800;
+  font-size:14px;
+  transition:.2s;
 }
 
 .nav-links a:hover{
-  color:#e71920;
+  color:var(--red);
 }
 
 .nav-btn{
-  background:linear-gradient(135deg,#075bd8,#e71920);
+  background:linear-gradient(135deg,var(--blue),var(--red));
   color:white!important;
-  padding:11px 18px;
+  padding:12px 18px;
   border-radius:30px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero{
   position:relative;
-  min-height:600px;
+  min-height:680px;
   display:flex;
   align-items:center;
   overflow:hidden;
-  background:#071936;
+  background:#061b41;
 }
 
 .hero-bg{
@@ -123,65 +161,74 @@ a{
   width:100%;
   height:100%;
   object-fit:cover;
-  opacity:.48;
+  opacity:.65;
+  filter:none;
 }
 
 .hero-overlay{
   position:absolute;
   inset:0;
   background:
-  linear-gradient(90deg,rgba(3,17,43,.96) 0%,rgba(3,17,43,.76) 42%,rgba(3,17,43,.32) 100%);
+    linear-gradient(90deg,
+    rgba(2,13,35,.96) 0%,
+    rgba(3,20,50,.82) 42%,
+    rgba(3,20,50,.30) 100%);
 }
 
 .hero-content{
   position:relative;
-  z-index:2;
+  z-index:3;
   color:white;
-  padding:70px 0;
-  max-width:760px;
+  padding:80px 0;
+  max-width:850px;
 }
 
-.hero-logo{
-  width:300px;
-  max-width:80%;
-  margin-bottom:22px;
-  filter:drop-shadow(0 5px 15px rgba(0,0,0,.4));
+.hero-brand{
+  font-size:52px;
+  line-height:1;
+  font-weight:950;
+  margin-bottom:18px;
+  letter-spacing:-2px;
 }
 
-.hero h1{
-  font-size:48px;
-  line-height:1.08;
-  margin-bottom:16px;
-  font-weight:900;
-}
-
-.hero h1 .blue{
+.hero-brand .fast{
   color:#35a8ff;
 }
 
-.hero h1 .red{
-  color:#ff2631;
+.hero-brand .fix{
+  color:#ff3038;
+}
+
+.hero-brand .service{
+  color:#fff;
+}
+
+.hero h1{
+  font-size:24px;
+  margin-bottom:15px;
+  color:#fff;
 }
 
 .hero-sub{
-  font-size:21px;
+  font-size:20px;
   font-weight:700;
-  margin-bottom:24px;
+  color:#eaf2ff;
+  margin-bottom:25px;
 }
 
 .services-line{
   display:flex;
   flex-wrap:wrap;
-  gap:10px;
+  gap:9px;
   margin-bottom:28px;
 }
 
 .service-tag{
   padding:9px 14px;
-  border-radius:25px;
-  background:rgba(255,255,255,.13);
-  border:1px solid rgba(255,255,255,.3);
-  backdrop-filter:blur(5px);
+  border-radius:30px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(8px);
   font-weight:700;
 }
 
@@ -195,73 +242,159 @@ a{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  gap:8px;
   padding:14px 22px;
-  border-radius:9px;
+  border-radius:10px;
   color:white;
-  font-weight:800;
-  border:none;
+  font-weight:900;
+  border:0;
   cursor:pointer;
   font-size:16px;
-}
-
-.btn-call{
-  background:#0867df;
-}
-
-.btn-whatsapp{
-  background:#12a84a;
-}
-
-.btn-book{
-  background:#e71920;
+  transition:.25s;
 }
 
 .btn:hover{
-  transform:translateY(-2px);
-  opacity:.92;
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-/* SECTION */
+.btn-call{
+  background:var(--blue);
+}
+
+.btn-whatsapp{
+  background:var(--green);
+}
+
+.btn-book{
+  background:var(--red);
+}
+
+/* =========================
+   SIGNATURE ANIMATION
+========================= */
+
+.signature-section{
+  position:relative;
+  width:100%;
+  height:520px;
+  overflow:hidden;
+  background:#061b41;
+}
+
+.signature-track{
+  position:absolute;
+  inset:0;
+  display:flex;
+  animation:signatureMove 28s linear infinite;
+}
+
+.signature-slide{
+  min-width:100%;
+  height:100%;
+  position:relative;
+}
+
+.signature-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.signature-slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(3,18,45,.65),
+    rgba(3,18,45,.05),
+    rgba(3,18,45,.55)
+  );
+}
+
+.signature-content{
+  position:absolute;
+  z-index:5;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  padding:20px;
+}
+
+.signature-content h2{
+  font-size:45px;
+  font-weight:950;
+  text-shadow:0 4px 15px rgba(0,0,0,.5);
+}
+
+.signature-content p{
+  font-size:19px;
+  font-weight:700;
+}
+
+@keyframes signatureMove{
+  0%,30%{transform:translateX(0)}
+  35%,63%{transform:translateX(-100%)}
+  68%,96%{transform:translateX(-200%)}
+  100%{transform:translateX(0)}
+}
+
+/* =========================
+   SECTION
+========================= */
+
 section{
-  padding:65px 0;
+  padding:75px 0;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:38px;
+  margin-bottom:42px;
 }
 
 .section-title h2{
-  font-size:35px;
-  color:#071d45;
+  font-size:38px;
+  color:var(--dark);
   margin-bottom:8px;
+  font-weight:950;
 }
 
 .section-title h2 span{
-  color:#e71920;
+  color:var(--red);
 }
 
 .section-title p{
-  color:#667085;
+  color:var(--muted);
 }
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
+
 .service-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:20px;
+  gap:22px;
 }
 
 .service-card{
-  background:white;
-  border-radius:16px;
+  background:#fff;
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,.1);
-  transition:.25s;
+  box-shadow:0 8px 30px rgba(6,27,65,.10);
+  border:1px solid #e8edf5;
+  transition:.3s;
+  cursor:pointer;
 }
 
 .service-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(6,27,65,.18);
 }
 
 .service-card img{
@@ -270,48 +403,63 @@ section{
   object-fit:cover;
 }
 
+.service-card-body{
+  padding:18px;
+}
+
 .service-card h3{
-  padding:14px 15px 3px;
-  color:#071d45;
+  color:var(--dark);
   font-size:20px;
+  margin-bottom:6px;
 }
 
 .service-card p{
-  padding:0 15px 18px;
-  color:#687386;
+  color:var(--muted);
   font-size:14px;
 }
 
-/* ABOUT */
+.service-open{
+  display:inline-block;
+  margin-top:12px;
+  color:var(--blue);
+  font-weight:900;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
 .about{
-  background:white;
+  background:#fff;
 }
 
 .about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:45px;
   align-items:center;
 }
 
 .about-img{
   width:100%;
-  border-radius:18px;
-  box-shadow:0 8px 30px rgba(0,0,0,.15);
+  max-height:480px;
+  object-fit:cover;
+  border-radius:22px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
 .about h2{
-  color:#071d45;
-  font-size:35px;
+  color:var(--dark);
+  font-size:38px;
   margin-bottom:15px;
 }
 
 .about h2 span{
-  color:#e71920;
+  color:var(--red);
 }
 
 .about p{
-  color:#596579;
+  color:var(--muted);
   margin-bottom:15px;
 }
 
@@ -319,18 +467,131 @@ section{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
-  margin-top:20px;
+  margin-top:22px;
 }
 
 .point{
-  background:#f1f6ff;
-  padding:13px;
-  border-left:4px solid #0867df;
-  border-radius:7px;
-  font-weight:700;
+  background:#f0f6ff;
+  padding:14px;
+  border-left:4px solid var(--blue);
+  border-radius:9px;
+  font-weight:800;
 }
 
-/* BRANCHES */
+/* =========================
+   BRANDS MODAL
+========================= */
+
+.brand-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  z-index:4000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+}
+
+.brand-box{
+  background:#fff;
+  width:100%;
+  max-width:900px;
+  max-height:90vh;
+  overflow-y:auto;
+  border-radius:22px;
+  position:relative;
+  animation:pop .25s ease;
+}
+
+.brand-head{
+  background:linear-gradient(135deg,#061b41,#075bd8);
+  color:#fff;
+  padding:25px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:5;
+}
+
+.brand-head h2{
+  font-size:30px;
+}
+
+.brand-close{
+  position:absolute;
+  top:12px;
+  right:15px;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  color:#061b41;
+  font-size:23px;
+  cursor:pointer;
+}
+
+.brand-grid{
+  padding:25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.brand-card{
+  border:1px solid #e0e6ef;
+  background:#f8fafc;
+  border-radius:14px;
+  padding:18px;
+  text-align:center;
+  transition:.2s;
+}
+
+.brand-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--blue);
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.brand-card h3{
+  color:var(--dark);
+  margin-bottom:12px;
+}
+
+.brand-actions{
+  display:flex;
+  gap:7px;
+}
+
+.brand-actions a,
+.brand-actions button{
+  flex:1;
+  padding:9px 5px;
+  border:0;
+  border-radius:7px;
+  color:#fff;
+  font-weight:800;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.brand-call{
+  background:var(--blue);
+}
+
+.brand-wa{
+  background:var(--green);
+}
+
+.brand-book{
+  background:var(--red);
+}
+
+/* =========================
+   BRANCHES
+========================= */
+
 .branches{
   background:#eef4fb;
 }
@@ -342,10 +603,15 @@ section{
 }
 
 .branch-card{
-  background:white;
-  border-radius:18px;
+  background:#fff;
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 7px 25px rgba(0,0,0,.1);
+  box-shadow:0 8px 30px rgba(0,0,0,.10);
+  transition:.25s;
+}
+
+.branch-card:hover{
+  transform:translateY(-5px);
 }
 
 .branch-front{
@@ -359,28 +625,28 @@ section{
 }
 
 .branch-body h3{
-  color:#071d45;
-  font-size:24px;
-  margin-bottom:5px;
+  color:var(--dark);
+  font-size:25px;
+  margin-bottom:7px;
 }
 
 .branch-body h3 span{
-  color:#e71920;
+  color:var(--red);
 }
 
 .branch-badge{
   display:inline-block;
-  background:#eaf3ff;
-  color:#075bd8;
-  font-weight:800;
-  padding:5px 10px;
+  background:#e9f2ff;
+  color:var(--blue);
+  font-weight:900;
+  padding:6px 11px;
   border-radius:20px;
   margin-bottom:12px;
-  font-size:13px;
+  font-size:12px;
 }
 
 .branch-body p{
-  color:#667085;
+  color:var(--muted);
   font-size:14px;
 }
 
@@ -395,36 +661,42 @@ section{
   width:100%;
   height:90px;
   object-fit:cover;
-  border-radius:7px;
+  border-radius:8px;
 }
 
-/* TEAM */
+/* =========================
+   MANAGEMENT
+========================= */
+
 .team{
-  background:white;
+  background:#fff;
 }
 
 .team-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  max-width:950px;
-  margin:auto;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
 
 .team-card{
-  background:#f5f8fd;
-  border-radius:16px;
+  background:#f7f9fc;
+  border-radius:18px;
   padding:30px 20px;
   text-align:center;
-  border-top:5px solid #0867df;
+  border-top:5px solid var(--blue);
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
 }
 
 .team-card:nth-child(2){
-  border-top-color:#e71920;
+  border-top-color:var(--red);
 }
 
 .team-card:nth-child(3){
-  border-top-color:#16a34a;
+  border-top-color:var(--green);
+}
+
+.team-card:nth-child(4){
+  border-top-color:#7c3aed;
 }
 
 .team-icon{
@@ -432,85 +704,126 @@ section{
   height:70px;
   margin:auto auto 15px;
   border-radius:50%;
-  background:linear-gradient(135deg,#0867df,#e71920);
-  color:white;
+  background:linear-gradient(135deg,var(--blue),var(--red));
+  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:30px;
+  font-size:28px;
 }
 
 .team-card h3{
-  color:#071d45;
-  margin-bottom:4px;
+  color:var(--dark);
 }
 
 .team-card p{
-  color:#697586;
+  color:var(--muted);
   font-weight:700;
 }
 
-/* GALLERY */
+.team-card a{
+  display:block;
+  margin-top:10px;
+  color:var(--blue);
+  font-weight:900;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
 .gallery{
-  background:#f5f7fb;
+  background:#f5f8fc;
 }
 
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
+  gap:13px;
 }
 
 .gallery-grid img{
   width:100%;
-  height:210px;
+  height:220px;
   object-fit:cover;
-  border-radius:12px;
+  border-radius:13px;
   cursor:pointer;
-  transition:.25s;
+  transition:.3s;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
 .gallery-grid img:hover{
-  transform:scale(1.025);
+  transform:scale(1.035);
 }
 
-/* CTA */
+/* =========================
+   LOCATIONS
+========================= */
+
+.locations{
+  background:#fff;
+}
+
+.location-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+}
+
+.location{
+  padding:12px 20px;
+  background:#f0f5fc;
+  border-radius:30px;
+  color:var(--dark);
+  font-weight:900;
+  border:1px solid #dce5f2;
+}
+
+/* =========================
+   CONTACT / CTA
+========================= */
+
 .cta{
-  background:linear-gradient(120deg,#061b41,#075bd8);
-  color:white;
+  background:linear-gradient(120deg,#04142f,#075bd8);
+  color:#fff;
   text-align:center;
 }
 
 .cta h2{
-  font-size:38px;
+  font-size:40px;
   margin-bottom:10px;
 }
 
 .cta p{
   margin-bottom:25px;
   font-size:17px;
+  color:#eaf2ff;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-  background:#04132f;
-  color:white;
-  padding:40px 0 20px;
+  background:#03112c;
+  color:#fff;
+  padding:50px 0 20px;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:30px;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:35px;
 }
 
 footer h3{
-  margin-bottom:12px;
+  margin-bottom:13px;
 }
 
 footer p,
 footer li{
-  color:#c7d0df;
+  color:#c5cfdf;
   font-size:14px;
 }
 
@@ -519,55 +832,88 @@ footer ul{
 }
 
 footer li{
-  margin-bottom:7px;
+  margin-bottom:8px;
+}
+
+footer a{
+  color:#dce8f8;
+}
+
+.footer-brand{
+  font-size:28px;
+  font-weight:950;
+  margin-bottom:10px;
+}
+
+.footer-brand .fast{
+  color:#35a8ff;
+}
+
+.footer-brand .fix{
+  color:#ff3038;
 }
 
 .footer-bottom{
   border-top:1px solid rgba(255,255,255,.15);
-  margin-top:25px;
+  margin-top:30px;
   padding-top:18px;
   text-align:center;
-  color:#aebbd0;
+  color:#9eabc0;
   font-size:13px;
 }
 
-/* FLOATING BUTTONS */
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
 .floating{
   position:fixed;
   right:18px;
   bottom:18px;
-  z-index:1500;
+  z-index:3500;
   display:flex;
   flex-direction:column;
   gap:10px;
 }
 
 .float-btn{
-  width:52px;
-  height:52px;
+  width:55px;
+  height:55px;
   border-radius:50%;
-  color:white;
+  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:23px;
-  box-shadow:0 5px 15px rgba(0,0,0,.25);
+  font-size:22px;
+  box-shadow:0 7px 20px rgba(0,0,0,.28);
+  transition:.2s;
+}
+
+.float-btn:hover{
+  transform:scale(1.08);
 }
 
 .float-call{
-  background:#0867df;
+  background:var(--blue);
 }
 
 .float-wa{
-  background:#12a84a;
+  background:var(--green);
 }
 
-/* POPUP */
+.float-book{
+  background:var(--red);
+}
+
+/* =========================
+   BOOKING POPUP
+========================= */
+
 .popup-overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.7);
-  z-index:3000;
+  background:rgba(0,0,0,.72);
+  z-index:5000;
   display:none;
   align-items:center;
   justify-content:center;
@@ -576,24 +922,30 @@ footer li{
 
 .popup{
   width:100%;
-  max-width:500px;
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 20px 60px rgba(0,0,0,.4);
+  max-width:520px;
+  max-height:92vh;
+  overflow-y:auto;
+  background:#fff;
+  border-radius:22px;
   position:relative;
-  animation:pop .3s ease;
+  animation:pop .25s ease;
 }
 
 @keyframes pop{
-  from{transform:scale(.8);opacity:0}
-  to{transform:scale(1);opacity:1}
+  from{
+    transform:scale(.85);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
 }
 
 .popup-head{
-  background:linear-gradient(135deg,#071d45,#0867df);
-  color:white;
-  padding:24px;
+  background:linear-gradient(135deg,#061b41,#075bd8);
+  color:#fff;
+  padding:25px;
   text-align:center;
 }
 
@@ -603,20 +955,19 @@ footer li{
 
 .popup-head p{
   font-size:14px;
-  margin-top:5px;
 }
 
 .close-popup{
   position:absolute;
-  right:14px;
-  top:10px;
-  width:35px;
-  height:35px;
+  right:13px;
+  top:11px;
+  width:36px;
+  height:36px;
   border-radius:50%;
-  border:none;
-  background:white;
-  color:#071d45;
-  font-size:23px;
+  border:0;
+  background:#fff;
+  color:#061b41;
+  font-size:22px;
   cursor:pointer;
 }
 
@@ -626,61 +977,60 @@ footer li{
 
 .popup-body label{
   display:block;
-  font-weight:700;
+  font-weight:800;
   margin:10px 0 5px;
-  color:#172033;
 }
 
 .popup-body input,
 .popup-body select,
 .popup-body textarea{
   width:100%;
-  padding:12px;
-  border:1px solid #d4d9e2;
-  border-radius:8px;
+  padding:13px;
+  border:1px solid #d5dce7;
+  border-radius:9px;
   outline:none;
   font-size:15px;
 }
 
+.popup-body input:focus,
+.popup-body select:focus,
+.popup-body textarea:focus{
+  border-color:var(--blue);
+}
+
 .popup-body textarea{
-  min-height:80px;
-  resize:vertical;
+  min-height:85px;
 }
 
 .popup-submit{
   width:100%;
   margin-top:16px;
-  background:#12a84a;
-  color:white;
-  border:none;
-  padding:14px;
+  background:var(--green);
+  color:#fff;
+  border:0;
+  padding:15px;
   border-radius:9px;
   font-size:16px;
-  font-weight:800;
+  font-weight:900;
   cursor:pointer;
 }
 
-/* MOBILE */
-@media(max-width:900px){
+/* =========================
+   MOBILE BOTTOM BAR
+========================= */
+
+.mobile-actions{
+  display:none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1000px){
 
   .nav-links{
     display:none;
-  }
-
-  .hero{
-    min-height:620px;
-  }
-
-  .hero-content{
-    padding:55px 0;
-  }
-
-  .hero h1{
-    font-size:37px;
-  }
-
-  .hero-sub{
-    font-size:18px;
   }
 
   .service-grid{
@@ -691,7 +1041,113 @@ footer li{
     grid-template-columns:1fr;
   }
 
+  .team-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
   .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .brand-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+
+  body{
+    padding-bottom:68px;
+  }
+
+  .topbar .container{
+    flex-direction:column;
+    text-align:center;
+    gap:3px;
+  }
+
+  .topbar{
+    font-size:11px;
+  }
+
+  .brand-name{
+    font-size:21px;
+  }
+
+  .brand-name .service{
+    font-size:14px;
+  }
+
+  .hero{
+    min-height:690px;
+  }
+
+  .hero-content{
+    padding:55px 0;
+  }
+
+  .hero-brand{
+    font-size:36px;
+    letter-spacing:-1px;
+  }
+
+  .hero h1{
+    font-size:20px;
+  }
+
+  .hero-sub{
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .hero-buttons .btn{
+    width:100%;
+  }
+
+  .signature-section{
+    height:390px;
+  }
+
+  .signature-content h2{
+    font-size:30px;
+  }
+
+  .signature-content p{
+    font-size:15px;
+  }
+
+  section{
+    padding:50px 0;
+  }
+
+  .section-title{
+    margin-bottom:30px;
+  }
+
+  .section-title h2{
+    font-size:29px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-card img{
+    height:210px;
+  }
+
+  .about h2{
+    font-size:30px;
+  }
+
+  .points{
     grid-template-columns:1fr;
   }
 
@@ -703,81 +1159,70 @@ footer li{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:520px){
-
-  .topbar .container{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .logo img{
-    width:155px;
-  }
-
-  .nav-inner{
-    min-height:65px;
-  }
-
-  .hero{
-    min-height:650px;
-  }
-
-  .hero h1{
-    font-size:32px;
-  }
-
-  .hero-logo{
-    width:230px;
-  }
-
-  .services-line{
-    gap:6px;
-  }
-
-  .service-tag{
-    font-size:12px;
-    padding:7px 10px;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-  }
-
-  .hero-buttons .btn{
-    width:100%;
-  }
-
-  section{
-    padding:45px 0;
-  }
-
-  .section-title h2{
-    font-size:28px;
-  }
-
-  .service-grid{
-    grid-template-columns:1fr;
-  }
-
-  .gallery-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
   .gallery-grid img{
     height:150px;
   }
 
-  .points{
+  .brand-grid{
     grid-template-columns:1fr;
   }
 
+  .brand-box{
+    max-height:94vh;
+  }
+
   .cta h2{
-    font-size:28px;
+    font-size:29px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .floating{
+    display:none;
+  }
+
+  /* MOBILE ACTION BAR */
+
+  .mobile-actions{
+    position:fixed;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    left:0;
+    right:0;
+    bottom:0;
+    height:64px;
+    background:#fff;
+    z-index:4500;
+    box-shadow:0 -5px 20px rgba(0,0,0,.18);
+  }
+
+  .mobile-action{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:12px;
+    font-weight:900;
+    gap:2px;
+  }
+
+  .mobile-action span{
+    font-size:22px;
+  }
+
+  .mobile-call{
+    background:var(--blue);
+  }
+
+  .mobile-wa{
+    background:var(--green);
+  }
+
+  .mobile-book{
+    background:var(--red);
   }
 }
 </style>
@@ -789,20 +1234,24 @@ footer li{
 <div class="topbar">
   <div class="container">
     <div>⚡ Fast2Fix Service Centre</div>
+
     <div>
-      📞 <a href="tel:+919234227337">9234227337</a>
+      📞 <a href="tel:+919234227337">92342 27337</a>
       &nbsp; | &nbsp;
-      WhatsApp: <a href="https://wa.me/918434746494">8434746494</a>
+      WhatsApp:
+      <a href="https://wa.me/918434746494" target="_blank">84347 46494</a>
     </div>
   </div>
 </div>
+
 
 <!-- NAVIGATION -->
 <nav class="navbar">
   <div class="container nav-inner">
 
-    <a href="#home" class="logo">
-      <img src="hero2.jpeg" alt="Fast2Fix Service Centre">
+    <a href="#home" class="brand-name">
+      <span class="fast">Fast</span><span class="fix">2Fix</span>
+      <span class="service">Service Centre</span>
     </a>
 
     <div class="nav-links">
@@ -811,7 +1260,10 @@ footer li{
       <a href="#branches">Branches</a>
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
-      <a href="#contact" class="nav-btn">Book Service</a>
+      <a href="#locations">Locations</a>
+      <a href="javascript:void(0)" class="nav-btn" onclick="openBooking()">
+        📅 Book Service
+      </a>
     </div>
 
   </div>
@@ -822,19 +1274,20 @@ footer li{
 <section class="hero" id="home">
 
   <img class="hero-bg" src="hero2.jpeg" alt="Fast2Fix Service Centre">
+
   <div class="hero-overlay"></div>
 
   <div class="container hero-content">
 
-    <img class="hero-logo" src="hero2.jpeg" alt="Fast2Fix Service Centre">
+    <div class="hero-brand">
+      <span class="fast">Fast</span><span class="fix">2Fix</span>
+      <span class="service"> Service Centre</span>
+    </div>
 
-    <h1>
-      <span class="blue">FAST2FIX</span>
-      <span class="red"> SERVICE CENTRE</span>
-    </h1>
+    <h1>Fast • Reliable • Professional Home Appliance Repair</h1>
 
     <div class="hero-sub">
-      Fast • Reliable • Professional Home Appliance Repair Service
+      Expert technicians for AC, Refrigerator, Washing Machine and all major home appliances.
     </div>
 
     <div class="services-line">
@@ -844,223 +1297,25 @@ footer li{
       <div class="service-tag">🔥 Geyser</div>
       <div class="service-tag">📺 LED TV</div>
       <div class="service-tag">🍳 Microwave</div>
-      <div class="service-tag">💧 RO / Purifier</div>
+      <div class="service-tag">💧 RO</div>
       <div class="service-tag">🏠 Chimney</div>
     </div>
 
     <div class="hero-buttons">
+
       <a class="btn btn-call" href="tel:+919234227337">
-        📞 Call Now
+        ☎️ Call Now
       </a>
 
-      <a class="btn btn-whatsapp" href="https://wa.me/918434746494?text=Hello%20Fast2Fix%20Service%20Centre%2C%20I%20need%20appliance%20repair%20service.">
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/918434746494?text=Hello%20Fast2Fix%20Service%20Centre%2C%20I%20need%20appliance%20repair%20service."
+         target="_blank">
         💬 WhatsApp
       </a>
 
-      <button class="btn btn-book" onclick="openPopup()">
+      <button class="btn btn-book" onclick="openBooking()">
         📅 Book a Service
       </button>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Our <span>Services</span></h2>
-      <p>Professional repair and service for major home appliances</p>
-    </div>
-
-    <div class="service-grid">
-
-      <div class="service-card">
-        <img src="ac1.jpeg" alt="AC Repair">
-        <h3>❄️ AC Repair & Service</h3>
-        <p>Split AC, Window AC, Inverter AC repair, service, installation and gas work.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="fr1.jpeg" alt="Refrigerator Repair">
-        <h3>🧊 Refrigerator Repair</h3>
-        <p>Refrigerator cooling, compressor, gas, PCB and other appliance problems.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="wm1.jpeg" alt="Washing Machine Repair">
-        <h3>🌀 Washing Machine</h3>
-        <p>Front load, top load and semi-automatic washing machine repair.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="gr1.jpeg" alt="Geyser Repair">
-        <h3>🔥 Geyser Repair</h3>
-        <p>Geyser heating, thermostat, element and electrical repair services.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="mw1.jpeg" alt="Microwave Repair">
-        <h3>🍳 Microwave Repair</h3>
-        <p>Microwave oven repair and electronic component service.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="chimney1.jpeg" alt="Chimney Repair">
-        <h3>🏠 Chimney Service</h3>
-        <p>Kitchen chimney repair, cleaning and maintenance service.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="tv1.jpeg" alt="LED TV Repair">
-        <h3>📺 LED TV Repair</h3>
-        <p>LED TV display, power, sound and board related repair.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="aqua1.jpeg" alt="RO Repair">
-        <h3>💧 RO / Purifier</h3>
-        <p>RO water purifier service, filter replacement and repair.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container about-grid">
-
-    <div>
-      <img class="about-img" src="hero2.jpeg" alt="Fast2Fix Service Centre">
-    </div>
-
-    <div>
-      <h2>About <span>Fast2Fix</span></h2>
-
-      <p>
-        Fast2Fix Service Centre is a professional home appliance repair and
-        service company providing reliable appliance solutions to customers.
-      </p>
-
-      <p>
-        Our services cover AC, refrigerator, washing machine, geyser,
-        microwave, chimney, LED TV and RO / water purifier.
-      </p>
-
-      <div class="points">
-        <div class="point">✓ Experienced Technicians</div>
-        <div class="point">✓ Quality Service</div>
-        <div class="point">✓ Quick Response</div>
-        <div class="point">✓ Customer Support</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- BRANCHES -->
-<section class="branches" id="branches">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Our <span>Branches</span></h2>
-      <p>Fast2Fix Service Centre locations</p>
-    </div>
-
-    <div class="branch-grid">
-
-      <!-- DHANBAD -->
-      <div class="branch-card">
-
-        <img class="branch-front" src="Dh1.jpeg" alt="Fast2Fix Dhanbad Zonal Office">
-
-        <div class="branch-body">
-          <span class="branch-badge">ZONAL OFFICE</span>
-
-          <h3>Dhanbad <span>Branch</span></h3>
-
-          <p>
-            Our main zonal office in Dhanbad, Jharkhand.
-            Fast2Fix Service Centre provides home appliance repair and
-            service in Dhanbad and nearby areas.
-          </p>
-
-          <br>
-
-          <p>📍 Naya Bazar, Kabadi Patti, Dhanbad, Jharkhand</p>
-        </div>
-
-        <div class="branch-gallery">
-          <img src="Dh1.jpeg" alt="Dhanbad Office">
-          <img src="hero2.jpeg" alt="Fast2Fix Dhanbad">
-        </div>
-
-      </div>
-
-
-      <!-- BOKARO -->
-      <div class="branch-card">
-
-        <img class="branch-front" src="bk2.jpeg" alt="Fast2Fix Bokaro Branch">
-
-        <div class="branch-body">
-          <span class="branch-badge">OPEN BRANCH</span>
-
-          <h3>Bokaro <span>Branch</span></h3>
-
-          <p>
-            Fast2Fix Service Centre Bokaro branch provides professional
-            home appliance repair and service for customers in Bokaro
-            and nearby locations.
-          </p>
-
-          <br>
-
-          <p>📍 Bokaro, Jharkhand</p>
-        </div>
-
-        <div class="branch-gallery">
-          <img src="bk1.jpeg" alt="Bokaro Office">
-          <img src="bk2.jpeg" alt="Bokaro Branch Front">
-          <img src="bk3.jpeg" alt="Bokaro Service Centre">
-        </div>
-
-      </div>
-
-
-      <!-- KHARAGPUR -->
-      <div class="branch-card">
-
-        <img class="branch-front" src="kp1.jpeg" alt="Fast2Fix Kharagpur Branch">
-
-        <div class="branch-body">
-          <span class="branch-badge">OPEN BRANCH</span>
-
-          <h3>Kharagpur <span>Branch</span></h3>
-
-          <p>
-            Fast2Fix Service Centre Kharagpur branch provides home appliance
-            repair and service in Kharagpur and nearby areas.
-          </p>
-
-          <br>
-
-          <p>📍 Kharagpur, West Bengal</p>
-        </div>
-
-        <div class="branch-gallery">
-          <img src="kp1.jpeg" alt="Kharagpur Office">
-          <img src="kp2.jpeg" alt="Kharagpur Branch">
-          <img src="kp4.jpeg" alt="Kharagpur Service Centre">
-        </div>
-
-      </div>
 
     </div>
 
@@ -1068,74 +1323,15 @@ footer li{
 </section>
 
 
-<!-- MANAGEMENT -->
-<section class="team">
+<!-- FULL SCREEN ANIMATION -->
+<section class="signature-section">
 
-  <div class="container">
+  <div class="signature-track">
 
-    <div class="section-title">
-      <h2>Our <span>Management</span></h2>
-      <p>Fast2Fix Service Centre Management Team</p>
+    <div class="signature-slide">
+      <img src="ac1.jpeg" alt="AC Repair">
     </div>
 
-    <div class="team-grid">
-
-      <div class="team-card">
-        <div class="team-icon">👨‍💼</div>
-        <h3>Reyaan Khan</h3>
-        <p>Owner & Founder</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-icon">👨‍🔧</div>
-        <h3>Sameer</h3>
-        <p>Area Manager</p>
-      </div>
-
-      <div class="team-card">
-        <div class="team-icon">👩‍💼</div>
-        <h3>Mehak</h3>
-        <p>Office Manager</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- GALLERY -->
-<section class="gallery" id="gallery">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Our <span>Work Gallery</span></h2>
-      <p>Some of our appliance repair and service work</p>
-    </div>
-
-    <div class="gallery-grid">
-
-      <img src="ac1.jpeg" alt="AC Service">
-      <img src="ac2.jpeg" alt="AC Repair">
-      <img src="ac3.jpeg" alt="AC Repair Work">
-      <img src="ac4.jpeg" alt="AC Service Work">
-
+    <div class="signature-slide">
       <img src="fr1.jpeg" alt="Refrigerator Repair">
-      <img src="fr3.jpeg" alt="Fridge Repair">
-      <img src="fr4.jpeg" alt="Fridge Service">
-      <img src="fr6.jpeg" alt="Refrigerator Service">
-
-      <img src="wm1.jpeg" alt="Washing Machine Repair">
-      <img src="wm2.jpeg" alt="Washing Machine Service">
-      <img src="wm3.jpeg" alt="Washing Machine Repair">
-      <img src="wm4.jpeg" alt="Washing Machine Work">
-
-      <img src="gr1.jpeg" alt="Geyser Repair">
-      <img src="gr2.jpeg" alt="Geyser Service">
-
-      <img src="mw1.jpeg" alt="Microwave Repair">
-      <img src="chimney1.jpeg" alt="Chimney Service">
-
-      <img src="tv1.jpeg" alt="LED TV Repair">
-      <img sr
+    </div>
