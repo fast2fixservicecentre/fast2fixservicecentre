@@ -59,7 +59,7 @@ color:#ff3030;
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:18px;
 font-size:15px;
 font-weight:bold;
 }
@@ -86,6 +86,10 @@ color:#a970ff;
 
 nav a:nth-child(6){
 color:#00d9ff;
+}
+
+nav a:nth-child(7){
+color:#ff8c00;
 }
 
 
@@ -364,7 +368,7 @@ font-size:15px;
 }
 
 
-/* ABOUT FAST2FIX */
+/* ABOUT */
 
 .about-fast2fix{
 background:white;
@@ -404,29 +408,104 @@ margin-bottom:12px;
 color:#444;
 }
 
+.about-contact{
+margin-top:18px;
+padding:15px;
+background:#f4f7fb;
+border-left:5px solid #087cff;
+border-radius:8px;
+}
 
-/* WHY */
+.about-contact p{
+margin:6px 0;
+font-weight:bold;
+}
+
+.about-contact a{
+color:#087cff;
+text-decoration:none;
+}
+
+
+/* WHY CHOOSE US */
 
 .why{
-background:#111;
+background:linear-gradient(135deg,#080808,#1d1d1d);
 color:white;
+position:relative;
+overflow:hidden;
+}
+
+.why .section-title{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.why .section-title::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:linear-gradient(90deg,#087cff,#ff3030,#20c968);
+margin:12px auto 0;
+border-radius:10px;
 }
 
 .why-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:22px;
+max-width:1200px;
+margin:auto;
 }
 
 .why-box{
-background:#1d1d1d;
-padding:25px;
-border-radius:10px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.12);
+padding:30px 20px;
+border-radius:16px;
 text-align:center;
+transition:.3s;
+position:relative;
+overflow:hidden;
+}
+
+.why-box:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,.10);
+box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+
+.why-icon{
+font-size:44px;
+margin-bottom:12px;
+display:block;
 }
 
 .why-box h3{
+font-size:19px;
 margin-bottom:10px;
+}
+
+.why-box p{
+color:#ddd;
+font-size:14px;
+}
+
+.why-box:nth-child(1){
+border-top:4px solid #087cff;
+}
+
+.why-box:nth-child(2){
+border-top:4px solid #20c968;
+}
+
+.why-box:nth-child(3){
+border-top:4px solid #ff6800;
+}
+
+.why-box:nth-child(4){
+border-top:4px solid #ff3030;
 }
 
 
@@ -760,6 +839,10 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.why .section-title{
+font-size:29px;
+}
+
 .steps{
 grid-template-columns:1fr;
 }
@@ -838,6 +921,8 @@ height:52px;
 <a href="#areas">Areas</a>
 
 <a href="#branches">Our Branches</a>
+
+<a href="#about">About</a>
 
 <a href="#contact">Contact</a>
 
@@ -1147,7 +1232,6 @@ alt="Dhanbad Branch">
 <img src="dh4.jpeg"
 alt="Dhanbad Branch">
 
-
 <button class="branch-close"
 onclick="closeBranch(event,'dhanbadGallery')">
 
@@ -1207,7 +1291,6 @@ alt="Bokaro Branch">
 <img src="bk5.jpeg"
 alt="Bokaro Branch">
 
-
 <button class="branch-close"
 onclick="closeBranch(event,'bokaroGallery')">
 
@@ -1264,7 +1347,6 @@ alt="Kharagpur Branch">
 <img src="kp4.jpeg"
 alt="Kharagpur Branch">
 
-
 <button class="branch-close"
 onclick="closeBranch(event,'kharagpurGallery')">
 
@@ -1280,7 +1362,7 @@ Close Photos
 </div>
 
 
-<!-- MANAGEMENT TEAM -->
+<!-- MANAGEMENT -->
 
 <div class="management">
 
@@ -1368,7 +1450,7 @@ customer coordination and payment collection.
 
 <!-- ABOUT FAST2FIX -->
 
-<section class="about-fast2fix">
+<section class="about-fast2fix" id="about">
 
 <div class="about-container">
 
@@ -1407,6 +1489,34 @@ we aim to provide dependable home appliance repair and
 maintenance services.
 </p>
 
+
+<div class="about-contact">
+
+<p>
+📞 Call:
+<a href="tel:9234227337">
+9234227337
+</a>
+</p>
+
+<p>
+💬 WhatsApp:
+<a href="https://wa.me/918434746494"
+target="_blank">
+8434746494
+</a>
+</p>
+
+<p>
+📞 8804022021
+</p>
+
+<p>
+📞 7050129203
+</p>
+
+</div>
+
 </div>
 
 </div>
@@ -1422,17 +1532,22 @@ maintenance services.
 Why Choose Fast2Fix?
 </h2>
 
+
 <div class="why-grid">
 
 
 <div class="why-box">
 
+<span class="why-icon">
+👨‍🔧
+</span>
+
 <h3>
-👨‍🔧 Professional Technicians
+Professional Technicians
 </h3>
 
 <p>
-Experienced technicians for home appliance service.
+Experienced technicians for reliable home appliance repair and service.
 </p>
 
 </div>
@@ -1440,12 +1555,16 @@ Experienced technicians for home appliance service.
 
 <div class="why-box">
 
+<span class="why-icon">
+⚡
+</span>
+
 <h3>
-⚡ Quick Response
+Quick Response
 </h3>
 
 <p>
-Easy booking and quick response to service requests.
+Easy booking and quick response for your appliance service requirements.
 </p>
 
 </div>
@@ -1453,177 +1572,16 @@ Easy booking and quick response to service requests.
 
 <div class="why-box">
 
+<span class="why-icon">
+🔧
+</span>
+
 <h3>
-🔧 Quality Work
+Quality Work
 </h3>
 
 <p>
-Professional repair and maintenance service.
+Professional repair work with focus on quality and customer satisfaction.
 </p>
 
-</div>
-
-
-<div class="why-box">
-
-<h3>
-📞 Easy Support
-</h3>
-
-<p>
-Contact us easily through phone and WhatsApp.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- HOW IT WORKS -->
-
-<section>
-
-<h2 class="section-title">
-How It Works
-</h2>
-
-<div class="steps">
-
-
-<div class="step">
-
-<h3>
-1️⃣ Book
-</h3>
-
-<p>
-Submit your service request online.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<h3>
-2️⃣ Confirm
-</h3>
-
-<p>
-Our team contacts you for confirmation.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<h3>
-3️⃣ Technician
-</h3>
-
-<p>
-Technician availability is checked for your area.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<h3>
-4️⃣ Service
-</h3>
-
-<p>
-Your appliance service or repair is completed.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- SERVICE AREAS -->
-
-<section class="areas" id="areas">
-
-<h2 class="section-title">
-Service Areas
-</h2>
-
-<p style="margin-bottom:25px;">
-Fast2Fix accepts service enquiries from customers across India.
-</p>
-
-
-<div class="area-list">
-
-<span class="area">Dhanbad</span>
-
-<span class="area">Bokaro</span>
-
-<span class="area">Jamshedpur</span>
-
-<span class="area">Ranchi</span>
-
-<span class="area">Kharagpur</span>
-
-<span class="area">Asansol</span>
-
-<span class="area">Patna</span>
-
-<span class="area">Kolkata</span>
-
-<span class="area">Jharkhand</span>
-
-<span class="area">Bihar</span>
-
-<span class="area">West Bengal</span>
-
-<span class="area">India</span>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2>
-Contact Fast2Fix Service Centre
-</h2>
-
-<p>
-📞
-<a href="tel:9234227337">
-9234227337
-</a>
-</p>
-
-<p>
-💬
-<a href="https://wa.me/918434746494"
-target="_blank">
-WhatsApp: 8434746494
-</a>
-</p>
-
-<p>
-8804022021
-</p>
-
-<p>
-7050129203
-</p>
-
-
-<button
+</d
