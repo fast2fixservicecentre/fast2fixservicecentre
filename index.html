@@ -9,7 +9,6 @@
 <meta name="description" content="Fast2Fix Service Centre provides professional AC, refrigerator, washing machine, geyser, microwave, chimney, TV and RO repair services.">
 
 <style>
-
 *{
 box-sizing:border-box;
 margin:0;
@@ -77,11 +76,9 @@ justify-content:center;
 text-align:center;
 color:white;
 padding:40px 20px;
-
 background-image:
 linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
 url("hero2.jpeg");
-
 background-size:cover;
 background-position:center;
 }
@@ -142,7 +139,6 @@ font-size:32px;
 margin-bottom:35px;
 }
 
-
 /* SERVICES */
 
 .services-grid{
@@ -185,7 +181,6 @@ color:#555;
 font-size:14px;
 }
 
-
 /* GALLERY */
 
 .gallery{
@@ -209,7 +204,6 @@ transition:.3s;
 .gallery-grid img:hover{
 transform:scale(1.03);
 }
-
 
 /* BRANCHES */
 
@@ -292,7 +286,6 @@ cursor:pointer;
 font-weight:bold;
 }
 
-
 /* MANAGEMENT */
 
 .management{
@@ -338,7 +331,6 @@ margin-bottom:12px;
 color:#555;
 font-size:15px;
 }
-
 
 /* ABOUT */
 
@@ -397,7 +389,6 @@ font-weight:bold;
 color:#087cff;
 text-decoration:none;
 }
-
 
 /* WHY CHOOSE */
 
@@ -463,34 +454,6 @@ color:#ddd;
 font-size:14px;
 }
 
-.why-bottom{
-max-width:1000px;
-margin:40px auto 0;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-}
-
-.why-stat{
-background:white;
-color:#222;
-padding:20px;
-border-radius:12px;
-text-align:center;
-}
-
-.why-stat strong{
-display:block;
-font-size:25px;
-color:#087cff;
-}
-
-.why-stat span{
-font-size:14px;
-color:#555;
-}
-
-
 /* HOW IT WORKS */
 
 .how{
@@ -516,78 +479,170 @@ font-size:38px;
 margin-bottom:8px;
 }
 
+/* ONLINE REACH */
 
-/* SOCIAL NETWORK */
+.reach{
+background:linear-gradient(135deg,#07152e,#087cff);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.reach-title{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.reach-subtitle{
+color:#dceaff;
+max-width:750px;
+margin:0 auto 35px;
+}
+
+.reach-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.reach-card{
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.22);
+border-radius:16px;
+padding:25px 15px;
+backdrop-filter:blur(5px);
+}
+
+.reach-icon{
+font-size:35px;
+margin-bottom:8px;
+}
+
+.counter{
+font-size:32px;
+font-weight:bold;
+margin:5px 0;
+}
+
+.reach-card p{
+color:#dceaff;
+font-size:14px;
+}
+
+/* SOCIAL */
 
 .social{
 background:white;
 text-align:center;
 }
 
-.social-intro{
-max-width:700px;
-margin:-15px auto 30px;
-color:#666;
-}
-
 .social-grid{
+max-width:900px;
+margin:auto;
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
-max-width:1000px;
-margin:auto;
+gap:18px;
 }
 
 .social-card{
-display:block;
-text-decoration:none;
-color:#222;
-background:#f7f9fb;
-padding:28px 15px;
+padding:25px 15px;
 border-radius:15px;
-box-shadow:0 3px 12px rgba(0,0,0,.09);
+text-decoration:none;
+color:white;
+font-weight:bold;
+box-shadow:0 4px 14px rgba(0,0,0,.15);
 transition:.3s;
 }
 
 .social-card:hover{
-transform:translateY(-7px);
-box-shadow:0 8px 22px rgba(0,0,0,.16);
-}
-
-.social-icon{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.social-card h3{
-font-size:19px;
-margin-bottom:5px;
-}
-
-.social-card p{
-font-size:13px;
-color:#666;
-word-break:break-word;
+transform:translateY(-7px) scale(1.02);
 }
 
 .instagram{
-border-top:5px solid #e1306c;
+background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
 }
 
 .facebook{
-border-top:5px solid #1877f2;
+background:#1877f2;
 }
 
 .youtube{
-border-top:5px solid #ff0000;
+background:#ff0000;
 }
 
 .social-whatsapp{
-border-top:5px solid #20c968;
+background:#20c968;
 }
 
+.social-icon{
+font-size:38px;
+display:block;
+margin-bottom:8px;
+}
 
-/* SERVICE AREAS - LAST */
+/* BUSINESS */
+
+.business{
+background:#f5f7fa;
+}
+
+.business-grid{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.business-card{
+background:white;
+padding:30px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.10);
+}
+
+.business-logo{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.business-card h3{
+font-size:23px;
+margin-bottom:8px;
+}
+
+.rating{
+font-size:25px;
+color:#ffb400;
+margin:8px 0;
+}
+
+.business-card p{
+color:#666;
+margin-bottom:18px;
+}
+
+.business-btn{
+display:inline-block;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.google-btn{
+background:#4285f4;
+}
+
+.justdial-btn{
+background:#e53935;
+}
+
+/* SERVICE AREAS */
 
 .areas{
 background:linear-gradient(135deg,#eef7ff,#f5fff8);
@@ -630,7 +685,6 @@ background:#087cff;
 color:white;
 }
 
-
 /* CONTACT */
 
 .contact{
@@ -649,7 +703,6 @@ text-decoration:none;
 font-weight:bold;
 }
 
-
 /* FOOTER */
 
 footer{
@@ -660,8 +713,21 @@ padding:20px;
 font-size:14px;
 }
 
+.footer-brand{
+font-size:18px;
+font-weight:bold;
+margin-bottom:5px;
+}
 
-/* FLOATING */
+.footer-brand .blue{
+color:#087cff;
+}
+
+.footer-brand .red{
+color:#ff3030;
+}
+
+/* FLOATING BUTTONS */
 
 .floating{
 position:fixed;
@@ -694,14 +760,13 @@ background:#087cff;
 background:#20c968;
 }
 
-
 /* POPUP */
 
 .popup-overlay{
 display:none;
 position:fixed;
 inset:0;
-background:rgba(0,0,0,.75);
+background:rgba(0,0,0,.78);
 z-index:9999;
 padding:20px;
 overflow:auto;
@@ -714,6 +779,18 @@ margin:4% auto;
 padding:28px;
 border-radius:14px;
 position:relative;
+animation:popupIn .35s ease;
+}
+
+@keyframes popupIn{
+from{
+transform:scale(.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
 }
 
 .close{
@@ -760,7 +837,6 @@ margin-top:8px;
 cursor:pointer;
 }
 
-
 /* BRAND POPUP */
 
 .brand-popup{
@@ -770,6 +846,7 @@ margin:5% auto;
 padding:28px;
 border-radius:14px;
 position:relative;
+animation:popupIn .35s ease;
 }
 
 .brand-popup h2{
@@ -826,7 +903,6 @@ cursor:pointer;
 font-weight:bold;
 }
 
-
 /* RESPONSIVE */
 
 @media(max-width:1000px){
@@ -855,12 +931,15 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:repeat(2,1fr);
 }
 
+.reach-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
 .social-grid{
 grid-template-columns:repeat(2,1fr);
 }
 
 }
-
 
 @media(max-width:600px){
 
@@ -932,10 +1011,6 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
-.why-bottom{
-grid-template-columns:1fr;
-}
-
 .steps{
 grid-template-columns:1fr;
 }
@@ -953,16 +1028,26 @@ margin-bottom:25px;
 width:100%;
 }
 
+.reach-grid{
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.reach-title{
+font-size:28px;
+}
+
+.counter{
+font-size:25px;
+}
+
 .social-grid{
 grid-template-columns:1fr 1fr;
+gap:12px;
 }
 
-.social-card{
-padding:22px 8px;
-}
-
-.social-icon{
-font-size:35px;
+.business-grid{
+grid-template-columns:1fr;
 }
 
 .brand-popup{
@@ -986,7 +1071,6 @@ height:52px;
 }
 
 }
-
 </style>
 </head>
 
@@ -1018,9 +1102,7 @@ height:52px;
 
 <h1>Fast<span>2</span>Fix Service Centre</h1>
 
-<p>
-Fast, Reliable & Professional Home Appliance Repair Service
-</p>
+<p>Fast, Reliable & Professional Home Appliance Repair Service</p>
 
 <p>
 AC • Refrigerator • Washing Machine • Geyser • Microwave • Chimney • TV • RO
@@ -1041,7 +1123,6 @@ target="_blank">
 </button>
 
 </div>
-
 </section>
 
 
@@ -1173,7 +1254,6 @@ target="_blank">
 
 <div class="branches-grid">
 
-
 <div class="branch-card" onclick="toggleBranch('dhanbadGallery')">
 
 <img src="dh1.jpeg" alt="Fast2Fix Dhanbad Branch">
@@ -1282,51 +1362,34 @@ Close Photos
 <div class="management-grid">
 
 <div class="management-card">
-
 <div class="management-icon">👤</div>
-
 <h3>Mr. Reyaan Khan</h3>
-
 <span>Founder & Owner</span>
-
 <p>
 Founder and Owner of Fast2Fix Service Centre,
 responsible for overall business direction,
 growth and management.
 </p>
-
 </div>
 
-
 <div class="management-card">
-
 <div class="management-icon">👨‍💼</div>
-
 <h3>Mr. Sameer</h3>
-
 <span>Operations Manager</span>
-
 <p>
 Handles daily business operations, technicians,
 service work and operational activities.
 </p>
-
 </div>
 
-
 <div class="management-card">
-
 <div class="management-icon">👩‍💼</div>
-
 <h3>Mrs. Mehak</h3>
-
 <span>Office & Accounts Manager</span>
-
 <p>
 Manages office work, service job assignments,
 customer coordination and payment collection.
 </p>
-
 </div>
 
 </div>
@@ -1342,9 +1405,7 @@ customer coordination and payment collection.
 <div class="about-container">
 
 <div class="about-image">
-
 <img src="dh1.jpeg" alt="Fast2Fix Service Centre">
-
 </div>
 
 <div class="about-content">
@@ -1371,28 +1432,22 @@ maintenance services.
 
 <div class="about-contact">
 
-<p>
-📞 Call:
+<p>📞 Call:
 <a href="tel:9234227337">9234227337</a>
 </p>
 
-<p>
-💬 WhatsApp:
+<p>💬 WhatsApp:
 <a href="https://wa.me/918434746494" target="_blank">
 8434746494
 </a>
 </p>
 
 <p>📞 8804022021</p>
-
 <p>📞 7050129203</p>
 
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 
@@ -1410,87 +1465,39 @@ experienced technicians and a customer-first approach.
 <div class="why-grid">
 
 <div class="why-box">
-
 <span class="why-icon">👨‍🔧</span>
-
 <h3>Professional Technicians</h3>
-
 <p>
 Experienced technicians for AC, refrigerator,
 washing machine and other home appliance repairs.
 </p>
-
 </div>
 
-
 <div class="why-box">
-
 <span class="why-icon">⚡</span>
-
 <h3>Quick Response</h3>
-
 <p>
 Easy booking and quick response for your appliance
 repair and service requirements.
 </p>
-
 </div>
 
-
 <div class="why-box">
-
 <span class="why-icon">🛠️</span>
-
 <h3>Quality Work</h3>
-
 <p>
 Professional repair work with attention to quality,
 safety and customer satisfaction.
 </p>
-
 </div>
-
 
 <div class="why-box">
-
-<span class="why-icon">⭐</span>
-
+<span class="why-icon">🤝</span>
 <h3>Customer First</h3>
-
 <p>
-We focus on transparent service, proper communication
-and customer satisfaction.
+We focus on clear communication, dependable service
+and a better customer experience.
 </p>
-
-</div>
-
-</div>
-
-
-<div class="why-bottom">
-
-<div class="why-stat">
-
-<strong>Professional</strong>
-
-<span>Service Team</span>
-
-</div>
-
-<div class="why-stat">
-
-<strong>Fast</strong>
-
-<span>Response</span>
-
-</div>
-
-<div class="why-stat">
-
-<strong>Trusted</strong>
-
-<span>Repair Service</span>
-
 </div>
 
 </div>
@@ -1507,54 +1514,70 @@ and customer satisfaction.
 <div class="steps">
 
 <div class="step">
-
 <div class="step-icon">📞</div>
-
 <h3>1. Contact Us</h3>
-
-<p>
-Call or WhatsApp us for your appliance repair requirement.
-</p>
-
+<p>Call or WhatsApp us for your appliance problem.</p>
 </div>
 
-
 <div class="step">
-
 <div class="step-icon">📋</div>
-
 <h3>2. Book Service</h3>
-
-<p>
-Share your appliance details and service requirement.
-</p>
-
+<p>Share your appliance and service requirement.</p>
 </div>
 
-
 <div class="step">
-
 <div class="step-icon">👨‍🔧</div>
+<h3>3. Technician Visit</h3>
+<p>Our technician checks the appliance problem.</p>
+</div>
 
-<h3>3. Technician</h3>
-
-<p>
-Our technician checks the appliance and identifies the issue.
-</p>
+<div class="step">
+<div class="step-icon">✅</div>
+<h3>4. Repair & Service</h3>
+<p>Professional repair and service as required.</p>
+</div>
 
 </div>
 
+</section>
 
-<div class="step">
 
-<div class="step-icon">✅</div>
+<!-- ONLINE REACH -->
 
-<h3>4. Get It Fixed</h3>
+<section class="reach">
 
-<p>
-Professional repair and service for your appliance.
+<h2 class="reach-title">Our Online Reach</h2>
+
+<p class="reach-subtitle">
+Fast2Fix Service Centre is building its online presence
+across multiple platforms. Connect with us and explore
+our latest services and work.
 </p>
 
+<div class="reach-grid">
+
+<div class="reach-card">
+<div class="reach-icon">🌐</div>
+<div class="counter" data-target="50000">0</div>
+<p>Online Reach</p>
+</div>
+
+<div class="reach-card">
+<div class="reach-icon">📱</div>
+<div class="counter" data-target="4">0</div>
+<p>Social Platforms</p>
+</div>
+
+<div class="reach-card">
+<div class="reach-icon">🛠️</div>
+<div class="counter" data-target="8">0</div>
+<p>Major Services</p>
+</div>
+
+<div class="reach-card">
+<div class="reach-icon">📍</div>
+<div class="counter" data-target="3">0</div>
+<p>Service Branches</p>
 </div>
 
 </div>
@@ -1564,68 +1587,103 @@ Professional repair and service for your appliance.
 
 <!-- SOCIAL NETWORK -->
 
-<section class="social" id="social">
+<section class="social">
 
 <h2 class="section-title">Connect With Us</h2>
 
-<p class="social-intro">
-Follow Fast2Fix Service Centre on social media and stay connected with us.
-</p>
-
 <div class="social-grid">
-
 
 <a class="social-card instagram"
 href="https://www.instagram.com/fast2fix_service?igsh=MXVkbnpkMW04ejZtYQ=="
 target="_blank">
 
-<div class="social-icon">📸</div>
-
-<h3>Instagram</h3>
-
-<p>Follow us on Instagram</p>
-
+<span class="social-icon">📸</span>
+Instagram
 </a>
-
 
 <a class="social-card facebook"
 href="https://www.facebook.com/share/1943G38VPs/"
 target="_blank">
 
-<div class="social-icon">📘</div>
-
-<h3>Facebook</h3>
-
-<p>Visit our Facebook Page</p>
-
+<span class="social-icon">f</span>
+Facebook
 </a>
-
 
 <a class="social-card youtube"
 href="https://www.youtube.com/@Fast2fix_service_"
 target="_blank">
 
-<div class="social-icon">▶️</div>
-
-<h3>YouTube</h3>
-
-<p>Subscribe to our YouTube Channel</p>
-
+<span class="social-icon">▶️</span>
+YouTube
 </a>
-
 
 <a class="social-card social-whatsapp"
 href="https://wa.me/918434746494"
 target="_blank">
 
-<div class="social-icon">💬</div>
-
-<h3>WhatsApp</h3>
-
-<p>Chat with Fast2Fix</p>
-
+<span class="social-icon">💬</span>
+WhatsApp
 </a>
 
+</div>
+
+</section>
+
+
+<!-- GOOGLE & JUSTDIAL -->
+
+<section class="business">
+
+<h2 class="section-title">Find Us Online</h2>
+
+<div class="business-grid">
+
+<div class="business-card">
+
+<div class="business-logo">⭐</div>
+
+<h3>Google Business Profile</h3>
+
+<div class="rating">
+★★★★★
+</div>
+
+<p>
+See our latest Google reviews, customer feedback,
+business information and location.
+</p>
+
+<a class="business-btn google-btn"
+href="https://maps.app.goo.gl/gRVLhre6StVFkE6K9"
+target="_blank">
+⭐ View Google Reviews
+</a>
+
+</div>
+
+
+<div class="business-card">
+
+<div class="business-logo">📒</div>
+
+<h3>Justdial Business</h3>
+
+<div class="rating">
+★ ★ ★ ★ ★
+</div>
+
+<p>
+Visit our Justdial business profile to see our
+service information and business details.
+</p>
+
+<a class="business-btn justdial-btn"
+href="https://jsdl.in/DT-99NUR8BI9YH"
+target="_blank">
+📒 View Justdial Business
+</a>
+
+</div>
 
 </div>
 
@@ -1640,28 +1698,28 @@ target="_blank">
 
 <div class="area-intro">
 
-<h3>📍 We Provide Home Appliance Services</h3>
+<h3>📍 Fast2Fix Service Coverage</h3>
 
 <p>
-Fast2Fix Service Centre provides professional appliance
-repair and service across selected areas.
+We provide home appliance repair and service across
+selected areas through our service network.
 </p>
 
 </div>
 
-
 <div class="area-list">
 
 <span class="area">Dhanbad</span>
+<span class="area">Bokaro</span>
+<span class="area">Jharia</span>
 <span class="area">Bank More</span>
 <span class="area">Wasseypur</span>
-<span class="area">Jharia</span>
+<span class="area">Naya Bazar</span>
+<span class="area">Asansol</span>
+<span class="area">Kulti</span>
 <span class="area">Nirsa</span>
 <span class="area">Maithon</span>
 <span class="area">Tundi</span>
-<span class="area">Bokaro</span>
-<span class="area">Kulti</span>
-<span class="area">Asansol</span>
 <span class="area">Kharagpur</span>
 
 </div>
@@ -1675,19 +1733,21 @@ repair and service across selected areas.
 
 <h2 class="section-title">Contact Fast2Fix</h2>
 
-<p>
-📞 <a href="tel:9234227337">9234227337</a>
-</p>
+<p>📞 Call: <a href="tel:9234227337">9234227337</a></p>
 
 <p>
-💬 <a href="https://wa.me/918434746494" target="_blank">
-WhatsApp: 8434746494
+💬 WhatsApp:
+<a href="https://wa.me/918434746494" target="_blank">
+8434746494
 </a>
 </p>
 
 <p>📞 8804022021</p>
-
 <p>📞 7050129203</p>
+
+<button class="btn booking" onclick="openBooking()">
+🔧 Book a Service
+</button>
 
 </section>
 
@@ -1696,12 +1756,16 @@ WhatsApp: 8434746494
 
 <footer>
 
-<p>
-© 2026 Fast2Fix Service Centre. All Rights Reserved.
-</p>
+<div class="footer-brand">
+<span class="blue">Fast</span><span class="red">2Fix</span> Service Centre
+</div>
 
 <p>
 Professional Home Appliance Repair & Service
+</p>
+
+<p>
+© 2026 Fast2Fix Service Centre. All Rights Reserved.
 </p>
 
 </footer>
@@ -1712,13 +1776,15 @@ Professional Home Appliance Repair & Service
 <div class="floating">
 
 <a class="float-btn float-call"
-href="tel:9234227337">
+href="tel:9234227337"
+title="Call Fast2Fix">
 📞
 </a>
 
 <a class="float-btn float-whatsapp"
 href="https://wa.me/918434746494"
-target="_blank">
+target="_blank"
+title="WhatsApp Fast2Fix">
 💬
 </a>
 
@@ -1733,43 +1799,60 @@ target="_blank">
 
 <span class="close" onclick="closeBooking()">×</span>
 
-<h2>Book a Service</h2>
+<h2>🔧 Book a Service</h2>
 
 <p class="popup-subtitle">
-Fast2Fix Service Centre
+Fill the details and send your booking request on WhatsApp.
 </p>
 
-<input type="text" id="customerName" placeholder="Your Name">
+<form onsubmit="sendBooking(event)">
 
-<input type="tel" id="customerPhone" placeholder="Mobile Number">
+<input
+type="text"
+id="customerName"
+placeholder="Your Name"
+required>
 
-<select id="appliance">
+<input
+type="tel"
+id="customerPhone"
+placeholder="Mobile Number"
+required>
 
-<option value="">Select Appliance</option>
+<select id="serviceType" required>
 
-<option>AC</option>
-<option>Refrigerator</option>
-<option>Washing Machine</option>
-<option>Geyser</option>
-<option>Microwave Oven</option>
-<option>Chimney</option>
-<option>TV</option>
+<option value="">Select Service</option>
+
+<option>AC Repair & Service</option>
+<option>Refrigerator Repair</option>
+<option>Washing Machine Repair</option>
+<option>Geyser Repair</option>
+<option>Microwave Oven Repair</option>
+<option>Chimney Repair</option>
+<option>TV Repair</option>
 <option>RO / Water Purifier</option>
 
 </select>
 
+<input
+type="text"
+id="customerLocation"
+placeholder="Your Location"
+required>
+
 <textarea
-id="problem"
+id="customerMessage"
 rows="4"
 placeholder="Describe your appliance problem">
 </textarea>
 
-<button class="submit" onclick="sendBooking()">
-Send Booking on WhatsApp
+<button class="submit" type="submit">
+💬 Send Booking on WhatsApp
 </button>
 
-</div>
+</form>
 
+</div>
 </div>
 
 
@@ -1783,31 +1866,25 @@ Send Booking on WhatsApp
 
 <h2>Choose Your Brand</h2>
 
-<div class="brand-title" id="selectedService"></div>
+<div class="brand-title" id="selectedService">
+Service
+</div>
 
 <p>
-Select your appliance brand for service.
+Select your appliance brand for service enquiry.
 </p>
 
 <div class="brand-grid">
 
-<button class="brand-btn" onclick="brandSelected('LG')">LG</button>
-
-<button class="brand-btn" onclick="brandSelected('Samsung')">Samsung</button>
-
-<button class="brand-btn" onclick="brandSelected('Whirlpool')">Whirlpool</button>
-
-<button class="brand-btn" onclick="brandSelected('Voltas')">Voltas</button>
-
-<button class="brand-btn" onclick="brandSelected('Haier')">Haier</button>
-
-<button class="brand-btn" onclick="brandSelected('Panasonic')">Panasonic</button>
-
-<button class="brand-btn" onclick="brandSelected('Hitachi')">Hitachi</button>
-
-<button class="brand-btn" onclick="brandSelected('Godrej')">Godrej</button>
-
-<button class="brand-btn" onclick="brandSelected('Other')">Other</button>
+<button class="brand-btn" onclick="brandBooking('LG')">LG</button>
+<button class="brand-btn" onclick="brandBooking('Samsung')">Samsung</button>
+<button class="brand-btn" onclick="brandBooking('Whirlpool')">Whirlpool</button>
+<button class="brand-btn" onclick="brandBooking('Voltas')">Voltas</button>
+<button class="brand-btn" onclick="brandBooking('Haier')">Haier</button>
+<button class="brand-btn" onclick="brandBooking('Panasonic')">Panasonic</button>
+<button class="brand-btn" onclick="brandBooking('Hitachi')">Hitachi</button>
+<button class="brand-btn" onclick="brandBooking('IFB')">IFB</button>
+<button class="brand-btn" onclick="brandBooking('Other')">Other</button>
 
 </div>
 
@@ -1816,13 +1893,12 @@ Close
 </button>
 
 </div>
-
 </div>
 
 
 <script>
 
-/* BOOKING */
+/* BOOKING POPUP */
 
 function openBooking(){
 
@@ -1836,41 +1912,49 @@ document.getElementById("bookingPopup").style.display="none";
 
 }
 
-function sendBooking(){
 
-let name=document.getElementById("customerName").value.trim();
+/* AUTO BOOKING POPUP */
 
-let phone=document.getElementById("customerPhone").value.trim();
+window.addEventListener("load",function(){
 
-let appliance=document.getElementById("appliance").value;
+setTimeout(function(){
 
-let problem=document.getElementById("problem").value.trim();
+openBooking();
 
-if(!name || !phone || !appliance){
+},1800);
 
-alert("Please fill Name, Mobile Number and Appliance.");
+});
 
-return;
 
-}
+/* BOOKING TO WHATSAPP */
 
-let message=
-"Hello Fast2Fix Service Centre,%0A%0A"+
-"Service Booking Request%0A"+
-"Name: "+encodeURIComponent(name)+"%0A"+
-"Mobile: "+encodeURIComponent(phone)+"%0A"+
-"Appliance: "+encodeURIComponent(appliance)+"%0A"+
-"Problem: "+encodeURIComponent(problem);
+function sendBooking(event){
+
+event.preventDefault();
+
+let name=document.getElementById("customerName").value;
+let phone=document.getElementById("customerPhone").value;
+let service=document.getElementById("serviceType").value;
+let location=document.getElementById("customerLocation").value;
+let message=document.getElementById("customerMessage").value;
+
+let text=
+"🔧 *Fast2Fix Service Booking*%0A%0A"+
+"👤 Name: "+encodeURIComponent(name)+"%0A"+
+"📞 Mobile: "+encodeURIComponent(phone)+"%0A"+
+"🛠️ Service: "+encodeURIComponent(service)+"%0A"+
+"📍 Location: "+encodeURIComponent(location)+"%0A"+
+"📝 Problem: "+encodeURIComponent(message);
 
 window.open(
-"https://wa.me/918434746494?text="+message,
+"https://wa.me/918434746494?text="+text,
 "_blank"
 );
 
 }
 
 
-/* BRANDS */
+/* BRAND POPUP */
 
 function openBrands(service){
 
@@ -1886,20 +1970,25 @@ document.getElementById("brandPopup").style.display="none";
 
 }
 
-function brandSelected(brand){
+
+/* BRAND TO BOOKING */
+
+function brandBooking(brand){
 
 let service=document.getElementById("selectedService").innerText;
 
-let message=
-"Hello Fast2Fix Service Centre,%0A"+
-"I need service for:%0A"+
-"Service: "+encodeURIComponent(service)+"%0A"+
-"Brand: "+encodeURIComponent(brand);
+closeBrands();
 
-window.open(
-"https://wa.me/918434746494?text="+message,
-"_blank"
-);
+openBooking();
+
+setTimeout(function(){
+
+document.getElementById("serviceType").value=service;
+
+document.getElementById("customerMessage").value=
+"Brand: "+brand;
+
+},100);
 
 }
 
@@ -1931,27 +2020,95 @@ document.getElementById(id).style.display="none";
 }
 
 
-/* CLOSE POPUPS WHEN CLICKING OUTSIDE */
+/* ONLINE REACH COUNTER */
 
-window.onclick=function(event){
+function animateCounter(element){
+
+let target=parseInt(element.getAttribute("data-target"));
+
+let current=0;
+
+let increment=Math.max(1,Math.ceil(target/80));
+
+let timer=setInterval(function(){
+
+current+=increment;
+
+if(current>=target){
+
+current=target;
+
+clearInterval(timer);
+
+}
+
+if(target>=1000){
+
+element.innerText=
+current.toLocaleString()+"+";
+
+}else{
+
+element.innerText=
+current+"+";
+
+}
+
+},20);
+
+}
+
+
+let counterStarted=false;
+
+function startCounters(){
+
+if(counterStarted) return;
+
+let section=document.querySelector(".reach");
+
+let position=section.getBoundingClientRect().top;
+
+if(position<window.innerHeight-100){
+
+counterStarted=true;
+
+document.querySelectorAll(".counter").forEach(function(counter){
+
+animateCounter(counter);
+
+});
+
+}
+
+}
+
+window.addEventListener("scroll",startCounters);
+
+window.addEventListener("load",startCounters);
+
+
+/* CLOSE POPUPS BY CLICKING OUTSIDE */
+
+window.addEventListener("click",function(event){
 
 let booking=document.getElementById("bookingPopup");
 
-let brands=document.getElementById("brandPopup");
+let brand=document.getElementById("brandPopup");
 
 if(event.target===booking){
 
-booking.style.display="none";
+closeBooking();
 
 }
 
-if(event.target===brands){
+if(event.target===brand){
 
-brands.style.display="none";
-
-}
+closeBrands();
 
 }
+
+});
 
 </script>
 
