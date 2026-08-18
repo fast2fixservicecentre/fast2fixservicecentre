@@ -416,7 +416,7 @@ color:#087cff;
 text-decoration:none;
 }
 
-/* WHY */
+/* WHY CHOOSE */
 
 .why{
 background:linear-gradient(135deg,#080808,#1d1d1d);
@@ -425,6 +425,15 @@ color:white;
 
 .why .section-title{
 font-size:36px;
+margin-bottom:12px;
+}
+
+.why-intro{
+max-width:850px;
+margin:0 auto 35px;
+text-align:center;
+color:#d8d8d8;
+font-size:16px;
 }
 
 .why-grid{
@@ -437,15 +446,23 @@ margin:auto;
 
 .why-box{
 background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.13);
 padding:30px 20px;
 border-radius:16px;
 text-align:center;
 transition:.3s;
+min-height:230px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 }
 
 .why-box:hover{
 transform:translateY(-8px);
+background:rgba(255,255,255,.10);
+border-color:#087cff;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
 .why-icon{
@@ -771,6 +788,10 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.why-box{
+min-height:200px;
+}
+
 .steps{
 grid-template-columns:1fr;
 }
@@ -832,7 +853,6 @@ height:52px;
 
 </header>
 
-
 <!-- HERO -->
 
 <section class="hero" id="home">
@@ -861,7 +881,6 @@ target="_blank">
 
 </div>
 </section>
-
 
 <!-- SERVICES -->
 
@@ -938,7 +957,6 @@ target="_blank">
 </div>
 </section>
 
-
 <!-- GALLERY -->
 
 <section class="gallery" id="gallery">
@@ -982,45 +1000,6 @@ target="_blank">
 </div>
 </section>
 
-
-<!-- SERVICE AREAS -->
-
-<section class="areas" id="areas">
-
-<h2 class="section-title">Service Areas</h2>
-
-<div class="area-intro">
-
-<h3>🌐 Accepted Service Enquiries Across India</h3>
-
-<p>
-Fast2Fix Service Centre accepts service enquiries from customers across India.
-Our major service locations include Jharkhand, Bihar and West Bengal.
-</p>
-
-</div>
-
-<div class="area-list">
-
-<span class="area">📍 Dhanbad</span>
-<span class="area">📍 Bokaro</span>
-<span class="area">📍 Jamshedpur</span>
-<span class="area">📍 Ranchi</span>
-<span class="area">📍 Kharagpur</span>
-<span class="area">📍 Asansol</span>
-<span class="area">📍 Patna</span>
-<span class="area">📍 Kolkata</span>
-
-<span class="area">🇮🇳 Jharkhand</span>
-<span class="area">🇮🇳 Bihar</span>
-<span class="area">🇮🇳 West Bengal</span>
-<span class="area">🇮🇳 India</span>
-
-</div>
-
-</section>
-
-
 <!-- BRANCHES -->
 
 <section class="branches" id="branches">
@@ -1060,7 +1039,6 @@ Close Photos
 </div>
 </div>
 
-
 <div class="branch-card" onclick="toggleBranch('bokaroGallery')">
 
 <img src="bk2.jpeg" alt="Fast2Fix Bokaro Branch">
@@ -1092,7 +1070,6 @@ Close Photos
 
 </div>
 </div>
-
 
 <div class="branch-card" onclick="toggleBranch('kharagpurGallery')">
 
@@ -1126,7 +1103,6 @@ Close Photos
 </div>
 
 </div>
-
 
 <!-- MANAGEMENT -->
 
@@ -1171,7 +1147,6 @@ customer coordination and payment collection.
 </div>
 
 </section>
-
 
 <!-- ABOUT -->
 
@@ -1225,32 +1200,57 @@ maintenance services.
 </div>
 </section>
 
-
 <!-- WHY CHOOSE US -->
 
-<section class="why">
+<section class="why" id="why">
 
 <h2 class="section-title">Why Choose Fast2Fix?</h2>
+
+<p class="why-intro">
+Professional home appliance repair service focused on
+quality, reliability, quick response and customer satisfaction.
+</p>
 
 <div class="why-grid">
 
 <div class="why-box">
 <span class="why-icon">👨‍🔧</span>
 <h3>Professional Technicians</h3>
-<p>Experienced technicians for reliable home appliance repair and service.</p>
+<p>
+Skilled and experienced technicians for AC, refrigerator,
+washing machine and other home appliance repairs.
+</p>
 </div>
 
 <div class="why-box">
 <span class="why-icon">⚡</span>
 <h3>Quick Response</h3>
-<p>Easy booking and quick response for your appliance service requirements.</p>
+<p>
+Fast response to service enquiries with easy call and
+WhatsApp booking support.
+</p>
 </div>
 
 <div class="why-box">
 <span class="why-icon">🔧</span>
-<h3>Quality Work</h3>
-<p>Professional repair work with focus on quality and customer satisfaction.</p>
+<h3>Quality Repair Work</h3>
+<p>
+Professional diagnosis and reliable repair solutions
+with focus on quality workmanship.
+</p>
 </div>
 
 <div class="why-box">
-<span cl
+<span class="why-icon">💰</span>
+<h3>Transparent Pricing</h3>
+<p>
+Clear service information and reasonable pricing
+with no unnecessary confusion.
+</p>
+</div>
+
+<div class="why-box">
+<span class="why-icon">📱</span>
+<h3>Easy Booking</h3>
+<p>
+Book your appliance service easily through phone cal
