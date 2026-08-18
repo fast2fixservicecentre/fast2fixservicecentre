@@ -1,25 +1,1256 @@
-<span class="why-icon">🛠️</span>
-<h3>Trusted Service</h3>
-<p>Reliable home appliance repair service with professional support.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fast2Fix Service Centre | Home Appliance Repair</title>
+
+<meta name="description" content="Fast2Fix Service Centre provides professional AC, refrigerator, washing machine, geyser, microwave, chimney, TV and RO repair services in Dhanbad, Bokaro, Jharkhand, Bihar and West Bengal.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fa;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:#111;
+color:white;
+padding:16px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:25px;
+font-weight:bold;
+white-space:nowrap;
+}
+
+.logo .fast{color:#087cff;}
+.logo .fix{color:#ff3030;}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:15px;
+font-weight:bold;
+}
+
+nav a:nth-child(1){color:#00c6ff;}
+nav a:nth-child(2){color:#20c968;}
+nav a:nth-child(3){color:#ffb000;}
+nav a:nth-child(4){color:#ff4d6d;}
+nav a:nth-child(5){color:#a970ff;}
+nav a:nth-child(6){color:#00d9ff;}
+nav a:nth-child(7){color:#ff8c00;}
+
+.hero{
+min-height:620px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:40px 20px;
+background-image:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("hero2.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:900px;
+width:100%;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+text-shadow:0 3px 10px rgba(0,0,0,.7);
+}
+
+.hero h1 span{color:#ff3030;}
+
+.hero p{
+font-size:20px;
+margin-bottom:12px;
+text-shadow:0 2px 6px rgba(0,0,0,.8);
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+margin:12px 5px 0;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+border:0;
+font-size:16px;
+cursor:pointer;
+}
+
+.call{background:#087cff;}
+.whatsapp{background:#20c968;}
+.booking{background:#ff6800;}
+
+section{
+padding:65px 6%;
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:35px;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+}
+
+.service-card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 3px 12px rgba(0,0,0,.10);
+transition:.3s;
+cursor:pointer;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+}
+
+.service-card img{
+width:100%;
+height:190px;
+object-fit:cover;
+}
+
+.service-card-content{
+padding:18px;
+text-align:center;
+}
+
+.service-card h3{
+margin-bottom:7px;
+}
+
+/* GALLERY */
+
+.gallery{
+background:white;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.gallery-grid img{
+width:100%;
+height:210px;
+object-fit:cover;
+border-radius:10px;
+transition:.3s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.03);
+}
+
+/* SERVICE AREAS */
+
+.areas{
+background:white;
+text-align:center;
+}
+
+.area-intro{
+max-width:900px;
+margin:0 auto 25px;
+padding:22px;
+border-radius:15px;
+background:linear-gradient(135deg,#087cff,#20c968);
+color:white;
+box-shadow:0 5px 18px rgba(0,0,0,.15);
+}
+
+.area-intro h3{
+font-size:24px;
+margin-bottom:7px;
+}
+
+.area-intro p{
+font-size:16px;
+}
+
+.area-list{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+.area{
+background:#eeeeee;
+padding:10px 18px;
+border-radius:25px;
+font-weight:bold;
+transition:.2s;
+}
+
+.area:hover{
+background:#087cff;
+color:white;
+}
+
+/* BRANCHES */
+
+.branches{
+background:#f5f7fa;
+}
+
+.branches-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.branch-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.12);
+transition:.3s;
+cursor:pointer;
+}
+
+.branch-card:hover{
+transform:translateY(-6px);
+}
+
+.branch-card>img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.branch-content{
+padding:20px;
+text-align:center;
+}
+
+.branch-content h3{
+font-size:23px;
+margin-bottom:6px;
+}
+
+.branch-type{
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+background:#087cff;
+color:white;
+font-size:14px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.branch-content p{
+margin:5px 0;
+color:#555;
+}
+
+.branch-gallery{
+display:none;
+padding:15px;
+background:#fafafa;
+}
+
+.branch-gallery img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.branch-close{
+background:#222;
+color:white;
+border:0;
+padding:8px 18px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* MANAGEMENT */
+
+.management{
+margin-top:55px;
+}
+
+.management-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.management-card{
+background:white;
+padding:25px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 3px 12px rgba(0,0,0,.10);
+}
+
+.management-icon{
+font-size:42px;
+margin-bottom:8px;
+}
+
+.management-card h3{
+font-size:21px;
+margin-bottom:5px;
+}
+
+.management-card span{
+display:inline-block;
+background:#087cff;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:14px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.management-card p{
+color:#555;
+font-size:15px;
+}
+
+/* ABOUT */
+
+.about-fast2fix{
+background:white;
+}
+
+.about-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:35px;
+}
+
+.about-image{
+width:42%;
+}
+
+.about-image img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:14px;
+box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.about-content{
+width:58%;
+}
+
+.about-content h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.about-content p{
+margin-bottom:12px;
+color:#444;
+}
+
+.about-contact{
+margin-top:18px;
+padding:15px;
+background:#f4f7fb;
+border-left:5px solid #087cff;
+border-radius:8px;
+}
+
+.about-contact p{
+margin:6px 0;
+font-weight:bold;
+}
+
+.about-contact a{
+color:#087cff;
+text-decoration:none;
+}
+
+/* WHY */
+
+.why{
+background:linear-gradient(135deg,#080808,#1d1d1d);
+color:white;
+}
+
+.why .section-title{
+font-size:36px;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+max-width:1200px;
+margin:auto;
+}
+
+.why-box{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.12);
+padding:30px 20px;
+border-radius:16px;
+text-align:center;
+transition:.3s;
+}
+
+.why-box:hover{
+transform:translateY(-8px);
+}
+
+.why-icon{
+font-size:44px;
+margin-bottom:12px;
+display:block;
+}
+
+.why-box h3{
+font-size:19px;
+margin-bottom:10px;
+}
+
+.why-box p{
+color:#ddd;
+font-size:14px;
+}
+
+/* HOW IT WORKS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.step-icon{
+font-size:38px;
+margin-bottom:8px;
+}
+
+/* CONTACT */
+
+.contact{
+background:#111;
+color:white;
+text-align:center;
+}
+
+.contact p{
+margin:8px 0;
+}
+
+.contact a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+color:#aaa;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+/* FLOATING */
+
+.floating{
+position:fixed;
+right:18px;
+bottom:20px;
+z-index:2000;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.float-btn{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-decoration:none;
+font-size:25px;
+box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+.float-call{background:#087cff;}
+.float-whatsapp{background:#20c968;}
+
+/* POPUP */
+
+.popup-overlay{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+z-index:9999;
+padding:20px;
+overflow:auto;
+}
+
+.popup{
+background:white;
+max-width:500px;
+margin:4% auto;
+padding:28px;
+border-radius:14px;
+position:relative;
+}
+
+.close{
+position:absolute;
+right:15px;
+top:8px;
+font-size:30px;
+cursor:pointer;
+color:#555;
+}
+
+.popup h2{
+text-align:center;
+margin-bottom:8px;
+}
+
+.popup-subtitle{
+text-align:center;
+color:#666;
+margin-bottom:18px;
+}
+
+.popup input,
+.popup textarea,
+.popup select{
+width:100%;
+padding:12px;
+margin:7px 0;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:15px;
+}
+
+.submit{
+width:100%;
+background:#20c968;
+color:white;
+border:0;
+padding:14px;
+border-radius:7px;
+font-weight:bold;
+font-size:16px;
+margin-top:8px;
+cursor:pointer;
+}
+
+/* BRAND POPUP */
+
+.brand-popup{
+background:white;
+max-width:600px;
+margin:5% auto;
+padding:28px;
+border-radius:14px;
+position:relative;
+}
+
+.brand-popup h2{
+text-align:center;
+margin-bottom:5px;
+}
+
+.brand-title{
+text-align:center;
+color:#087cff;
+font-weight:bold;
+font-size:18px;
+margin-bottom:8px;
+}
+
+.brand-popup p{
+text-align:center;
+color:#666;
+margin-bottom:20px;
+}
+
+.brand-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+
+.brand-btn{
+background:#f4f6f8;
+border:2px solid #e1e5e9;
+padding:15px 8px;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.2s;
+}
+
+.brand-btn:hover{
+background:#087cff;
+color:white;
+border-color:#087cff;
+}
+
+.back-btn{
+display:block;
+margin:20px auto 0;
+background:#222;
+color:white;
+border:0;
+padding:11px 22px;
+border-radius:7px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.gallery-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.branches-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.why-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr);
+}
+
+.management-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+gap:8px;
+padding:14px 10px;
+}
+
+.logo{
+font-size:21px;
+}
+
+nav{
+display:none;
+}
+
+.hero{
+min-height:560px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.btn{
+display:block;
+width:90%;
+margin:9px auto;
+}
+
+section{
+padding:45px 15px;
+}
+
+.section-title{
+font-size:27px;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.gallery-grid img{
+height:160px;
+}
+
+.branches-grid{
+grid-template-columns:1fr;
+}
+
+.branch-card>img{
+height:210px;
+}
+
+.management-grid{
+grid-template-columns:1fr;
+}
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.steps{
+grid-template-columns:1fr;
+}
+
+.about-container{
+display:block;
+}
+
+.about-image{
+width:100%;
+margin-bottom:25px;
+}
+
+.about-content{
+width:100%;
+}
+
+.brand-popup{
+margin:12% auto;
+padding:22px 15px;
+}
+
+.brand-grid{
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.brand-btn{
+padding:14px 5px;
+font-size:14px;
+}
+
+.float-btn{
+width:52px;
+height:52px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<span class="fast">Fast</span><span class="fix">2Fix</span> Service Centre
 </div>
 
-<div class="why-box">
-<span class="why-icon">💰</span>
-<h3>Fair Pricing</h3>
-<p>Transparent and reasonable service charges for customers.</p>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Our Work</a>
+<a href="#areas">Areas</a>
+<a href="#branches">Branches</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Fast<span>2</span>Fix Service Centre</h1>
+
+<p>Fast, Reliable & Professional Home Appliance Repair Service</p>
+
+<p>
+AC • Refrigerator • Washing Machine • Geyser • Microwave • Chimney • TV • RO
+</p>
+
+<a class="btn call" href="tel:9234227337">📞 Call Now</a>
+
+<a class="btn whatsapp"
+href="https://wa.me/918434746494"
+target="_blank">
+💬 WhatsApp
+</a>
+
+<button class="btn booking" onclick="openBooking()">
+🔧 Book a Service
+</button>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card" onclick="openBrands('AC Repair & Service')">
+<img src="ac1.jpeg" alt="AC Repair">
+<div class="service-card-content">
+<h3>❄️ AC Repair & Service</h3>
+<p>Professional AC repair, servicing and installation.</p>
+</div>
 </div>
 
-<div class="why-box">
-<span class="why-icon">📞</span>
-<h3>Easy Booking</h3>
-<p>Call or WhatsApp us to book your appliance repair service.</p>
+<div class="service-card" onclick="openBrands('Refrigerator Repair')">
+<img src="fr1.jpeg" alt="Refrigerator Repair">
+<div class="service-card-content">
+<h3>🧊 Refrigerator Repair</h3>
+<p>Reliable refrigerator repair and maintenance.</p>
+</div>
 </div>
 
-<div class="why-box">
-<span class="why-icon">⭐</span>
-<h3>Customer Satisfaction</h3>
-<p>We focus on quality workmanship and customer satisfaction.</p>
+<div class="service-card" onclick="openBrands('Washing Machine Repair')">
+<img src="wm1.jpeg" alt="Washing Machine Repair">
+<div class="service-card-content">
+<h3>🧺 Washing Machine</h3>
+<p>Front load, top load and semi-automatic repair.</p>
+</div>
+</div>
+
+<div class="service-card" onclick="openBrands('Geyser Repair')">
+<img src="gr1.jpeg" alt="Geyser Repair">
+<div class="service-card-content">
+<h3>🔥 Geyser Repair</h3>
+<p>Electric geyser repair and maintenance.</p>
+</div>
+</div>
+
+<div class="service-card" onclick="openBrands('Microwave Oven Repair')">
+<img src="mw1.jpeg" alt="Microwave Repair">
+<div class="service-card-content">
+<h3>🍽️ Microwave Oven</h3>
+<p>Microwave inspection and professional repair.</p>
+</div>
+</div>
+
+<div class="service-card" onclick="openBrands('Chimney Repair')">
+<img src="chimney1.jpeg" alt="Chimney Repair">
+<div class="service-card-content">
+<h3>🏠 Chimney Repair</h3>
+<p>Kitchen chimney service and maintenance.</p>
+</div>
+</div>
+
+<div class="service-card" onclick="openBrands('TV Repair')">
+<img src="tv1.jpeg" alt="TV Repair">
+<div class="service-card-content">
+<h3>📺 TV Repair</h3>
+<p>Professional TV repair and technical service.</p>
+</div>
+</div>
+
+<div class="service-card" onclick="openBrands('RO / Water Purifier')">
+<img src="aqua1.jpeg" alt="RO Water Purifier Repair">
+<div class="service-card-content">
+<h3>💧 RO / Water Purifier</h3>
+<p>RO and water purifier repair and service.</p>
+</div>
 </div>
 
 </div>
 </section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+<h2 class="section-title">Our Work</h2>
+
+<div class="gallery-grid">
+
+<img src="ac1.jpeg" alt="AC Repair Work">
+<img src="ac2.jpeg" alt="AC Service Work">
+<img src="ac3.jpeg" alt="AC Technician Work">
+<img src="ac4.jpeg" alt="AC Repair Work">
+
+<img src="fr1.jpeg" alt="Refrigerator Repair">
+<img src="fr2.jpeg" alt="Fridge Service">
+<img src="fr3.jpeg" alt="Fridge Repair">
+<img src="fr4.jpeg" alt="Fridge Service">
+
+<img src="wm1.jpeg" alt="Washing Machine Repair">
+<img src="wm2.jpeg" alt="Washing Machine Service">
+<img src="wm3.jpeg" alt="Washing Machine Repair">
+<img src="wm4.jpeg" alt="Washing Machine Service">
+
+<img src="gr1.jpeg" alt="Geyser Repair">
+<img src="gr2.jpeg" alt="Geyser Service">
+<img src="gr3.jpeg" alt="Geyser Repair">
+<img src="gr4.jpeg" alt="Geyser Service">
+
+<img src="mw1.jpeg" alt="Microwave Repair">
+<img src="mw2.jpeg" alt="Microwave Service">
+
+<img src="chimney1.jpeg" alt="Chimney Repair">
+<img src="chimney2.jpeg" alt="Chimney Service">
+
+<img src="tv1.jpeg" alt="TV Repair">
+<img src="tv2.jpeg" alt="TV Service">
+
+<img src="aqua1.jpeg" alt="RO Repair">
+<img src="aqua2.jpeg" alt="RO Service">
+
+</div>
+</section>
+
+
+<!-- SERVICE AREAS -->
+
+<section class="areas" id="areas">
+
+<h2 class="section-title">Service Areas</h2>
+
+<div class="area-intro">
+
+<h3>🌐 Accepted Service Enquiries Across India</h3>
+
+<p>
+Fast2Fix Service Centre accepts service enquiries from customers across India.
+Our major service locations include Jharkhand, Bihar and West Bengal.
+</p>
+
+</div>
+
+<div class="area-list">
+
+<span class="area">📍 Dhanbad</span>
+<span class="area">📍 Bokaro</span>
+<span class="area">📍 Jamshedpur</span>
+<span class="area">📍 Ranchi</span>
+<span class="area">📍 Kharagpur</span>
+<span class="area">📍 Asansol</span>
+<span class="area">📍 Patna</span>
+<span class="area">📍 Kolkata</span>
+
+<span class="area">🇮🇳 Jharkhand</span>
+<span class="area">🇮🇳 Bihar</span>
+<span class="area">🇮🇳 West Bengal</span>
+<span class="area">🇮🇳 India</span>
+
+</div>
+
+</section>
+
+
+<!-- BRANCHES -->
+
+<section class="branches" id="branches">
+
+<h2 class="section-title">Our Branches</h2>
+
+<div class="branches-grid">
+
+<div class="branch-card" onclick="toggleBranch('dhanbadGallery')">
+
+<img src="dh1.jpeg" alt="Fast2Fix Dhanbad Branch">
+
+<div class="branch-content">
+
+<span class="branch-type">Zonal Branch</span>
+
+<h3>Dhanbad</h3>
+
+<p>📍 Naya Bazar, Dhanbad</p>
+
+<p>Fast2Fix Service Centre Zonal Branch</p>
+
+</div>
+
+<div class="branch-gallery" id="dhanbadGallery">
+
+<img src="dh1.jpeg" alt="Dhanbad Branch">
+<img src="dh2.jpeg" alt="Dhanbad Branch">
+<img src="dh3.jpeg" alt="Dhanbad Branch">
+<img src="dh4.jpeg" alt="Dhanbad Branch">
+
+<button class="branch-close"
+onclick="closeBranch(event,'dhanbadGallery')">
+Close Photos
+</button>
+
+</div>
+</div>
+
+
+<div class="branch-card" onclick="toggleBranch('bokaroGallery')">
+
+<img src="bk2.jpeg" alt="Fast2Fix Bokaro Branch">
+
+<div class="branch-content">
+
+<span class="branch-type">Branch Office</span>
+
+<h3>Bokaro</h3>
+
+<p>📍 City Centre, Bokaro</p>
+
+<p>Fast2Fix Service Centre Branch Office</p>
+
+</div>
+
+<div class="branch-gallery" id="bokaroGallery">
+
+<img src="bk1.jpeg" alt="Bokaro Branch">
+<img src="bk2.jpeg" alt="Bokaro Branch">
+<img src="bk3.jpeg" alt="Bokaro Branch">
+<img src="bk4.jpeg" alt="Bokaro Branch">
+<img src="bk5.jpeg" alt="Bokaro Branch">
+
+<button class="branch-close"
+onclick="closeBranch(event,'bokaroGallery')">
+Close Photos
+</button>
+
+</div>
+</div>
+
+
+<div class="branch-card" onclick="toggleBranch('kharagpurGallery')">
+
+<img src="kp1.jpeg" alt="Fast2Fix Kharagpur Branch">
+
+<div class="branch-content">
+
+<span class="branch-type">Service Branch</span>
+
+<h3>Kharagpur</h3>
+
+<p>📍 Kharagpur, West Bengal</p>
+
+<p>Fast2Fix Service Centre Service Branch</p>
+
+</div>
+
+<div class="branch-gallery" id="kharagpurGallery">
+
+<img src="kp1.jpeg" alt="Kharagpur Branch">
+<img src="kp2.jpeg" alt="Kharagpur Branch">
+<img src="kp3.jpeg" alt="Kharagpur Branch">
+<img src="kp4.jpeg" alt="Kharagpur Branch">
+
+<button class="branch-close"
+onclick="closeBranch(event,'kharagpurGallery')">
+Close Photos
+</button>
+
+</div>
+</div>
+
+</div>
+
+
+<!-- MANAGEMENT -->
+
+<div class="management">
+
+<h2 class="section-title">Our Management Team</h2>
+
+<div class="management-grid">
+
+<div class="management-card">
+<div class="management-icon">👤</div>
+<h3>Mr. Reyaan Khan</h3>
+<span>Founder & Owner</span>
+<p>
+Founder and Owner of Fast2Fix Service Centre,
+responsible for overall business direction,
+growth and management.
+</p>
+</div>
+
+<div class="management-card">
+<div class="management-icon">👨‍💼</div>
+<h3>Mr. Sameer</h3>
+<span>Operations Manager</span>
+<p>
+Handles daily business operations, technicians,
+service work and operational activities.
+</p>
+</div>
+
+<div class="management-card">
+<div class="management-icon">👩‍💼</div>
+<h3>Mrs. Mehak</h3>
+<span>Office & Accounts Manager</span>
+<p>
+Manages office work, service job assignments,
+customer coordination and payment collection.
+</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about-fast2fix" id="about">
+
+<div class="about-container">
+
+<div class="about-image">
+<img src="dh1.jpeg" alt="Fast2Fix Service Centre">
+</div>
+
+<div class="about-content">
+
+<h2>About Fast2Fix Service Centre</h2>
+
+<p>
+Fast2Fix Service Centre is a professional home appliance
+repair and service company providing reliable repair
+solutions for AC, refrigerator, washing machine, geyser,
+microwave oven, chimney, TV and RO / water purifier.
+</p>
+
+<p>
+Our team focuses on professional service, quick response,
+quality workmanship and customer satisfaction.
+</p>
+
+<p>
+With experienced technicians and dedicated office support,
+we aim to provide dependable home appliance repair and
+maintenance services.
+</p>
+
+<div class="about-contact">
+
+<p>📞 Call:
+<a href="tel:9234227337">9234227337</a>
+</p>
+
+<p>💬 WhatsApp:
+<a href="https://wa.me/918434746494" target="_blank">
+8434746494
+</a>
+</p>
+
+<p>📞 8804022021</p>
+<p>📞 7050129203</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="why">
+
+<h2 class="section-title">Why Choose Fast2Fix?</h2>
+
+<div class="why-grid">
+
+<div class="why-box">
+<span class="why-icon">👨‍🔧</span>
+<h3>Professional Technicians</h3>
+<p>Experienced technicians for reliable home appliance repair and service.</p>
+</div>
+
+<div class="why-box">
+<span class="why-icon">⚡</span>
+<h3>Quick Response</h3>
+<p>Easy booking and quick response for your appliance service requirements.</p>
+</div>
+
+<div class="why-box">
+<span class="why-icon">🔧</span>
+<h3>Quality Work</h3>
+<p>Professional repair work with focus on quality and customer satisfaction.</p>
+</div>
+
+<div class="why-box">
+<span cl
