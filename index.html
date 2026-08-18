@@ -1112,11 +1112,9 @@ AC • Refrigerator • Washing Machine • Geyser • Microwave • Chimney •
 📞 Call Now
 </a>
 
-<a class="btn whatsapp"
-href="https://wa.me/918434746494"
-target="_blank">
+<button class="btn whatsapp" onclick="openBooking()">
 💬 WhatsApp
-</a>
+</button>
 
 <button class="btn booking" onclick="openBooking()">
 🔧 Book a Service
@@ -1434,7 +1432,7 @@ maintenance services.
 
 <p>📍 Address: Dhanbad Zonal Branch, Naya Bazar</p>
 
-<p>📧 Gmail:
+<p>📧 Email:
 <a href="mailto:fast2fixservices.co.in@gmail.com">
 fast2fixservices.co.in@gmail.com
 </a>
@@ -1445,7 +1443,7 @@ fast2fixservices.co.in@gmail.com
 </p>
 
 <p>💬 WhatsApp:
-<a href="https://wa.me/918434746494" target="_blank">
+<a href="javascript:void(0)" onclick="openBooking()">
 8434746494
 </a>
 </p>
@@ -1626,8 +1624,8 @@ YouTube
 </a>
 
 <a class="social-card social-whatsapp"
-href="https://wa.me/918434746494"
-target="_blank">
+href="javascript:void(0)"
+onclick="openBooking()">
 
 <span class="social-icon">💬</span>
 WhatsApp
@@ -1744,7 +1742,7 @@ selected areas through our service network.
 <p>📍 Address: Dhanbad Zonal Branch, Naya Bazar</p>
 
 <p>
-📧 Gmail:
+📧 Email:
 <a href="mailto:fast2fixservices.co.in@gmail.com">
 fast2fixservices.co.in@gmail.com
 </a>
@@ -1754,7 +1752,7 @@ fast2fixservices.co.in@gmail.com
 
 <p>
 💬 WhatsApp:
-<a href="https://wa.me/918434746494" target="_blank">
+<a href="javascript:void(0)" onclick="openBooking()">
 8434746494
 </a>
 </p>
@@ -1781,6 +1779,12 @@ fast2fixservices.co.in@gmail.com
 Professional Home Appliance Repair & Service
 </p>
 
+<p>📍 Dhanbad Zonal Branch, Naya Bazar</p>
+
+<p>
+📧 fast2fixservices.co.in@gmail.com
+</p>
+
 <p>
 © 2026 Fast2Fix Service Centre. All Rights Reserved.
 </p>
@@ -1799,8 +1803,8 @@ title="Call Fast2Fix">
 </a>
 
 <a class="float-btn float-whatsapp"
-href="https://wa.me/918434746494"
-target="_blank"
+href="javascript:void(0)"
+onclick="openBooking()"
 title="WhatsApp Fast2Fix">
 💬
 </a>
@@ -1808,7 +1812,7 @@ title="WhatsApp Fast2Fix">
 </div>
 
 
-<!-- BOOKING POPUP -->
+<!-- BOOKING / ENQUIRY POPUP -->
 
 <div class="popup-overlay" id="bookingPopup">
 
@@ -1816,10 +1820,10 @@ title="WhatsApp Fast2Fix">
 
 <span class="close" onclick="closeBooking()">×</span>
 
-<h2>🔧 Book a Service</h2>
+<h2>🔧 Service Enquiry</h2>
 
 <p class="popup-subtitle">
-Fill the details and send your booking request on WhatsApp.
+Fill your details and send your enquiry directly on WhatsApp.
 </p>
 
 <form onsubmit="sendBooking(event)">
@@ -1851,10 +1855,40 @@ required>
 
 </select>
 
+<select id="customerBrand" required>
+
+<option value="">Select Brand</option>
+
+<option>LG</option>
+<option>Samsung</option>
+<option>Whirlpool</option>
+<option>Voltas</option>
+<option>Haier</option>
+<option>Panasonic</option>
+<option>Hitachi</option>
+<option>IFB</option>
+<option>Other</option>
+
+</select>
+
 <input
 type="text"
-id="customerLocation"
-placeholder="Your Location"
+id="customerCity"
+placeholder="City"
+required>
+
+<input
+type="text"
+id="customerArea"
+placeholder="Area / Locality"
+required>
+
+<input
+type="text"
+id="customerPincode"
+placeholder="PIN Code"
+inputmode="numeric"
+maxlength="6"
 required>
 
 <textarea
@@ -1864,7 +1898,7 @@ placeholder="Describe your appliance problem">
 </textarea>
 
 <button class="submit" type="submit">
-💬 Send Booking on WhatsApp
+💬 Submit Enquiry on WhatsApp
 </button>
 
 </form>
@@ -1949,19 +1983,25 @@ function sendBooking(event){
 
 event.preventDefault();
 
-let name=document.getElementById("customerName").value;
-let phone=document.getElementById("customerPhone").value;
+let name=document.getElementById("customerName").value.trim();
+let phone=document.getElementById("customerPhone").value.trim();
 let service=document.getElementById("serviceType").value;
-let location=document.getElementById("customerLocation").value;
-let message=document.getElementById("customerMessage").value;
+let brand=document.getElementById("customerBrand").value;
+let city=document.getElementById("customerCity").value.trim();
+let area=document.getElementById("customerArea").value.trim();
+let pincode=document.getElementById("customerPincode").value.trim();
+let message=document.getElementById("customerMessage").value.trim();
 
 let text=
-"🔧 *Fast2Fix Service Booking*%0A%0A"+
-"👤 Name: "+encodeURIComponent(name)+"%0A"+
-"📞 Mobile: "+encodeURIComponent(phone)+"%0A"+
-"🛠️ Service: "+encodeURIComponent(service)+"%0A"+
-"📍 Location: "+encodeURIComponent(location)+"%0A"+
-"📝 Problem: "+encodeURIComponent(message);
+"🔧 *Fast2Fix New Service Enquiry*%0A%0A"+
+"👤 *Name:* "+encodeURIComponent(name)+"%0A"+
+"📞 *Mobile:* "+encodeURIComponent(phone)+"%0A"+
+"🛠️ *Service:* "+encodeURIComponent(service)+"%0A"+
+"🏷️ *Brand:* "+encodeURIComponent(brand)+"%0A"+
+"🏙️ *City:* "+encodeURIComponent(city)+"%0A"+
+"📍 *Area:* "+encodeURIComponent(area)+"%0A"+
+"📮 *PIN Code:* "+encodeURIComponent(pincode)+"%0A"+
+"📝 *Problem:* "+encodeURIComponent(message || "Not mentioned");
 
 window.open(
 "https://wa.me/918434746494?text="+text,
@@ -2002,8 +2042,7 @@ setTimeout(function(){
 
 document.getElementById("serviceType").value=service;
 
-document.getElementById("customerMessage").value=
-"Brand: "+brand;
+document.getElementById("customerBrand").value=brand;
 
 },100);
 
