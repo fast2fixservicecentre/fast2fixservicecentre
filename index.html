@@ -185,52 +185,6 @@ transition:.3s;
 transform:scale(1.03);
 }
 
-/* SERVICE AREAS */
-
-.areas{
-background:white;
-text-align:center;
-}
-
-.area-intro{
-max-width:900px;
-margin:0 auto 25px;
-padding:22px;
-border-radius:15px;
-background:linear-gradient(135deg,#087cff,#20c968);
-color:white;
-box-shadow:0 5px 18px rgba(0,0,0,.15);
-}
-
-.area-intro h3{
-font-size:24px;
-margin-bottom:7px;
-}
-
-.area-intro p{
-font-size:16px;
-}
-
-.area-list{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:12px;
-}
-
-.area{
-background:#eeeeee;
-padding:10px 18px;
-border-radius:25px;
-font-weight:bold;
-transition:.2s;
-}
-
-.area:hover{
-background:#087cff;
-color:white;
-}
-
 /* BRANCHES */
 
 .branches{
@@ -419,7 +373,7 @@ text-decoration:none;
 /* WHY CHOOSE */
 
 .why{
-background:linear-gradient(135deg,#080808,#1d1d1d);
+background:linear-gradient(135deg,#050505,#181818);
 color:white;
 }
 
@@ -451,7 +405,7 @@ padding:30px 20px;
 border-radius:16px;
 text-align:center;
 transition:.3s;
-min-height:230px;
+min-height:235px;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -460,7 +414,7 @@ justify-content:center;
 
 .why-box:hover{
 transform:translateY(-8px);
-background:rgba(255,255,255,.10);
+background:rgba(255,255,255,.11);
 border-color:#087cff;
 box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
@@ -481,18 +435,35 @@ color:#ddd;
 font-size:14px;
 }
 
+.why-badge{
+display:inline-block;
+margin-top:10px;
+padding:5px 12px;
+border-radius:20px;
+background:#087cff;
+color:white;
+font-size:12px;
+font-weight:bold;
+}
+
 /* HOW IT WORKS */
+
+.how{
+background:#f5f7fa;
+}
 
 .steps{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .step{
 background:white;
 padding:25px;
-border-radius:10px;
+border-radius:12px;
 text-align:center;
 box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
@@ -510,14 +481,117 @@ color:white;
 text-align:center;
 }
 
-.contact p{
-margin:8px 0;
+.contact .section-title{
+color:white;
+margin-bottom:25px;
 }
 
-.contact a{
+.contact-intro{
+max-width:800px;
+margin:0 auto 28px;
+color:#ccc;
+}
+
+.contact-grid{
+max-width:1050px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.contact-card{
+background:#1d1d1d;
+border:1px solid #333;
+padding:22px 15px;
+border-radius:14px;
+transition:.3s;
+}
+
+.contact-card:hover{
+transform:translateY(-5px);
+border-color:#087cff;
+}
+
+.contact-icon{
+font-size:34px;
+display:block;
+margin-bottom:8px;
+}
+
+.contact-card h3{
+font-size:17px;
+margin-bottom:7px;
+}
+
+.contact-card p{
+font-size:14px;
+color:#ccc;
+}
+
+.contact-card a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+}
+
+.contact-card a:hover{
+color:#20c968;
+}
+
+.contact-locations{
+margin-top:25px;
+font-weight:bold;
+color:#fff;
+}
+
+/* SERVICE AREAS - AT BOTTOM */
+
+.areas{
+background:white;
+text-align:center;
+}
+
+.area-intro{
+max-width:900px;
+margin:0 auto 28px;
+padding:25px;
+border-radius:15px;
+background:linear-gradient(135deg,#087cff,#20c968);
+color:white;
+box-shadow:0 5px 18px rgba(0,0,0,.15);
+}
+
+.area-intro h3{
+font-size:24px;
+margin-bottom:8px;
+}
+
+.area-intro p{
+font-size:16px;
+}
+
+.area-list{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+max-width:1000px;
+margin:auto;
+}
+
+.area{
+background:#eeeeee;
+padding:11px 20px;
+border-radius:25px;
+font-weight:bold;
+transition:.2s;
+}
+
+.area:hover{
+background:#087cff;
+color:white;
+transform:translateY(-2px);
 }
 
 /* FOOTER */
@@ -526,8 +600,12 @@ footer{
 background:#000;
 color:#aaa;
 text-align:center;
-padding:20px;
+padding:22px 15px;
 font-size:14px;
+}
+
+footer strong{
+color:white;
 }
 
 /* FLOATING */
@@ -716,6 +794,10 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:repeat(2,1fr);
 }
 
+.contact-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 @media(max-width:600px){
@@ -789,7 +871,7 @@ grid-template-columns:1fr;
 }
 
 .why-box{
-min-height:200px;
+min-height:205px;
 }
 
 .steps{
@@ -807,6 +889,14 @@ margin-bottom:25px;
 
 .about-content{
 width:100%;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.area{
+padding:9px 15px;
 }
 
 .brand-popup{
@@ -845,13 +935,14 @@ height:52px;
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#gallery">Our Work</a>
-<a href="#areas">Areas</a>
 <a href="#branches">Branches</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+<a href="#areas">Areas</a>
 </nav>
 
 </header>
+
 
 <!-- HERO -->
 
@@ -881,6 +972,7 @@ target="_blank">
 
 </div>
 </section>
+
 
 <!-- SERVICES -->
 
@@ -957,6 +1049,7 @@ target="_blank">
 </div>
 </section>
 
+
 <!-- GALLERY -->
 
 <section class="gallery" id="gallery">
@@ -1000,6 +1093,7 @@ target="_blank">
 </div>
 </section>
 
+
 <!-- BRANCHES -->
 
 <section class="branches" id="branches">
@@ -1039,6 +1133,7 @@ Close Photos
 </div>
 </div>
 
+
 <div class="branch-card" onclick="toggleBranch('bokaroGallery')">
 
 <img src="bk2.jpeg" alt="Fast2Fix Bokaro Branch">
@@ -1070,6 +1165,7 @@ Close Photos
 
 </div>
 </div>
+
 
 <div class="branch-card" onclick="toggleBranch('kharagpurGallery')">
 
@@ -1103,6 +1199,7 @@ Close Photos
 </div>
 
 </div>
+
 
 <!-- MANAGEMENT -->
 
@@ -1148,6 +1245,7 @@ customer coordination and payment collection.
 
 </section>
 
+
 <!-- ABOUT -->
 
 <section class="about-fast2fix" id="about">
@@ -1182,75 +1280,23 @@ maintenance services.
 
 <div class="about-contact">
 
-<p>📞 Call:
-<a href="tel:9234227337">9234227337</a>
+<p>
+📞 Office:
+<a href="tel:9234227337">9234 227 337</a>
 </p>
 
-<p>💬 WhatsApp:
+<p>
+💬 WhatsApp:
 <a href="https://wa.me/918434746494" target="_blank">
-8434746494
+8434 746 494
 </a>
 </p>
 
-<p>📞 8804022021</p>
-<p>📞 7050129203</p>
-
-</div>
-</div>
-</div>
-</section>
-
-<!-- WHY CHOOSE US -->
-
-<section class="why" id="why">
-
-<h2 class="section-title">Why Choose Fast2Fix?</h2>
-
-<p class="why-intro">
-Professional home appliance repair service focused on
-quality, reliability, quick response and customer satisfaction.
+<p>
+🚨 Emergency:
+<a href="tel:8804022021">8804 022 021</a>
 </p>
 
-<div class="why-grid">
-
-<div class="why-box">
-<span class="why-icon">👨‍🔧</span>
-<h3>Professional Technicians</h3>
 <p>
-Skilled and experienced technicians for AC, refrigerator,
-washing machine and other home appliance repairs.
-</p>
-</div>
-
-<div class="why-box">
-<span class="why-icon">⚡</span>
-<h3>Quick Response</h3>
-<p>
-Fast response to service enquiries with easy call and
-WhatsApp booking support.
-</p>
-</div>
-
-<div class="why-box">
-<span class="why-icon">🔧</span>
-<h3>Quality Repair Work</h3>
-<p>
-Professional diagnosis and reliable repair solutions
-with focus on quality workmanship.
-</p>
-</div>
-
-<div class="why-box">
-<span class="why-icon">💰</span>
-<h3>Transparent Pricing</h3>
-<p>
-Clear service information and reasonable pricing
-with no unnecessary confusion.
-</p>
-</div>
-
-<div class="why-box">
-<span class="why-icon">📱</span>
-<h3>Easy Booking</h3>
-<p>
-Book your appliance service easily through phone cal
+👨‍💼 Area Manager:
+<a
