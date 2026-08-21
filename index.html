@@ -9,7 +9,6 @@
 <meta name="description" content="Fast2Fix Service Centre provides professional home appliance repair and service for AC, refrigerator, washing machine, geyser, microwave oven, chimney, TV and RO. Serving since 1992 and registered in 2024.">
 
 <style>
-
 *{
 box-sizing:border-box;
 margin:0;
@@ -26,8 +25,6 @@ background:#f5f7fa;
 color:#222;
 line-height:1.6;
 }
-
-/* HEADER */
 
 header{
 background:#111;
@@ -66,12 +63,12 @@ letter-spacing:.5px;
 }
 
 .logo-history{
+display:block;
 font-size:11px;
 color:#ffd000;
-display:block;
-margin-top:2px;
 font-weight:bold;
-letter-spacing:.3px;
+margin-top:3px;
+letter-spacing:.4px;
 }
 
 nav a{
@@ -89,9 +86,6 @@ nav a:nth-child(4){color:#ff4d6d;}
 nav a:nth-child(5){color:#a970ff;}
 nav a:nth-child(6){color:#00d9ff;}
 
-
-/* HERO */
-
 .hero{
 min-height:620px;
 display:flex;
@@ -99,36 +93,23 @@ align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
-padding:50px 20px;
-position:relative;
-
-/*
-   contain nahi kiya gaya hai kyunki photo ko
-   poore hero mein background ke roop mein rakhna hai.
-   Logo/text ko center mein clear rakha gaya hai.
-*/
-
+padding:40px 20px;
 background-image:
-linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.50)),
+linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
 url("hero2.jpeg");
-
 background-size:cover;
-background-position:center center;
-background-repeat:no-repeat;
+background-position:center;
 }
 
 .hero-content{
-max-width:1000px;
+max-width:900px;
 width:100%;
-position:relative;
-z-index:2;
 }
 
 .hero h1{
-font-size:52px;
-margin-bottom:7px;
-text-shadow:0 3px 12px rgba(0,0,0,.9);
-font-weight:800;
+font-size:50px;
+margin-bottom:8px;
+text-shadow:0 3px 10px rgba(0,0,0,.7);
 }
 
 .hero h1 span{
@@ -136,36 +117,22 @@ color:#ff3030;
 }
 
 .hero-subtitle{
-font-size:23px;
+font-size:22px;
 font-weight:bold;
 color:#fff;
-margin-bottom:5px;
-text-shadow:0 2px 7px rgba(0,0,0,.9);
-}
-
-.hero-history{
-display:inline-block;
-background:rgba(0,0,0,.72);
-border:2px solid #ffd000;
-color:#ffd000;
-padding:7px 18px;
-border-radius:25px;
-font-size:16px;
-font-weight:bold;
-margin:4px 0 13px;
-text-shadow:0 1px 5px rgba(0,0,0,.8);
-box-shadow:0 3px 12px rgba(0,0,0,.35);
+margin-bottom:12px;
+text-shadow:0 2px 6px rgba(0,0,0,.8);
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:10px;
-text-shadow:0 2px 7px rgba(0,0,0,.9);
+margin-bottom:12px;
+text-shadow:0 2px 6px rgba(0,0,0,.8);
 }
 
 .hero-phone{
 display:inline-block;
-background:rgba(0,0,0,.72);
+background:rgba(0,0,0,.65);
 border:2px solid #087cff;
 padding:10px 22px;
 border-radius:30px;
@@ -201,9 +168,6 @@ background:#20c968;
 background:#ff6800;
 }
 
-
-/* GENERAL SECTIONS */
-
 section{
 padding:65px 6%;
 }
@@ -213,7 +177,6 @@ text-align:center;
 font-size:32px;
 margin-bottom:35px;
 }
-
 
 /* SERVICES */
 
@@ -257,7 +220,6 @@ color:#555;
 font-size:14px;
 }
 
-
 /* GALLERY */
 
 .gallery{
@@ -281,7 +243,6 @@ transition:.3s;
 .gallery-grid img:hover{
 transform:scale(1.03);
 }
-
 
 /* BRANCHES */
 
@@ -383,7 +344,6 @@ cursor:pointer;
 font-weight:bold;
 }
 
-
 /* MANAGEMENT */
 
 .management{
@@ -430,7 +390,6 @@ color:#555;
 font-size:14px;
 }
 
-
 /* HISTORY */
 
 .history{
@@ -471,7 +430,6 @@ font-size:28px;
 font-weight:bold;
 margin-top:20px;
 }
-
 
 /* ABOUT */
 
@@ -531,6 +489,9 @@ color:#087cff;
 text-decoration:none;
 }
 
+.about-contact .emergency{
+color:#e53935;
+}
 
 /* WHY CHOOSE */
 
@@ -596,7 +557,6 @@ color:#ddd;
 font-size:14px;
 }
 
-
 /* HOW IT WORKS */
 
 .how{
@@ -621,7 +581,6 @@ box-shadow:0 2px 8px rgba(0,0,0,.08);
 font-size:38px;
 margin-bottom:8px;
 }
-
 
 /* ONLINE REACH */
 
@@ -675,7 +634,6 @@ color:#dceaff;
 font-size:14px;
 }
 
-
 /* SOCIAL */
 
 .social{
@@ -726,7 +684,6 @@ font-size:38px;
 display:block;
 margin-bottom:8px;
 }
-
 
 /* BUSINESS */
 
@@ -788,7 +745,6 @@ background:#4285f4;
 background:#e53935;
 }
 
-
 /* SERVICE AREAS */
 
 .areas{
@@ -831,7 +787,6 @@ transition:.2s;
 background:#087cff;
 color:white;
 }
-
 
 /* CONTACT */
 
@@ -877,7 +832,6 @@ margin-top:4px;
 color:#20c968;
 }
 
-
 /* FOOTER */
 
 footer{
@@ -901,7 +855,6 @@ color:#087cff;
 .footer-brand .red{
 color:#ff3030;
 }
-
 
 /* FLOATING BUTTONS */
 
@@ -935,7 +888,6 @@ background:#087cff;
 .float-whatsapp{
 background:#20c968;
 }
-
 
 /* POPUP */
 
@@ -1037,7 +989,6 @@ color:#444;
 margin:8px 0;
 }
 
-
 /* RESPONSIVE */
 
 @media(max-width:1100px){
@@ -1072,7 +1023,6 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-
 @media(max-width:700px){
 
 header{
@@ -1083,39 +1033,26 @@ padding:14px 10px;
 
 .logo{
 font-size:21px;
-text-align:center;
-}
-
-.logo-sub{
-font-size:11px;
-}
-
-.logo-history{
-font-size:10px;
 }
 
 nav{
 display:none;
 }
 
+.logo-history{
+font-size:10px;
+}
+
 .hero{
 min-height:590px;
-padding:45px 15px;
-background-position:center center;
 }
 
 .hero h1{
-font-size:34px;
-line-height:1.2;
+font-size:32px;
 }
 
 .hero-subtitle{
 font-size:18px;
-}
-
-.hero-history{
-font-size:14px;
-padding:6px 13px;
 }
 
 .hero p{
@@ -1230,40 +1167,26 @@ height:52px;
 }
 
 }
-
 </style>
 </head>
 
 <body>
 
-
-<!-- HEADER -->
-
 <header>
 
 <div class="logo">
-
 <span class="fast">Fast</span><span class="fix">2Fix</span> Service Centre
-
-<span class="logo-sub">
-Home Appliances Service
-</span>
-
-<span class="logo-history">
-⭐ Since 1992 • Registered in 2024
-</span>
-
+<span class="logo-sub">Home Appliances Service</span>
+<span class="logo-history">⭐ Since 1992 • Registered in 2024</span>
 </div>
 
 <nav>
-
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#gallery">Our Work</a>
 <a href="#branches">Branches</a>
 <a href="#about">About</a>
 <a href="#areas">Areas</a>
-
 </nav>
 
 </header>
@@ -1275,16 +1198,10 @@ Home Appliances Service
 
 <div class="hero-content">
 
-<h1>
-Fast<span>2</span>Fix Service Centre
-</h1>
+<h1>Fast<span>2</span>Fix Service Centre</h1>
 
 <div class="hero-subtitle">
 Home Appliances Service
-</div>
-
-<div class="hero-history">
-⭐ Since 1992 • Registered in 2024
 </div>
 
 <p>
@@ -1316,7 +1233,6 @@ target="_blank">
 </button>
 
 </div>
-
 </section>
 
 
@@ -1324,150 +1240,75 @@ target="_blank">
 
 <section id="services">
 
-<h2 class="section-title">
-Our Services
-</h2>
+<h2 class="section-title">Our Services</h2>
 
 <div class="services-grid">
 
-
 <div class="service-card" onclick="openBookingFor('AC')">
-
 <img src="ac1.jpeg" alt="AC Repair">
-
 <div class="service-card-content">
-
 <h3>❄️ AC Repair & Service</h3>
-
-<p>
-Repair, installation, servicing and shifting.
-</p>
-
+<p>Repair, installation, servicing and shifting.</p>
 </div>
-
 </div>
-
 
 <div class="service-card" onclick="openBookingFor('Refrigerator')">
-
 <img src="fr1.jpeg" alt="Refrigerator Repair">
-
 <div class="service-card-content">
-
 <h3>🧊 Refrigerator Repair</h3>
-
-<p>
-Professional refrigerator repair and service.
-</p>
-
+<p>Professional refrigerator repair and service.</p>
 </div>
-
 </div>
-
 
 <div class="service-card" onclick="openBookingFor('Washing Machine')">
-
 <img src="wm1.jpeg" alt="Washing Machine Repair">
-
 <div class="service-card-content">
-
 <h3>🧺 Washing Machine</h3>
-
-<p>
-Top load, front load, semi and commercial.
-</p>
-
+<p>Top load, front load, semi and commercial.</p>
 </div>
-
 </div>
-
 
 <div class="service-card" onclick="openBookingFor('Geyser')">
-
 <img src="gr1.jpeg" alt="Geyser Repair">
-
 <div class="service-card-content">
-
 <h3>🔥 Geyser Repair</h3>
-
-<p>
-Electric and commercial geyser service.
-</p>
-
+<p>Electric and commercial geyser service.</p>
 </div>
-
 </div>
-
 
 <div class="service-card" onclick="openBookingFor('Microwave')">
-
 <img src="mw1.jpeg" alt="Microwave Repair">
-
 <div class="service-card-content">
-
 <h3>🍽️ Microwave Oven</h3>
-
-<p>
-Home, commercial and restaurant microwave service.
-</p>
-
+<p>Home, commercial and restaurant microwave service.</p>
 </div>
-
 </div>
-
 
 <div class="service-card" onclick="openBookingFor('Chimney')">
-
 <img src="chimney1.jpeg" alt="Chimney Repair">
-
 <div class="service-card-content">
-
 <h3>🏠 Chimney Repair</h3>
-
-<p>
-Kitchen chimney repair and service.
-</p>
-
+<p>Kitchen chimney repair and service.</p>
 </div>
-
 </div>
-
 
 <div class="service-card" onclick="openBookingFor('TV')">
-
 <img src="tv1.jpeg" alt="TV Repair">
-
 <div class="service-card-content">
-
 <h3>📺 TV Repair</h3>
-
-<p>
-LED, 4K, 5K, HD, Plasma and other TVs.
-</p>
-
+<p>LED, 4K, 5K, HD, Plasma and other TVs.</p>
 </div>
-
 </div>
-
 
 <div class="service-card" onclick="openBookingFor('RO / Water Purifier')">
-
 <img src="aqua1.jpeg" alt="RO Water Purifier Repair">
-
 <div class="service-card-content">
-
 <h3>💧 RO / Water Purifier</h3>
-
-<p>
-RO, purifier installation, repair and service.
-</p>
-
+<p>RO, purifier installation, repair and service.</p>
+</div>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 
@@ -1475,9 +1316,7 @@ RO, purifier installation, repair and service.
 
 <section class="gallery" id="gallery">
 
-<h2 class="section-title">
-Our Work
-</h2>
+<h2 class="section-title">Our Work</h2>
 
 <div class="gallery-grid">
 
@@ -1514,7 +1353,6 @@ Our Work
 <img src="aqua2.jpeg" alt="RO Service">
 
 </div>
-
 </section>
 
 
@@ -1522,9 +1360,7 @@ Our Work
 
 <section class="branches" id="branches">
 
-<h2 class="section-title">
-Our Branches
-</h2>
+<h2 class="section-title">Our Branches</h2>
 
 <div class="branches-grid">
 
@@ -1537,17 +1373,11 @@ Our Branches
 
 <div class="branch-content">
 
-<span class="branch-type">
-Main / Zonal Branch
-</span>
+<span class="branch-type">Main / Zonal Branch</span>
 
-<h3>
-Dhanbad
-</h3>
+<h3>Dhanbad</h3>
 
-<p>
-📍 Naya Bazar, Dhanbad
-</p>
+<p>📍 Naya Bazar, Dhanbad</p>
 
 <p class="manager-name">
 Manager: Mr. Reyaan Khan
@@ -1556,14 +1386,10 @@ Manager: Mr. Reyaan Khan
 <a class="manager-phone"
 href="tel:8434746494"
 onclick="event.stopPropagation();">
-
 📞 8434746494
-
 </a>
 
-<p>
-Fast2Fix Service Centre Zonal Branch
-</p>
+<p>Fast2Fix Service Centre Zonal Branch</p>
 
 </div>
 
@@ -1576,13 +1402,10 @@ Fast2Fix Service Centre Zonal Branch
 
 <button class="branch-close"
 onclick="closeBranch(event,'dhanbadGallery')">
-
 Close Photos
-
 </button>
 
 </div>
-
 </div>
 
 
@@ -1594,17 +1417,11 @@ Close Photos
 
 <div class="branch-content">
 
-<span class="branch-type">
-Branch 3
-</span>
+<span class="branch-type">Branch 3</span>
 
-<h3>
-Bokaro
-</h3>
+<h3>Bokaro</h3>
 
-<p>
-📍 Ansari Mohalla, Bokaro
-</p>
+<p>📍 Ansari Mohalla, Bokaro</p>
 
 <p class="manager-name">
 Manager: Ms. Mahak
@@ -1613,14 +1430,10 @@ Manager: Ms. Mahak
 <a class="manager-phone"
 href="tel:9234227337"
 onclick="event.stopPropagation();">
-
 📞 9234227337
-
 </a>
 
-<p>
-Fast2Fix Service Centre Branch 3
-</p>
+<p>Fast2Fix Service Centre Branch 3</p>
 
 </div>
 
@@ -1634,13 +1447,10 @@ Fast2Fix Service Centre Branch 3
 
 <button class="branch-close"
 onclick="closeBranch(event,'bokaroGallery')">
-
 Close Photos
-
 </button>
 
 </div>
-
 </div>
 
 
@@ -1652,17 +1462,11 @@ Close Photos
 
 <div class="branch-content">
 
-<span class="branch-type">
-Branch 2
-</span>
+<span class="branch-type">Branch 2</span>
 
-<h3>
-Kharagpur
-</h3>
+<h3>Kharagpur</h3>
 
-<p>
-📍 Kharagpur, West Bengal
-</p>
+<p>📍 Kharagpur, West Bengal</p>
 
 <p class="manager-name">
 Manager: Mr. Sameer
@@ -1671,14 +1475,10 @@ Manager: Mr. Sameer
 <a class="manager-phone"
 href="tel:7050129203"
 onclick="event.stopPropagation();">
-
 📞 7050129203
-
 </a>
 
-<p>
-Fast2Fix Service Centre Branch 2
-</p>
+<p>Fast2Fix Service Centre Branch 2</p>
 
 </div>
 
@@ -1691,13 +1491,10 @@ Fast2Fix Service Centre Branch 2
 
 <button class="branch-close"
 onclick="closeBranch(event,'kharagpurGallery')">
-
 Close Photos
-
 </button>
 
 </div>
-
 </div>
 
 
@@ -1709,17 +1506,11 @@ Close Photos
 
 <div class="branch-content">
 
-<span class="branch-type">
-Branch 4
-</span>
+<span class="branch-type">Branch 4</span>
 
-<h3>
-Bihar Sharif
-</h3>
+<h3>Bihar Sharif</h3>
 
-<p>
-📍 Raja Dresses, Moghal Kuan, Bihar Sharif
-</p>
+<p>📍 Raja Dresses, Moghal Kuan, Bihar Sharif</p>
 
 <p class="manager-name">
 Manager: Mr. Alamgir
@@ -1728,14 +1519,10 @@ Manager: Mr. Alamgir
 <a class="manager-phone"
 href="tel:9835646220"
 onclick="event.stopPropagation();">
-
 📞 9835646220
-
 </a>
 
-<p>
-Fast2Fix Service Centre Branch 4
-</p>
+<p>Fast2Fix Service Centre Branch 4</p>
 
 </div>
 
@@ -1748,13 +1535,10 @@ Fast2Fix Service Centre Branch 4
 
 <button class="branch-close"
 onclick="closeBranch(event,'biharGallery')">
-
 Close Photos
-
 </button>
 
 </div>
-
 </div>
 
 </div>
@@ -1764,102 +1548,51 @@ Close Photos
 
 <div class="management">
 
-<h2 class="section-title">
-Our Management Team
-</h2>
+<h2 class="section-title">Our Management Team</h2>
 
 <div class="management-grid">
 
-
 <div class="management-card">
-
-<div class="management-icon">
-👤
-</div>
-
-<h3>
-Mr. Reyaan Khan
-</h3>
-
-<span>
-Founder & Owner
-</span>
-
+<div class="management-icon">👤</div>
+<h3>Mr. Reyaan Khan</h3>
+<span>Founder & Owner</span>
 <p>
 Responsible for overall business direction,
 growth, branch coordination and major business decisions.
 </p>
-
 </div>
-
 
 <div class="management-card">
-
-<div class="management-icon">
-👨‍🔧
-</div>
-
-<h3>
-Mr. Sameer
-</h3>
-
-<span>
-Kharagpur Branch Manager
-</span>
-
+<div class="management-icon">👨‍🔧</div>
+<h3>Mr. Sameer</h3>
+<span>Kharagpur Branch Manager</span>
 <p>
 Handles Kharagpur branch operations, technicians,
 customer service and daily service activities.
 </p>
-
 </div>
-
 
 <div class="management-card">
-
-<div class="management-icon">
-👨‍💼
-</div>
-
-<h3>
-Mr. Alamgir
-</h3>
-
-<span>
-Bihar Sharif Branch Manager
-</span>
-
+<div class="management-icon">👨‍💼</div>
+<h3>Mr. Alamgir</h3>
+<span>Bihar Sharif Branch Manager</span>
 <p>
 Handles Bihar Sharif branch operations, technicians,
 customer coordination and service activities.
 </p>
-
 </div>
-
 
 <div class="management-card">
-
-<div class="management-icon">
-👩‍💼
-</div>
-
-<h3>
-Ms. Mahak
-</h3>
-
-<span>
-Operations & Accounts Manager
-</span>
-
+<div class="management-icon">👩‍💼</div>
+<h3>Ms. Mahak</h3>
+<span>Operations & Accounts Manager</span>
 <p>
 Maintains customer details, branch records, technician
 assignments, collections, payments and overall operations.
 </p>
-
 </div>
 
 </div>
-
 </div>
 
 </section>
@@ -1875,9 +1608,7 @@ assignments, collections, payments and overall operations.
 ⭐ Serving Since 1992
 </div>
 
-<h2>
-Experience You Can Trust
-</h2>
+<h2>Experience You Can Trust</h2>
 
 <p>
 Fast2Fix Service Centre has been serving customers since
@@ -1906,16 +1637,12 @@ Since 1992 • Registered in 2024
 <div class="about-container">
 
 <div class="about-image">
-
 <img src="dh1.jpeg" alt="Fast2Fix Service Centre">
-
 </div>
 
 <div class="about-content">
 
-<h2>
-About Fast2Fix Service Centre
-</h2>
+<h2>About Fast2Fix Service Centre</h2>
 
 <p>
 Fast2Fix Service Centre is a professional home appliance
@@ -1938,21 +1665,10 @@ to <strong>1992</strong> and was formally registered in
 
 <div class="about-contact">
 
-<p>
-📍 Dhanbad: Naya Bazar
-</p>
-
-<p>
-📍 Bokaro: Ansari Mohalla, Branch 3
-</p>
-
-<p>
-📍 Kharagpur: Kharagpur, West Bengal, Branch 2
-</p>
-
-<p>
-📍 Bihar Sharif: Raja Dresses, Moghal Kuan, Branch 4
-</p>
+<p>📍 Dhanbad: Naya Bazar</p>
+<p>📍 Bokaro: Ansari Mohalla, Branch 3</p>
+<p>📍 Kharagpur: Kharagpur, West Bengal, Branch 2</p>
+<p>📍 Bihar Sharif: Raja Dresses, Moghal Kuan, Branch 4</p>
 
 <p>
 📧 Email:
@@ -1962,46 +1678,33 @@ fast2fixservices.co.in@gmail.com
 </p>
 
 <p>
-📞 Dhanbad:
-<a href="tel:8434746494">
-8434746494
-</a>
+📞 Dhanbad — Mr. Reyaan Khan:
+<a href="tel:8434746494">8434746494</a>
 </p>
 
 <p>
-📞 Bokaro:
-<a href="tel:9234227337">
-9234227337
-</a>
+📞 Bokaro — Ms. Mahak:
+<a href="tel:9234227337">9234227337</a>
 </p>
 
 <p>
-📞 Kharagpur:
-<a href="tel:7050129203">
-7050129203
-</a>
+📞 Kharagpur — Mr. Sameer:
+<a href="tel:7050129203">7050129203</a>
 </p>
 
 <p>
-📞 Bihar Sharif:
-<a href="tel:9835646220">
-9835646220
-</a>
+📞 Bihar Sharif — Mr. Alamgir:
+<a href="tel:9835646220">9835646220</a>
 </p>
 
 <p>
-🚨 Emergency:
-<a href="tel:8804022021">
-8804022021
-</a>
+🚨 Emergency Service:
+<a class="emergency" href="tel:8804022021">8804022021</a>
 </p>
 
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 
@@ -2009,9 +1712,7 @@ fast2fixservices.co.in@gmail.com
 
 <section class="why">
 
-<h2 class="section-title">
-Why Choose Fast2Fix?
-</h2>
+<h2 class="section-title">Why Choose Fast2Fix?</h2>
 
 <p class="why-intro">
 Professional appliance repair with dependable service,
@@ -2021,74 +1722,39 @@ experienced technicians and a customer-first approach.
 <div class="why-grid">
 
 <div class="why-box">
-
-<span class="why-icon">
-👨‍🔧
-</span>
-
-<h3>
-Professional Technicians
-</h3>
-
+<span class="why-icon">👨‍🔧</span>
+<h3>Professional Technicians</h3>
 <p>
 Experienced technicians for AC, refrigerator,
 washing machine and other home appliance repairs.
 </p>
-
 </div>
 
-
 <div class="why-box">
-
-<span class="why-icon">
-⚡
-</span>
-
-<h3>
-Quick Response
-</h3>
-
+<span class="why-icon">⚡</span>
+<h3>Quick Response</h3>
 <p>
 Easy booking and quick response for your appliance
 repair and service requirements.
 </p>
-
 </div>
 
-
 <div class="why-box">
-
-<span class="why-icon">
-🛠️
-</span>
-
-<h3>
-Quality Work
-</h3>
-
+<span class="why-icon">🛠️</span>
+<h3>Quality Work</h3>
 <p>
 Professional repair work with attention to quality,
 safety and customer satisfaction.
 </p>
-
 </div>
 
-
 <div class="why-box">
-
-<span class="why-icon">
-🤝
-</span>
-
-<h3>
-Customer First
-</h3>
-
+<span class="why-icon">🤝</span>
+<h3>Customer First</h3>
 <p>
 We focus on clear communication, dependable service
 and a better customer experience.
 </p>
-
 </div>
 
 </div>
@@ -2100,77 +1766,32 @@ and a better customer experience.
 
 <section class="how">
 
-<h2 class="section-title">
-How It Works
-</h2>
+<h2 class="section-title">How It Works</h2>
 
 <div class="steps">
 
 <div class="step">
-
-<div class="step-icon">
-📞
+<div class="step-icon">📞</div>
+<h3>1. Contact Us</h3>
+<p>Call or WhatsApp us for your appliance problem.</p>
 </div>
-
-<h3>
-1. Contact Us
-</h3>
-
-<p>
-Call or WhatsApp us for your appliance problem.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="step-icon">
-📋
+<div class="step-icon">📋</div>
+<h3>2. Book Service</h3>
+<p>Share your appliance and service requirement.</p>
 </div>
-
-<h3>
-2. Book Service
-</h3>
-
-<p>
-Share your appliance and service requirement.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="step-icon">
-👨‍🔧
+<div class="step-icon">👨‍🔧</div>
+<h3>3. Technician Visit</h3>
+<p>Our technician checks the appliance problem.</p>
 </div>
-
-<h3>
-3. Technician Visit
-</h3>
-
-<p>
-Our technician checks the appliance problem.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="step-icon">
-✅
-</div>
-
-<h3>
-4. Repair & Service
-</h3>
-
-<p>
-Professional repair and service as required.
-</p>
-
+<div class="step-icon">✅</div>
+<h3>4. Repair & Service</h3>
+<p>Professional repair and service as required.</p>
 </div>
 
 </div>
@@ -2182,9 +1803,7 @@ Professional repair and service as required.
 
 <section class="reach">
 
-<h2 class="reach-title">
-Our Online Reach
-</h2>
+<h2 class="reach-title">Our Online Reach</h2>
 
 <p class="reach-subtitle">
 Fast2Fix Service Centre is building its online presence
@@ -2195,70 +1814,27 @@ our latest services and work.
 <div class="reach-grid">
 
 <div class="reach-card">
-
-<div class="reach-icon">
-🌐
+<div class="reach-icon">🌐</div>
+<div class="counter" data-target="50000">0</div>
+<p>Online Reach</p>
 </div>
-
-<div class="counter" data-target="50000">
-0
-</div>
-
-<p>
-Online Reach
-</p>
-
-</div>
-
 
 <div class="reach-card">
-
-<div class="reach-icon">
-📱
+<div class="reach-icon">📱</div>
+<div class="counter" data-target="4">0</div>
+<p>Social Platforms</p>
 </div>
-
-<div class="counter" data-target="4">
-0
-</div>
-
-<p>
-Social Platforms
-</p>
-
-</div>
-
 
 <div class="reach-card">
-
-<div class="reach-icon">
-🛠️
+<div class="reach-icon">🛠️</div>
+<div class="counter" data-target="8">0</div>
+<p>Major Services</p>
 </div>
-
-<div class="counter" data-target="8">
-0
-</div>
-
-<p>
-Major Services
-</p>
-
-</div>
-
 
 <div class="reach-card">
-
-<div class="reach-icon">
-📍
-</div>
-
-<div class="counter" data-target="4">
-0
-</div>
-
-<p>
-Service Branches
-</p>
-
+<div class="reach-icon">📍</div>
+<div class="counter" data-target="4">0</div>
+<p>Service Branches</p>
 </div>
 
 </div>
@@ -2266,66 +1842,44 @@ Service Branches
 </section>
 
 
-<!-- SOCIAL -->
+<!-- SOCIAL NETWORK -->
 
 <section class="social">
 
-<h2 class="section-title">
-Connect With Us
-</h2>
+<h2 class="section-title">Connect With Us</h2>
 
 <div class="social-grid">
-
 
 <a class="social-card instagram"
 href="https://www.instagram.com/fast2fix_service?igsh=MXVkbnpkMW04ejZtYQ=="
 target="_blank">
 
-<span class="social-icon">
-📸
-</span>
-
+<span class="social-icon">📸</span>
 Instagram
-
 </a>
-
 
 <a class="social-card facebook"
 href="https://www.facebook.com/share/1943G38VPs/"
 target="_blank">
 
-<span class="social-icon">
-f
-</span>
-
+<span class="social-icon">f</span>
 Facebook
-
 </a>
-
 
 <a class="social-card youtube"
 href="https://www.youtube.com/@Fast2fix_service_"
 target="_blank">
 
-<span class="social-icon">
-▶️
-</span>
-
+<span class="social-icon">▶️</span>
 YouTube
-
 </a>
-
 
 <a class="social-card social-whatsapp"
 href="https://wa.me/918434746494"
 target="_blank">
 
-<span class="social-icon">
-💬
-</span>
-
+<span class="social-icon">💬</span>
 WhatsApp
-
 </a>
 
 </div>
@@ -2337,22 +1891,15 @@ WhatsApp
 
 <section class="business">
 
-<h2 class="section-title">
-Find Us Online
-</h2>
+<h2 class="section-title">Find Us Online</h2>
 
 <div class="business-grid">
 
-
 <div class="business-card">
 
-<div class="business-logo">
-⭐
-</div>
+<div class="business-logo">⭐</div>
 
-<h3>
-Google Business Profile
-</h3>
+<h3>Google Business Profile</h3>
 
 <div class="rating">
 ★★★★★
@@ -2366,9 +1913,7 @@ business information and location.
 <a class="business-btn google-btn"
 href="https://maps.app.goo.gl/gRVLhre6StVFkE6K9"
 target="_blank">
-
 ⭐ View Google Reviews
-
 </a>
 
 </div>
@@ -2376,13 +1921,9 @@ target="_blank">
 
 <div class="business-card">
 
-<div class="business-logo">
-📒
-</div>
+<div class="business-logo">📒</div>
 
-<h3>
-Justdial Business
-</h3>
+<h3>Justdial Business</h3>
 
 <div class="rating">
 ★ ★ ★ ★ ★
@@ -2396,9 +1937,7 @@ service information and business details.
 <a class="business-btn justdial-btn"
 href="https://jsdl.in/DT-99NUR8BI9YH"
 target="_blank">
-
 📒 View Justdial Business
-
 </a>
 
 </div>
@@ -2412,15 +1951,11 @@ target="_blank">
 
 <section class="areas" id="areas">
 
-<h2 class="section-title">
-Service Areas
-</h2>
+<h2 class="section-title">Service Areas</h2>
 
 <div class="area-intro">
 
-<h3>
-📍 Fast2Fix Service Coverage
-</h3>
+<h3>📍 Fast2Fix Service Coverage</h3>
 
 <p>
 We provide home appliance repair and service across
@@ -2455,13 +1990,9 @@ selected areas through our multi-branch service network.
 
 <section class="contact">
 
-<h2 class="section-title">
-Contact Fast2Fix
-</h2>
+<h2 class="section-title">Contact Fast2Fix</h2>
 
-<p>
-📍 Dhanbad Zonal Branch, Naya Bazar
-</p>
+<p>📍 Dhanbad Zonal Branch, Naya Bazar</p>
 
 <p>
 📧 Email:
@@ -2472,69 +2003,29 @@ fast2fixservices.co.in@gmail.com
 
 <div class="contact-managers">
 
-
 <div class="contact-manager">
-
-<strong>
-📍 Dhanbad — Mr. Reyaan Khan
-</strong>
-
-<a href="tel:8434746494">
-📞 8434746494
-</a>
-
+<strong>📍 Dhanbad — Mr. Reyaan Khan</strong>
+<a href="tel:8434746494">📞 8434746494</a>
 </div>
 
-
 <div class="contact-manager">
-
-<strong>
-📍 Bokaro — Ms. Mahak
-</strong>
-
-<a href="tel:9234227337">
-📞 9234227337
-</a>
-
+<strong>📍 Bokaro — Ms. Mahak</strong>
+<a href="tel:9234227337">📞 9234227337</a>
 </div>
 
-
 <div class="contact-manager">
-
-<strong>
-📍 Kharagpur — Mr. Sameer
-</strong>
-
-<a href="tel:7050129203">
-📞 7050129203
-</a>
-
+<strong>📍 Kharagpur — Mr. Sameer</strong>
+<a href="tel:7050129203">📞 7050129203</a>
 </div>
 
-
 <div class="contact-manager">
-
-<strong>
-📍 Bihar Sharif — Mr. Alamgir
-</strong>
-
-<a href="tel:9835646220">
-📞 9835646220
-</a>
-
+<strong>📍 Bihar Sharif — Mr. Alamgir</strong>
+<a href="tel:9835646220">📞 9835646220</a>
 </div>
 
-
 <div class="contact-manager">
-
-<strong>
-🚨 Emergency Service
-</strong>
-
-<a href="tel:8804022021">
-📞 8804022021
-</a>
-
+<strong>🚨 Emergency Service</strong>
+<a href="tel:8804022021">📞 8804022021</a>
 </div>
 
 </div>
@@ -2551,14 +2042,7 @@ fast2fixservices.co.in@gmail.com
 <footer>
 
 <div class="footer-brand">
-
-<span class="blue">
-Fast
-</span><span class="red">
-2Fix
-</span>
-Service Centre
-
+<span class="blue">Fast</span><span class="red">2Fix</span> Service Centre
 </div>
 
 <p>
@@ -2591,18 +2075,14 @@ Home Appliances Service
 <a class="float-btn float-call"
 href="tel:8434746494"
 title="Call Fast2Fix">
-
 📞
-
 </a>
 
 <a class="float-btn float-whatsapp"
 href="https://wa.me/918434746494"
 target="_blank"
 title="WhatsApp Fast2Fix">
-
 💬
-
 </a>
 
 </div>
@@ -2614,13 +2094,9 @@ title="WhatsApp Fast2Fix">
 
 <div class="popup">
 
-<span class="close" onclick="closeBooking()">
-×
-</span>
+<span class="close" onclick="closeBooking()">×</span>
 
-<h2>
-🔧 Book a Service / Enquiry
-</h2>
+<h2>🔧 Book a Service / Enquiry</h2>
 
 <p class="popup-subtitle">
 Please fill the details. Your enquiry will open directly in WhatsApp.
@@ -2628,87 +2104,45 @@ Please fill the details. Your enquiry will open directly in WhatsApp.
 
 <form onsubmit="sendBooking(event)">
 
-
 <!-- APPLIANCE FIRST -->
 
-<label>
-Appliance
-</label>
+<label>Appliance</label>
 
-<select id="applianceType"
-onchange="updateApplianceOptions()"
-required>
+<select id="applianceType" onchange="updateApplianceOptions()" required>
 
-<option value="">
-Select Appliance
-</option>
+<option value="">Select Appliance</option>
 
-<option value="AC">
-❄️ AC
-</option>
-
-<option value="Refrigerator">
-🧊 Refrigerator / Fridge
-</option>
-
-<option value="Washing Machine">
-🧺 Washing Machine
-</option>
-
-<option value="Geyser">
-🔥 Geyser
-</option>
-
-<option value="Microwave">
-🍽️ Microwave Oven
-</option>
-
-<option value="Chimney">
-🏠 Kitchen Chimney
-</option>
-
-<option value="TV">
-📺 Television
-</option>
-
-<option value="RO / Water Purifier">
-💧 RO / Water Purifier
-</option>
+<option value="AC">❄️ AC</option>
+<option value="Refrigerator">🧊 Refrigerator / Fridge</option>
+<option value="Washing Machine">🧺 Washing Machine</option>
+<option value="Geyser">🔥 Geyser</option>
+<option value="Microwave">🍽️ Microwave Oven</option>
+<option value="Chimney">🏠 Kitchen Chimney</option>
+<option value="TV">📺 Television</option>
+<option value="RO / Water Purifier">💧 RO / Water Purifier</option>
 
 </select>
 
 
-<div id="applianceOptionsBox"
-class="hidden-field">
+<div id="applianceOptionsBox" class="hidden-field">
 
 <label id="applianceOptionsLabel">
 Appliance Type
 </label>
 
 <select id="applianceOptions" required>
-
-<option value="">
-Select Type
-</option>
-
+<option value="">Select Type</option>
 </select>
 
 </div>
 
 
-<div id="tvSizeBox"
-class="hidden-field">
+<div id="tvSizeBox" class="hidden-field">
 
-<label>
-TV Size
-</label>
+<label>TV Size</label>
 
 <select id="tvSize">
-
-<option value="">
-Select TV Size
-</option>
-
+<option value="">Select TV Size</option>
 <option>24 Inch</option>
 <option>32 Inch</option>
 <option>40 Inch</option>
@@ -2719,25 +2153,17 @@ Select TV Size
 <option>75 Inch</option>
 <option>85 Inch</option>
 <option>Other</option>
-
 </select>
 
 </div>
 
 
-<div id="brandBox"
-class="hidden-field">
+<div id="brandBox" class="hidden-field">
 
-<label>
-Brand
-</label>
+<label>Brand</label>
 
 <select id="brand" required>
-
-<option value="">
-Select Brand
-</option>
-
+<option value="">Select Brand</option>
 </select>
 
 </div>
@@ -2745,91 +2171,40 @@ Select Brand
 
 <!-- SERVICE REQUIRED SECOND -->
 
-<label>
-Service Required
-</label>
+<label>Service Required</label>
 
 <select id="serviceAction" required>
 
-<option value="">
-Select Service
-</option>
+<option value="">Select Service</option>
 
-<option>
-Repair
-</option>
-
-<option>
-Installation
-</option>
-
-<option>
-Uninstallation
-</option>
-
-<option>
-Shifting
-</option>
-
-<option>
-Service / Maintenance
-</option>
-
-<option>
-Inspection / Diagnosis
-</option>
-
-<option>
-Other
-</option>
+<option>Repair</option>
+<option>Installation</option>
+<option>Uninstallation</option>
+<option>Shifting</option>
+<option>Service / Maintenance</option>
+<option>Inspection / Diagnosis</option>
+<option>Other</option>
 
 </select>
 
 
-<label>
-City / Service Location
-</label>
+<label>City / Service Location</label>
 
 <select id="customerCity" required>
 
-<option value="">
-Select City
-</option>
-
-<option>
-Dhanbad
-</option>
-
-<option>
-Kharagpur
-</option>
-
-<option>
-Bokaro
-</option>
-
-<option>
-Bihar Sharif
-</option>
-
-<option>
-Ranchi
-</option>
-
-<option>
-Jamshedpur
-</option>
-
-<option>
-Other
-</option>
+<option value="">Select City</option>
+<option>Dhanbad</option>
+<option>Kharagpur</option>
+<option>Bokaro</option>
+<option>Bihar Sharif</option>
+<option>Ranchi</option>
+<option>Jamshedpur</option>
+<option>Other</option>
 
 </select>
 
 
-<label>
-PIN Code
-</label>
+<label>PIN Code</label>
 
 <input
 type="text"
@@ -2841,9 +2216,7 @@ pattern="[0-9]{6}"
 required>
 
 
-<label>
-Your Name
-</label>
+<label>Your Name</label>
 
 <input
 type="text"
@@ -2852,9 +2225,7 @@ placeholder="Your Name"
 required>
 
 
-<label>
-Mobile Number
-</label>
+<label>Mobile Number</label>
 
 <input
 type="tel"
@@ -2866,41 +2237,34 @@ pattern="[0-9]{10}"
 required>
 
 
-<label>
-Problem / Requirement
-</label>
+<label>Problem / Requirement</label>
 
 <textarea
 id="customerMessage"
 rows="4"
-placeholder="Describe your appliance problem or requirement">
-</textarea>
+placeholder="Describe your appliance problem or requirement"></textarea>
 
 
 <div class="booking-note">
-
 📲 After submitting, WhatsApp will open with all enquiry details automatically filled in.
-
 </div>
 
 
 <button class="submit" type="submit">
-
 💬 Send Enquiry on WhatsApp
-
 </button>
 
 </form>
 
 </div>
-
 </div>
 
 
 <script>
 
-
-/* BOOKING POPUP */
+/* =========================================
+   BOOKING POPUP
+========================================= */
 
 function openBooking(){
 
@@ -2909,7 +2273,6 @@ document.getElementById("bookingPopup").style.display="block";
 document.body.style.overflow="hidden";
 
 }
-
 
 function closeBooking(){
 
@@ -2920,7 +2283,9 @@ document.body.style.overflow="";
 }
 
 
-/* OPEN BOOKING FROM SERVICE CARD */
+/* =========================================
+   OPEN BOOKING FROM SERVICE CARD
+========================================= */
 
 function openBookingFor(appliance){
 
@@ -2937,13 +2302,13 @@ updateApplianceOptions();
 }
 
 
-/* APPLIANCE OPTIONS + BRANDS */
+/* =========================================
+   APPLIANCE OPTIONS + BRANDS
+========================================= */
 
 const applianceData={
 
-
 "AC":{
-
 types:[
 "Window AC",
 "Split AC",
@@ -2952,7 +2317,6 @@ types:[
 "Portable AC",
 "Other"
 ],
-
 brands:[
 "LG",
 "Samsung",
@@ -2968,12 +2332,9 @@ brands:[
 "Whirlpool",
 "Other"
 ]
-
 },
 
-
 "Refrigerator":{
-
 types:[
 "Single Door",
 "Double Door",
@@ -2984,7 +2345,6 @@ types:[
 "Commercial Refrigerator",
 "Other"
 ],
-
 brands:[
 "LG",
 "Samsung",
@@ -2997,12 +2357,9 @@ brands:[
 "Voltas Beko",
 "Other"
 ]
-
 },
 
-
 "Washing Machine":{
-
 types:[
 "Top Load",
 "Front Load",
@@ -3011,7 +2368,6 @@ types:[
 "Commercial Washing Machine",
 "Other"
 ],
-
 brands:[
 "LG",
 "Samsung",
@@ -3024,12 +2380,9 @@ brands:[
 "Voltas",
 "Other"
 ]
-
 },
 
-
 "Geyser":{
-
 types:[
 "Electric Geyser",
 "Commercial Geyser",
@@ -3038,7 +2391,6 @@ types:[
 "Gas Geyser",
 "Other"
 ],
-
 brands:[
 "Bajaj",
 "Racold",
@@ -3051,12 +2403,9 @@ brands:[
 "Venus",
 "Other"
 ]
-
 },
 
-
 "Microwave":{
-
 types:[
 "Home Microwave",
 "Commercial Microwave",
@@ -3066,7 +2415,6 @@ types:[
 "Convection Microwave",
 "Other"
 ],
-
 brands:[
 "LG",
 "Samsung",
@@ -3078,12 +2426,9 @@ brands:[
 "Bosch",
 "Other"
 ]
-
 },
 
-
 "Chimney":{
-
 types:[
 "Wall Mounted Chimney",
 "Straight Line Chimney",
@@ -3093,7 +2438,6 @@ types:[
 "Commercial Chimney",
 "Other"
 ],
-
 brands:[
 "Faber",
 "Elica",
@@ -3105,12 +2449,9 @@ brands:[
 "Cata",
 "Other"
 ]
-
 },
 
-
 "TV":{
-
 types:[
 "LED TV",
 "LCD TV",
@@ -3122,7 +2463,6 @@ types:[
 "QLED TV",
 "Other"
 ],
-
 brands:[
 "LG",
 "Samsung",
@@ -3137,12 +2477,9 @@ brands:[
 "Kodak",
 "Other"
 ]
-
 },
 
-
 "RO / Water Purifier":{
-
 types:[
 "Domestic RO",
 "Commercial RO",
@@ -3153,7 +2490,6 @@ types:[
 "Water Purifier Installation",
 "Other"
 ],
-
 brands:[
 "Kent",
 "Aquaguard",
@@ -3166,13 +2502,14 @@ brands:[
 "Panasonic",
 "Other"
 ]
-
 }
 
 };
 
 
-/* UPDATE APPLIANCE OPTIONS */
+/* =========================================
+   UPDATE APPLIANCE OPTIONS
+========================================= */
 
 function updateApplianceOptions(){
 
@@ -3197,7 +2534,6 @@ document.getElementById("brand");
 let tvSizeBox=
 document.getElementById("tvSizeBox");
 
-
 options.innerHTML=
 '<option value="">Select Type</option>';
 
@@ -3206,35 +2542,28 @@ brand.innerHTML=
 
 tvSizeBox.style.display="none";
 
-
 if(!appliance){
 
 optionsBox.style.display="none";
-
 brandBox.style.display="none";
 
 return;
 
 }
 
-
 let data=applianceData[appliance];
 
 optionsBox.style.display="block";
-
 brandBox.style.display="block";
 
 optionsLabel.innerText=
 appliance+" Type";
 
-
 data.types.forEach(function(type){
 
-let option=
-document.createElement("option");
+let option=document.createElement("option");
 
 option.value=type;
-
 option.textContent=type;
 
 options.appendChild(option);
@@ -3244,11 +2573,9 @@ options.appendChild(option);
 
 data.brands.forEach(function(brandName){
 
-let option=
-document.createElement("option");
+let option=document.createElement("option");
 
 option.value=brandName;
-
 option.textContent=brandName;
 
 brand.appendChild(option);
@@ -3265,12 +2592,13 @@ tvSizeBox.style.display="block";
 }
 
 
-/* BOOKING TO WHATSAPP */
+/* =========================================
+   BOOKING TO WHATSAPP
+========================================= */
 
 function sendBooking(event){
 
 event.preventDefault();
-
 
 let appliance=
 document.getElementById("applianceType").value;
@@ -3303,16 +2631,16 @@ let tvSize=
 document.getElementById("tvSize").value;
 
 
-if(
-!appliance ||
+/* VALIDATION */
+
+if(!appliance ||
 !applianceOption ||
 !brand ||
 !serviceAction ||
 !city ||
 !pin ||
 !name ||
-!phone
-){
+!phone){
 
 alert("Please fill all required details.");
 
@@ -3321,8 +2649,9 @@ return;
 }
 
 
-let text=
+/* WHATSAPP MESSAGE */
 
+let text=
 "🔧 *FAST2FIX SERVICE CENTRE - NEW ENQUIRY*%0A"+
 "━━━━━━━━━━━━━━━━━━━━%0A%0A"+
 
@@ -3370,7 +2699,6 @@ encodeURIComponent(tvSize)+
 
 
 text+=
-
 "📝 *Problem / Requirement:* "+
 encodeURIComponent(message || "Not specified")+
 "%0A%0A"+
@@ -3388,15 +2716,14 @@ let whatsappURL=
 "https://wa.me/918434746494?text="+text;
 
 
-window.open(
-whatsappURL,
-"_blank"
-);
+window.open(whatsappURL,"_blank");
 
 }
 
 
-/* AUTO BOOKING POPUP */
+/* =========================================
+   AUTO BOOKING POPUP
+========================================= */
 
 window.addEventListener("load",function(){
 
@@ -3409,13 +2736,14 @@ openBooking();
 });
 
 
-/* BRANCH GALLERY */
+/* =========================================
+   BRANCH GALLERY
+========================================= */
 
 function toggleBranch(id){
 
 let gallery=
 document.getElementById(id);
-
 
 if(gallery.style.display==="block"){
 
@@ -3429,7 +2757,6 @@ gallery.style.display="block";
 
 }
 
-
 function closeBranch(event,id){
 
 event.stopPropagation();
@@ -3439,28 +2766,23 @@ document.getElementById(id).style.display="none";
 }
 
 
-/* ONLINE REACH COUNTER */
+/* =========================================
+   ONLINE REACH COUNTER
+========================================= */
 
 function animateCounter(element){
 
 let target=
-parseInt(
-element.getAttribute("data-target")
-);
+parseInt(element.getAttribute("data-target"));
 
 let current=0;
 
 let increment=
-Math.max(
-1,
-Math.ceil(target/80)
-);
+Math.max(1,Math.ceil(target/80));
 
-let timer=
-setInterval(function(){
+let timer=setInterval(function(){
 
 current+=increment;
-
 
 if(current>=target){
 
@@ -3469,7 +2791,6 @@ current=target;
 clearInterval(timer);
 
 }
-
 
 if(target>=1000){
 
@@ -3490,27 +2811,21 @@ current+"+";
 
 let counterStarted=false;
 
-
 function startCounters(){
 
 if(counterStarted) return;
 
-
 let section=
 document.querySelector(".reach");
 
-
 if(!section) return;
-
 
 let position=
 section.getBoundingClientRect().top;
 
-
 if(position<window.innerHeight-100){
 
 counterStarted=true;
-
 
 document.querySelectorAll(".counter").forEach(function(counter){
 
@@ -3522,27 +2837,19 @@ animateCounter(counter);
 
 }
 
+window.addEventListener("scroll",startCounters);
 
-window.addEventListener(
-"scroll",
-startCounters
-);
-
-window.addEventListener(
-"load",
-startCounters
-);
+window.addEventListener("load",startCounters);
 
 
-/* CLOSE POPUP OUTSIDE */
+/* =========================================
+   CLOSE POPUP OUTSIDE
+========================================= */
 
-window.addEventListener(
-"click",
-function(event){
+window.addEventListener("click",function(event){
 
 let booking=
 document.getElementById("bookingPopup");
-
 
 if(event.target===booking){
 
@@ -3553,34 +2860,26 @@ closeBooking();
 });
 
 
-/* PIN ONLY NUMBERS */
+/* =========================================
+   PIN CODE ONLY NUMBERS
+========================================= */
 
-document.getElementById("customerPin").addEventListener(
-"input",
-function(){
+document.getElementById("customerPin").addEventListener("input",function(){
 
-this.value=
-this.value
-.replace(/[^0-9]/g,"")
-.slice(0,6);
+this.value=this.value.replace(/[^0-9]/g,"").slice(0,6);
 
-}
-);
+});
 
 
-/* MOBILE ONLY NUMBERS */
+/* =========================================
+   MOBILE NUMBER ONLY NUMBERS
+========================================= */
 
-document.getElementById("customerPhone").addEventListener(
-"input",
-function(){
+document.getElementById("customerPhone").addEventListener("input",function(){
 
-this.value=
-this.value
-.replace(/[^0-9]/g,"")
-.slice(0,10);
+this.value=this.value.replace(/[^0-9]/g,"").slice(0,10);
 
-}
-);
+});
 
 </script>
 
