@@ -4,9 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fast2Fix Service Centre | Home Appliances Service</title>
+<title>Fast2Fix Service Centre | AC, Fridge, Washing Machine & Home Appliance Repair</title>
 
-<meta name="description" content="Fast2Fix Service Centre provides professional home appliance repair and service for AC, refrigerator, washing machine, geyser, microwave oven, chimney, TV and RO. Serving since 1992 and registered in 2024.">
+<meta name="description" content="Fast2Fix Service Centre provides professional AC, refrigerator, washing machine, geyser, microwave, chimney, TV and RO repair and service with doorstep assistance. Serving since 1992 and registered in 2024.">
+
+<meta name="keywords" content="AC repair, AC service, refrigerator repair, fridge repair, washing machine repair, geyser repair, microwave repair, chimney repair, TV repair, RO repair, home appliance repair, Fast2Fix Service Centre">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#087cff">
+
+<meta property="og:title" content="Fast2Fix Service Centre | Home Appliance Repair">
+<meta property="og:description" content="Professional AC, refrigerator, washing machine, geyser, microwave, chimney, TV and RO repair & service.">
+<meta property="og:type" content="website">
 
 <style>
 *{
@@ -24,25 +33,39 @@ font-family:Arial,Helvetica,sans-serif;
 background:#f5f7fa;
 color:#222;
 line-height:1.6;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+button,
+input,
+select,
+textarea{
+font-family:inherit;
 }
 
 header{
-background:#111;
+background:rgba(10,10,10,.97);
 color:white;
-padding:16px 5%;
+padding:14px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 2px 12px rgba(0,0,0,.3);
+box-shadow:0 2px 15px rgba(0,0,0,.35);
 }
 
 .logo{
 font-size:25px;
 font-weight:bold;
 white-space:nowrap;
+line-height:1.15;
 }
 
 .logo .fast{
@@ -57,7 +80,7 @@ color:#ff3030;
 font-size:12px;
 color:#ddd;
 display:block;
-margin-top:-3px;
+margin-top:3px;
 font-weight:normal;
 letter-spacing:.5px;
 }
@@ -71,12 +94,23 @@ margin-top:3px;
 letter-spacing:.4px;
 }
 
+nav{
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+}
+
 nav a{
 color:white;
 text-decoration:none;
 margin-left:18px;
-font-size:15px;
+font-size:14px;
 font-weight:bold;
+transition:.25s;
+}
+
+nav a:hover{
+transform:translateY(-1px);
 }
 
 nav a:nth-child(1){color:#00c6ff;}
@@ -87,29 +121,29 @@ nav a:nth-child(5){color:#a970ff;}
 nav a:nth-child(6){color:#00d9ff;}
 
 .hero{
-min-height:620px;
+min-height:650px;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
-padding:40px 20px;
+padding:50px 20px;
 background-image:
-linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
+linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.58)),
 url("hero2.jpeg");
 background-size:cover;
 background-position:center;
 }
 
 .hero-content{
-max-width:900px;
+max-width:950px;
 width:100%;
 }
 
 .hero h1{
-font-size:50px;
+font-size:54px;
 margin-bottom:8px;
-text-shadow:0 3px 10px rgba(0,0,0,.7);
+text-shadow:0 3px 12px rgba(0,0,0,.8);
 }
 
 .hero h1 span{
@@ -117,35 +151,45 @@ color:#ff3030;
 }
 
 .hero-subtitle{
-font-size:22px;
+font-size:23px;
 font-weight:bold;
 color:#fff;
 margin-bottom:12px;
-text-shadow:0 2px 6px rgba(0,0,0,.8);
+text-shadow:0 2px 7px rgba(0,0,0,.8);
 }
 
 .hero p{
-font-size:20px;
-margin-bottom:12px;
-text-shadow:0 2px 6px rgba(0,0,0,.8);
+font-size:19px;
+margin-bottom:10px;
+text-shadow:0 2px 7px rgba(0,0,0,.8);
+}
+
+.hero-services{
+color:#e9f4ff;
+font-weight:bold;
 }
 
 .hero-phone{
 display:inline-block;
-background:rgba(0,0,0,.65);
+background:rgba(0,0,0,.68);
 border:2px solid #087cff;
-padding:10px 22px;
-border-radius:30px;
+padding:11px 24px;
+border-radius:35px;
 font-size:21px;
 font-weight:bold;
-margin:8px 0 5px;
+margin:12px 0 5px;
 color:white;
 text-decoration:none;
+transition:.3s;
+}
+
+.hero-phone:hover{
+background:#087cff;
 }
 
 .btn{
 display:inline-block;
-padding:14px 24px;
+padding:14px 25px;
 margin:12px 5px 0;
 border-radius:8px;
 text-decoration:none;
@@ -154,6 +198,12 @@ font-weight:bold;
 border:0;
 font-size:16px;
 cursor:pointer;
+transition:.25s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,0,0,.25);
 }
 
 .call{
@@ -184,11 +234,13 @@ margin-bottom:35px;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:22px;
+max-width:1250px;
+margin:auto;
 }
 
 .service-card{
 background:white;
-border-radius:12px;
+border-radius:14px;
 overflow:hidden;
 box-shadow:0 3px 12px rgba(0,0,0,.10);
 transition:.3s;
@@ -197,7 +249,7 @@ cursor:pointer;
 
 .service-card:hover{
 transform:translateY(-7px);
-box-shadow:0 8px 22px rgba(0,0,0,.18);
+box-shadow:0 8px 25px rgba(0,0,0,.18);
 }
 
 .service-card img{
@@ -213,6 +265,7 @@ text-align:center;
 
 .service-card h3{
 margin-bottom:7px;
+font-size:19px;
 }
 
 .service-card p{
@@ -230,6 +283,8 @@ background:white;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:15px;
+max-width:1250px;
+margin:auto;
 }
 
 .gallery-grid img{
@@ -238,10 +293,12 @@ height:210px;
 object-fit:cover;
 border-radius:10px;
 transition:.3s;
+cursor:pointer;
 }
 
 .gallery-grid img:hover{
 transform:scale(1.03);
+box-shadow:0 6px 18px rgba(0,0,0,.2);
 }
 
 /* BRANCHES */
@@ -254,7 +311,7 @@ background:#f5f7fa;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:25px;
-max-width:1100px;
+max-width:1150px;
 margin:auto;
 }
 
@@ -354,6 +411,8 @@ margin-top:55px;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:22px;
+max-width:1200px;
+margin:auto;
 }
 
 .management-card{
@@ -567,6 +626,8 @@ background:#f5f7fa;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .step{
@@ -838,7 +899,7 @@ footer{
 background:#000;
 color:#aaa;
 text-align:center;
-padding:20px;
+padding:22px 15px;
 font-size:14px;
 }
 
@@ -879,6 +940,11 @@ color:white;
 text-decoration:none;
 font-size:25px;
 box-shadow:0 3px 10px rgba(0,0,0,.3);
+transition:.25s;
+}
+
+.float-btn:hover{
+transform:scale(1.08);
 }
 
 .float-call{
@@ -952,6 +1018,14 @@ border:1px solid #ccc;
 border-radius:6px;
 font-size:15px;
 background:white;
+outline:none;
+}
+
+.popup input:focus,
+.popup textarea:focus,
+.popup select:focus{
+border-color:#087cff;
+box-shadow:0 0 0 2px rgba(8,124,255,.08);
 }
 
 .popup label{
@@ -987,6 +1061,35 @@ border-radius:6px;
 font-size:13px;
 color:#444;
 margin:8px 0;
+}
+
+/* IMAGE VIEWER */
+
+.image-viewer{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.92);
+z-index:10000;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.image-viewer img{
+max-width:95%;
+max-height:90vh;
+border-radius:10px;
+object-fit:contain;
+}
+
+.image-viewer-close{
+position:absolute;
+top:15px;
+right:25px;
+font-size:40px;
+color:white;
+cursor:pointer;
 }
 
 /* RESPONSIVE */
@@ -1028,23 +1131,29 @@ grid-template-columns:repeat(2,1fr);
 header{
 flex-direction:column;
 gap:8px;
-padding:14px 10px;
+padding:13px 10px;
 }
 
 .logo{
 font-size:21px;
+text-align:center;
 }
 
-nav{
-display:none;
+.logo-sub{
+font-size:11px;
 }
 
 .logo-history{
 font-size:10px;
 }
 
+nav{
+display:none;
+}
+
 .hero{
-min-height:590px;
+min-height:600px;
+padding:40px 15px;
 }
 
 .hero h1{
@@ -1060,7 +1169,8 @@ font-size:16px;
 }
 
 .hero-phone{
-font-size:18px;
+font-size:17px;
+padding:10px 17px;
 }
 
 .btn{
@@ -1075,14 +1185,20 @@ padding:45px 15px;
 
 .section-title{
 font-size:27px;
+margin-bottom:27px;
 }
 
 .services-grid{
 grid-template-columns:1fr;
 }
 
+.service-card img{
+height:200px;
+}
+
 .gallery-grid{
 grid-template-columns:1fr 1fr;
+gap:10px;
 }
 
 .gallery-grid img{
@@ -1122,12 +1238,20 @@ margin-bottom:25px;
 width:100%;
 }
 
+.about-content h2{
+font-size:28px;
+}
+
 .history h2{
 font-size:28px;
 }
 
 .history p{
 font-size:15px;
+}
+
+.history-year{
+font-size:22px;
 }
 
 .reach-grid{
@@ -1167,6 +1291,26 @@ height:52px;
 }
 
 }
+
+@media(max-width:380px){
+
+.hero h1{
+font-size:28px;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.reach-grid{
+grid-template-columns:1fr;
+}
+
+.social-grid{
+grid-template-columns:1fr;
+}
+
+}
 </style>
 </head>
 
@@ -1201,10 +1345,14 @@ height:52px;
 <h1>Fast<span>2</span>Fix Service Centre</h1>
 
 <div class="hero-subtitle">
-Home Appliances Service
+Professional Home Appliances Service
 </div>
 
 <p>
+Fast, Reliable & Professional Home Appliance Repair Service
+</p>
+
+<p class="hero-services">
 AC • Refrigerator • Washing Machine • Geyser • Microwave • Chimney • TV • RO
 </p>
 
@@ -1220,7 +1368,8 @@ AC • Refrigerator • Washing Machine • Geyser • Microwave • Chimney •
 
 <a class="btn whatsapp"
 href="https://wa.me/918434746494"
-target="_blank">
+target="_blank"
+rel="noopener">
 💬 WhatsApp
 </a>
 
@@ -1236,44 +1385,44 @@ target="_blank">
 
 <section id="services">
 
-<h2 class="section-title">Our Services</h2>
+<h2 class="section-title">Our Home Appliance Services</h2>
 
 <div class="services-grid">
 
 <div class="service-card" onclick="openBookingFor('AC')">
-<img src="ac1.jpeg" alt="AC Repair">
+<img src="ac1.jpeg" alt="AC Repair and Service" loading="lazy">
 <div class="service-card-content">
 <h3>❄️ AC Repair & Service</h3>
-<p>Repair, installation, servicing and shifting.</p>
+<p>Repair, installation, servicing, gas work and shifting.</p>
 </div>
 </div>
 
 <div class="service-card" onclick="openBookingFor('Refrigerator')">
-<img src="fr1.jpeg" alt="Refrigerator Repair">
+<img src="fr1.jpeg" alt="Refrigerator Repair Service" loading="lazy">
 <div class="service-card-content">
 <h3>🧊 Refrigerator Repair</h3>
-<p>Professional refrigerator repair and service.</p>
+<p>Professional refrigerator and commercial fridge service.</p>
 </div>
 </div>
 
 <div class="service-card" onclick="openBookingFor('Washing Machine')">
-<img src="wm1.jpeg" alt="Washing Machine Repair">
+<img src="wm1.jpeg" alt="Washing Machine Repair Service" loading="lazy">
 <div class="service-card-content">
 <h3>🧺 Washing Machine</h3>
-<p>Top load, front load, semi and commercial.</p>
+<p>Top load, front load, semi automatic and commercial service.</p>
 </div>
 </div>
 
 <div class="service-card" onclick="openBookingFor('Geyser')">
-<img src="gr1.jpeg" alt="Geyser Repair">
+<img src="gr1.jpeg" alt="Geyser Repair Service" loading="lazy">
 <div class="service-card-content">
 <h3>🔥 Geyser Repair</h3>
-<p>Electric and commercial geyser service.</p>
+<p>Electric, instant, storage and commercial geyser service.</p>
 </div>
 </div>
 
 <div class="service-card" onclick="openBookingFor('Microwave')">
-<img src="mw1.jpeg" alt="Microwave Repair">
+<img src="mw1.jpeg" alt="Microwave Oven Repair" loading="lazy">
 <div class="service-card-content">
 <h3>🍽️ Microwave Oven</h3>
 <p>Home, commercial and restaurant microwave service.</p>
@@ -1281,26 +1430,26 @@ target="_blank">
 </div>
 
 <div class="service-card" onclick="openBookingFor('Chimney')">
-<img src="chimney1.jpeg" alt="Chimney Repair">
+<img src="chimney1.jpeg" alt="Kitchen Chimney Repair" loading="lazy">
 <div class="service-card-content">
 <h3>🏠 Chimney Repair</h3>
-<p>Kitchen chimney repair and service.</p>
+<p>Kitchen chimney repair, servicing and maintenance.</p>
 </div>
 </div>
 
 <div class="service-card" onclick="openBookingFor('TV')">
-<img src="tv1.jpeg" alt="TV Repair">
+<img src="tv1.jpeg" alt="LED TV Repair" loading="lazy">
 <div class="service-card-content">
 <h3>📺 TV Repair</h3>
-<p>LED, 4K, 5K, HD, Plasma and other TVs.</p>
+<p>LED, LCD, Smart TV, QLED and other television repairs.</p>
 </div>
 </div>
 
 <div class="service-card" onclick="openBookingFor('RO / Water Purifier')">
-<img src="aqua1.jpeg" alt="RO Water Purifier Repair">
+<img src="aqua1.jpeg" alt="RO Water Purifier Repair" loading="lazy">
 <div class="service-card-content">
 <h3>💧 RO / Water Purifier</h3>
-<p>RO, purifier installation, repair and service.</p>
+<p>RO, purifier installation, repair, service and maintenance.</p>
 </div>
 </div>
 
@@ -1312,41 +1461,41 @@ target="_blank">
 
 <section class="gallery" id="gallery">
 
-<h2 class="section-title">Our Work</h2>
+<h2 class="section-title">Our Repair & Service Work</h2>
 
 <div class="gallery-grid">
 
-<img src="ac1.jpeg" alt="AC Repair Work">
-<img src="ac2.jpeg" alt="AC Service Work">
-<img src="ac3.jpeg" alt="AC Technician Work">
-<img src="ac4.jpeg" alt="AC Repair Work">
+<img src="ac1.jpeg" alt="AC Repair Work" loading="lazy" onclick="viewImage(this.src)">
+<img src="ac2.jpeg" alt="AC Service Work" loading="lazy" onclick="viewImage(this.src)">
+<img src="ac3.jpeg" alt="AC Technician Work" loading="lazy" onclick="viewImage(this.src)">
+<img src="ac4.jpeg" alt="AC Repair Work" loading="lazy" onclick="viewImage(this.src)">
 
-<img src="fr1.jpeg" alt="Refrigerator Repair">
-<img src="fr2.jpeg" alt="Fridge Service">
-<img src="fr3.jpeg" alt="Fridge Repair">
-<img src="fr4.jpeg" alt="Fridge Service">
+<img src="fr1.jpeg" alt="Refrigerator Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="fr2.jpeg" alt="Fridge Service" loading="lazy" onclick="viewImage(this.src)">
+<img src="fr3.jpeg" alt="Fridge Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="fr4.jpeg" alt="Fridge Service" loading="lazy" onclick="viewImage(this.src)">
 
-<img src="wm1.jpeg" alt="Washing Machine Repair">
-<img src="wm2.jpeg" alt="Washing Machine Service">
-<img src="wm3.jpeg" alt="Washing Machine Repair">
-<img src="wm4.jpeg" alt="Washing Machine Service">
+<img src="wm1.jpeg" alt="Washing Machine Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="wm2.jpeg" alt="Washing Machine Service" loading="lazy" onclick="viewImage(this.src)">
+<img src="wm3.jpeg" alt="Washing Machine Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="wm4.jpeg" alt="Washing Machine Service" loading="lazy" onclick="viewImage(this.src)">
 
-<img src="gr1.jpeg" alt="Geyser Repair">
-<img src="gr2.jpeg" alt="Geyser Service">
-<img src="gr3.jpeg" alt="Geyser Repair">
-<img src="gr4.jpeg" alt="Geyser Service">
+<img src="gr1.jpeg" alt="Geyser Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="gr2.jpeg" alt="Geyser Service" loading="lazy" onclick="viewImage(this.src)">
+<img src="gr3.jpeg" alt="Geyser Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="gr4.jpeg" alt="Geyser Service" loading="lazy" onclick="viewImage(this.src)">
 
-<img src="mw1.jpeg" alt="Microwave Repair">
-<img src="mw2.jpeg" alt="Microwave Service">
+<img src="mw1.jpeg" alt="Microwave Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="mw2.jpeg" alt="Microwave Service" loading="lazy" onclick="viewImage(this.src)">
 
-<img src="chimney1.jpeg" alt="Chimney Repair">
-<img src="chimney2.jpeg" alt="Chimney Service">
+<img src="chimney1.jpeg" alt="Chimney Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="chimney2.jpeg" alt="Chimney Service" loading="lazy" onclick="viewImage(this.src)">
 
-<img src="tv1.jpeg" alt="TV Repair">
-<img src="tv2.jpeg" alt="TV Service">
+<img src="tv1.jpeg" alt="TV Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="tv2.jpeg" alt="TV Service" loading="lazy" onclick="viewImage(this.src)">
 
-<img src="aqua1.jpeg" alt="RO Repair">
-<img src="aqua2.jpeg" alt="RO Service">
+<img src="aqua1.jpeg" alt="RO Repair" loading="lazy" onclick="viewImage(this.src)">
+<img src="aqua2.jpeg" alt="RO Service" loading="lazy" onclick="viewImage(this.src)">
 
 </div>
 </section>
@@ -1365,7 +1514,7 @@ target="_blank">
 
 <div class="branch-card" onclick="toggleBranch('dhanbadGallery')">
 
-<img src="dh1.jpeg" alt="Fast2Fix Dhanbad Branch">
+<img src="dh1.jpeg" alt="Fast2Fix Dhanbad Branch" loading="lazy">
 
 <div class="branch-content">
 
@@ -1391,10 +1540,10 @@ onclick="event.stopPropagation();">
 
 <div class="branch-gallery" id="dhanbadGallery">
 
-<img src="dh1.jpeg" alt="Dhanbad Branch">
-<img src="dh2.jpeg" alt="Dhanbad Branch">
-<img src="dh3.jpeg" alt="Dhanbad Branch">
-<img src="dh4.jpeg" alt="Dhanbad Branch">
+<img src="dh1.jpeg" alt="Dhanbad Branch" loading="lazy">
+<img src="dh2.jpeg" alt="Dhanbad Branch" loading="lazy">
+<img src="dh3.jpeg" alt="Dhanbad Branch" loading="lazy">
+<img src="dh4.jpeg" alt="Dhanbad Branch" loading="lazy">
 
 <button class="branch-close"
 onclick="closeBranch(event,'dhanbadGallery')">
@@ -1409,7 +1558,7 @@ Close Photos
 
 <div class="branch-card" onclick="toggleBranch('bokaroGallery')">
 
-<img src="bk2.jpeg" alt="Fast2Fix Bokaro Branch">
+<img src="bk2.jpeg" alt="Fast2Fix Bokaro Branch" loading="lazy">
 
 <div class="branch-content">
 
@@ -1429,19 +1578,17 @@ onclick="event.stopPropagation();">
 📞 9234227337
 </a>
 
-<p>📅 Opened: 20 January 2025</p>
-
 <p>Fast2Fix Service Centre Branch 3</p>
 
 </div>
 
 <div class="branch-gallery" id="bokaroGallery">
 
-<img src="bk1.jpeg" alt="Bokaro Branch">
-<img src="bk2.jpeg" alt="Bokaro Branch">
-<img src="bk3.jpeg" alt="Bokaro Branch">
-<img src="bk4.jpeg" alt="Bokaro Branch">
-<img src="bk5.jpeg" alt="Bokaro Branch">
+<img src="bk1.jpeg" alt="Bokaro Branch" loading="lazy">
+<img src="bk2.jpeg" alt="Bokaro Branch" loading="lazy">
+<img src="bk3.jpeg" alt="Bokaro Branch" loading="lazy">
+<img src="bk4.jpeg" alt="Bokaro Branch" loading="lazy">
+<img src="bk5.jpeg" alt="Bokaro Branch" loading="lazy">
 
 <button class="branch-close"
 onclick="closeBranch(event,'bokaroGallery')">
@@ -1456,7 +1603,7 @@ Close Photos
 
 <div class="branch-card" onclick="toggleBranch('kharagpurGallery')">
 
-<img src="kp1.jpeg" alt="Fast2Fix Kharagpur Branch">
+<img src="kp1.jpeg" alt="Fast2Fix Kharagpur Branch" loading="lazy">
 
 <div class="branch-content">
 
@@ -1476,18 +1623,16 @@ onclick="event.stopPropagation();">
 📞 7050129203
 </a>
 
-<p>📅 Opened: 20 January 2024</p>
-
 <p>Fast2Fix Service Centre Branch 2</p>
 
 </div>
 
 <div class="branch-gallery" id="kharagpurGallery">
 
-<img src="kp1.jpeg" alt="Kharagpur Branch">
-<img src="kp2.jpeg" alt="Kharagpur Branch">
-<img src="kp3.jpeg" alt="Kharagpur Branch">
-<img src="kp4.jpeg" alt="Kharagpur Branch">
+<img src="kp1.jpeg" alt="Kharagpur Branch" loading="lazy">
+<img src="kp2.jpeg" alt="Kharagpur Branch" loading="lazy">
+<img src="kp3.jpeg" alt="Kharagpur Branch" loading="lazy">
+<img src="kp4.jpeg" alt="Kharagpur Branch" loading="lazy">
 
 <button class="branch-close"
 onclick="closeBranch(event,'kharagpurGallery')">
@@ -1502,7 +1647,7 @@ Close Photos
 
 <div class="branch-card" onclick="toggleBranch('biharGallery')">
 
-<img src="bs1.jpeg" alt="Fast2Fix Bihar Sharif Branch">
+<img src="bs1.jpeg" alt="Fast2Fix Bihar Sharif Branch" loading="lazy">
 
 <div class="branch-content">
 
@@ -1522,18 +1667,16 @@ onclick="event.stopPropagation();">
 📞 9835646220
 </a>
 
-<p>📅 Opened: 20 January 2026</p>
-
 <p>Fast2Fix Service Centre Branch 4</p>
 
 </div>
 
 <div class="branch-gallery" id="biharGallery">
 
-<img src="bs1.jpeg" alt="Bihar Sharif Branch">
-<img src="bs2.jpeg" alt="Bihar Sharif Branch">
-<img src="bs3.jpeg" alt="Bihar Sharif Branch">
-<img src="bs4.jpeg" alt="Bihar Sharif Branch">
+<img src="bs1.jpeg" alt="Bihar Sharif Branch" loading="lazy">
+<img src="bs2.jpeg" alt="Bihar Sharif Branch" loading="lazy">
+<img src="bs3.jpeg" alt="Bihar Sharif Branch" loading="lazy">
+<img src="bs4.jpeg" alt="Bihar Sharif Branch" loading="lazy">
 
 <button class="branch-close"
 onclick="closeBranch(event,'biharGallery')">
@@ -1639,7 +1782,7 @@ Since 1992 • Registered in 2024
 <div class="about-container">
 
 <div class="about-image">
-<img src="dh1.jpeg" alt="Fast2Fix Service Centre">
+<img src="dh1.jpeg" alt="Fast2Fix Service Centre" loading="lazy">
 </div>
 
 <div class="about-content">
@@ -1854,7 +1997,8 @@ our latest services and work.
 
 <a class="social-card instagram"
 href="https://www.instagram.com/fast2fix_service?igsh=MXVkbnpkMW04ejZtYQ=="
-target="_blank">
+target="_blank"
+rel="noopener">
 
 <span class="social-icon">📸</span>
 Instagram
@@ -1862,7 +2006,8 @@ Instagram
 
 <a class="social-card facebook"
 href="https://www.facebook.com/share/1943G38VPs/"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 <span class="social-icon">f</span>
 Facebook
@@ -1870,7 +2015,8 @@ Facebook
 
 <a class="social-card youtube"
 href="https://www.youtube.com/@Fast2fix_service_"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 <span class="social-icon">▶️</span>
 YouTube
@@ -1878,7 +2024,8 @@ YouTube
 
 <a class="social-card social-whatsapp"
 href="https://wa.me/918434746494"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 <span class="social-icon">💬</span>
 WhatsApp
@@ -1914,7 +2061,8 @@ business information and location.
 
 <a class="business-btn google-btn"
 href="https://maps.app.goo.gl/gRVLhre6StVFkE6K9"
-target="_blank">
+target="_blank"
+rel="noopener">
 ⭐ View Google Reviews
 </a>
 
@@ -1938,7 +2086,8 @@ service information and business details.
 
 <a class="business-btn justdial-btn"
 href="https://jsdl.in/DT-99NUR8BI9YH"
-target="_blank">
+target="_blank"
+rel="noopener">
 📒 View Justdial Business
 </a>
 
@@ -2083,6 +2232,7 @@ title="Call Fast2Fix">
 <a class="float-btn float-whatsapp"
 href="https://wa.me/918434746494"
 target="_blank"
+rel="noopener"
 title="WhatsApp Fast2Fix">
 💬
 </a>
@@ -2142,6 +2292,7 @@ Appliance Type
 <label>TV Size</label>
 
 <select id="tvSize">
+
 <option value="">Select TV Size</option>
 <option>24 Inch</option>
 <option>32 Inch</option>
@@ -2153,6 +2304,7 @@ Appliance Type
 <option>75 Inch</option>
 <option>85 Inch</option>
 <option>Other</option>
+
 </select>
 
 </div>
@@ -2220,6 +2372,7 @@ required>
 type="text"
 id="customerName"
 placeholder="Your Name"
+maxlength="60"
 required>
 
 
@@ -2240,6 +2393,7 @@ required>
 <textarea
 id="customerMessage"
 rows="4"
+maxlength="500"
 placeholder="Describe your appliance problem or requirement"></textarea>
 
 
@@ -2255,6 +2409,20 @@ placeholder="Describe your appliance problem or requirement"></textarea>
 </form>
 
 </div>
+</div>
+
+
+<!-- IMAGE VIEWER -->
+
+<div class="image-viewer" id="imageViewer" onclick="closeImage(event)">
+
+<span class="image-viewer-close"
+onclick="closeImage(event)">
+×
+</span>
+
+<img id="viewerImage" src="" alt="Fast2Fix Service Work">
+
 </div>
 
 
@@ -2291,7 +2459,10 @@ openBooking();
 
 setTimeout(function(){
 
-document.getElementById("applianceType").value=appliance;
+const applianceSelect=
+document.getElementById("applianceType");
+
+applianceSelect.value=appliance;
 
 updateApplianceOptions();
 
@@ -2532,11 +2703,16 @@ document.getElementById("brand");
 let tvSizeBox=
 document.getElementById("tvSizeBox");
 
+let tvSize=
+document.getElementById("tvSize");
+
 options.innerHTML=
 '<option value="">Select Type</option>';
 
 brand.innerHTML=
 '<option value="">Select Brand</option>';
+
+tvSize.value="";
 
 tvSizeBox.style.display="none";
 
@@ -2550,6 +2726,10 @@ return;
 }
 
 let data=applianceData[appliance];
+
+if(!data){
+return;
+}
 
 optionsBox.style.display="block";
 brandBox.style.display="block";
@@ -2617,26 +2797,30 @@ let pin=
 document.getElementById("customerPin").value;
 
 let name=
-document.getElementById("customerName").value;
+document.getElementById("customerName").value.trim();
 
 let phone=
 document.getElementById("customerPhone").value;
 
 let message=
-document.getElementById("customerMessage").value;
+document.getElementById("customerMessage").value.trim();
 
 let tvSize=
 document.getElementById("tvSize").value;
 
 
-if(!appliance ||
+/* VALIDATION */
+
+if(
+!appliance ||
 !applianceOption ||
 !brand ||
 !serviceAction ||
 !city ||
 !pin ||
 !name ||
-!phone){
+!phone
+){
 
 alert("Please fill all required details.");
 
@@ -2644,6 +2828,24 @@ return;
 
 }
 
+if(!/^[0-9]{6}$/.test(pin)){
+
+alert("Please enter a valid 6 digit PIN Code.");
+
+return;
+
+}
+
+if(!/^[0-9]{10}$/.test(phone)){
+
+alert("Please enter a valid 10 digit mobile number.");
+
+return;
+
+}
+
+
+/* WHATSAPP MESSAGE */
 
 let text=
 "🔧 *FAST2FIX SERVICE CENTRE - NEW ENQUIRY*%0A"+
@@ -2716,21 +2918,6 @@ window.open(whatsappURL,"_blank");
 
 
 /* =========================================
-   AUTO BOOKING POPUP
-========================================= */
-
-window.addEventListener("load",function(){
-
-setTimeout(function(){
-
-openBooking();
-
-},1800);
-
-});
-
-
-/* =========================================
    BRANCH GALLERY
 ========================================= */
 
@@ -2756,6 +2943,36 @@ function closeBranch(event,id){
 event.stopPropagation();
 
 document.getElementById(id).style.display="none";
+
+}
+
+
+/* =========================================
+   IMAGE VIEWER
+========================================= */
+
+function viewImage(src){
+
+document.getElementById("viewerImage").src=src;
+
+document.getElementById("imageViewer").style.display="flex";
+
+document.body.style.overflow="hidden";
+
+}
+
+function closeImage(event){
+
+if(
+event.target.id==="imageViewer" ||
+event.target.classList.contains("image-viewer-close")
+){
+
+document.getElementById("imageViewer").style.display="none";
+
+document.body.style.overflow="";
+
+}
 
 }
 
@@ -2855,12 +3072,32 @@ closeBooking();
 
 
 /* =========================================
+   ESC KEY CLOSE
+========================================= */
+
+document.addEventListener("keydown",function(event){
+
+if(event.key==="Escape"){
+
+closeBooking();
+
+document.getElementById("imageViewer").style.display="none";
+
+document.body.style.overflow="";
+
+}
+
+});
+
+
+/* =========================================
    PIN CODE ONLY NUMBERS
 ========================================= */
 
 document.getElementById("customerPin").addEventListener("input",function(){
 
-this.value=this.value.replace(/[^0-9]/g,"").slice(0,6);
+this.value=
+this.value.replace(/[^0-9]/g,"").slice(0,6);
 
 });
 
@@ -2871,10 +3108,77 @@ this.value=this.value.replace(/[^0-9]/g,"").slice(0,6);
 
 document.getElementById("customerPhone").addEventListener("input",function(){
 
-this.value=this.value.replace(/[^0-9]/g,"").slice(0,10);
+this.value=
+this.value.replace(/[^0-9]/g,"").slice(0,10);
 
 });
 
+
+/* =========================================
+   AUTO BOOKING POPUP
+   Disabled on mobile for better UX
+========================================= */
+
+window.addEventListener("load",function(){
+
+if(window.innerWidth>700){
+
+setTimeout(function(){
+
+openBooking();
+
+},1800);
+
+}
+
+});
+
+</script>
+
+
+<!-- LOCAL BUSINESS STRUCTURED DATA -->
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"HomeAndConstructionBusiness",
+"name":"Fast2Fix Service Centre",
+"description":"Professional home appliance repair and service provider for AC, refrigerator, washing machine, geyser, microwave oven, chimney, TV and RO water purifier.",
+"url":"https://fast2fixservices.co.in/",
+"telephone":"+91-8434746494",
+"email":"fast2fixservices.co.in@gmail.com",
+"foundingDate":"1992",
+"sameAs":[
+"https://www.instagram.com/fast2fix_service",
+"https://www.facebook.com/share/1943G38VPs/",
+"https://www.youtube.com/@Fast2fix_service_"
+],
+"areaServed":[
+"Dhanbad",
+"Bokaro",
+"Kharagpur",
+"Bihar Sharif",
+"Jharia",
+"Wasseypur",
+"Asansol",
+"Kulti",
+"Nirsa",
+"Maithon",
+"Tundi",
+"Moghal Kuan"
+],
+"serviceType":[
+"AC Repair",
+"AC Service",
+"Refrigerator Repair",
+"Washing Machine Repair",
+"Geyser Repair",
+"Microwave Oven Repair",
+"Chimney Repair",
+"TV Repair",
+"RO Water Purifier Repair"
+]
+}
 </script>
 
 </body>
