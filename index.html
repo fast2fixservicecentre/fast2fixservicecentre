@@ -257,6 +257,29 @@ font-size:21px;
 font-weight:bold;
 }
 
+
+/* TECHNICIAN VISITING CHARGE */
+
+.visiting-charge{
+display:inline-block;
+margin:15px auto 5px;
+padding:11px 22px;
+border-radius:9px;
+background:rgba(255,104,0,.95);
+color:white;
+font-size:17px;
+font-weight:bold;
+box-shadow:0 3px 12px rgba(0,0,0,.3);
+}
+
+.visiting-charge small{
+display:block;
+font-size:12px;
+font-weight:normal;
+margin-top:2px;
+}
+
+
 .btn{
 display:inline-block;
 border:0;
@@ -1090,6 +1113,15 @@ font-size:16px;
 font-size:17px;
 }
 
+.visiting-charge{
+font-size:15px;
+padding:10px 15px;
+}
+
+.visiting-charge small{
+font-size:11px;
+}
+
 .btn{
 display:block;
 width:90%;
@@ -1232,6 +1264,15 @@ Official Home Appliances Repair & Service Network
 <p>
 Fast, Reliable & Professional Appliance Service
 </p>
+
+<!-- TECHNICIAN VISITING CHARGE -->
+
+<div class="visiting-charge">
+🔧 Technician Visiting Charge: ₹350–₹600
+<small>
+Final visiting charge will be confirmed on call before technician visit.
+</small>
+</div>
 
 <p>
 AC • Refrigerator • Washing Machine • Geyser • Microwave • Chimney • TV • RO
@@ -3304,7 +3345,9 @@ message || "Not specified"
 
 "🏢 *Fast2Fix Service Centre*%0A"+
 
-"👨‍🔧 *Technician Visiting Charge:* Call karke abhi confirm kar diya jayega.%0A"+
+"🔧 *Technician Visiting Charge: ₹350–₹600*%0A"+
+
+"📞 Technician visiting charge will be confirmed on call before the visit.%0A"+
 
 "📧 fast2fixservices.co.in@gmail.com";
 
@@ -3373,6 +3416,26 @@ this.value=
 this.value
 .replace(/[^0-9]/g,"")
 .slice(0,10);
+
+});
+
+
+/* =========================
+   AUTO OPEN BOOKING POPUP
+========================= */
+
+window.addEventListener(
+"load",
+function(){
+
+setTimeout(
+function(){
+
+openBooking();
+
+},
+800
+);
 
 });
 
