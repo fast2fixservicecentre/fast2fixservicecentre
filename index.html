@@ -473,6 +473,40 @@ section{
     box-shadow:0 8px 25px rgba(0,0,0,.18);
 }
 
+/* CLICKABLE SERVICE CARD */
+
+.service-clickable{
+    cursor:pointer;
+    position:relative;
+}
+
+.service-clickable::after{
+    content:"Click to Select Brand & Book";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:8px;
+    background:rgba(8,124,255,.94);
+    color:#fff;
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+    opacity:0;
+    transform:translateY(100%);
+    transition:.25s;
+}
+
+.service-clickable:hover::after{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.service-clickable:focus{
+    outline:3px solid #087cff;
+    outline-offset:3px;
+}
+
 .service-card img{
     width:100%;
     height:190px;
@@ -1137,7 +1171,7 @@ footer{
 
 
 /* =====================================================
-   BOOKING POPUP
+   ALL POPUPS
 ===================================================== */
 
 .popup-overlay{
@@ -1145,7 +1179,7 @@ footer{
     position:fixed;
     inset:0;
     z-index:9999;
-    background:rgba(0,0,0,.8);
+    background:rgba(0,0,0,.82);
     padding:20px;
     overflow:auto;
 }
@@ -1157,6 +1191,7 @@ footer{
     border-radius:15px;
     padding:28px;
     position:relative;
+    box-shadow:0 15px 50px rgba(0,0,0,.4);
 }
 
 .close{
@@ -1166,6 +1201,12 @@ footer{
     font-size:30px;
     cursor:pointer;
     color:#555;
+    line-height:1;
+    z-index:2;
+}
+
+.close:hover{
+    color:#e40000;
 }
 
 .popup h2{
@@ -1198,6 +1239,134 @@ footer{
     background:#fff;
 }
 
+.popup input:focus,
+.popup textarea:focus,
+.popup select:focus{
+    border-color:#087cff;
+}
+
+
+/* =====================================================
+   BRAND POPUP
+===================================================== */
+
+.brand-popup{
+    max-width:700px;
+    margin:4% auto;
+}
+
+.brand-popup-badge{
+    display:block;
+    width:max-content;
+    max-width:100%;
+    margin:0 auto 10px;
+    padding:7px 15px;
+    background:#087cff;
+    color:#fff;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.brand-popup h2{
+    font-size:27px;
+    color:#111;
+}
+
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin:18px 0;
+    max-height:390px;
+    overflow-y:auto;
+    padding:4px;
+}
+
+.brand-option{
+    border:1px solid #d5d5d5;
+    background:#f7f9fc;
+    color:#222;
+    padding:12px 7px;
+    border-radius:9px;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.brand-option:hover{
+    background:#087cff;
+    color:#fff;
+    border-color:#087cff;
+    transform:translateY(-2px);
+}
+
+.brand-option:active{
+    transform:scale(.97);
+}
+
+.brand-skip{
+    width:100%;
+    border:1px solid #aaa;
+    background:#fff;
+    color:#444;
+    padding:12px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:5px;
+}
+
+.brand-skip:hover{
+    background:#f1f1f1;
+}
+
+
+/* =====================================================
+   BOOKING POPUP
+===================================================== */
+
+.booking-popup{
+    max-width:560px;
+}
+
+.selected-info{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin:10px 0 5px;
+}
+
+.selected-chip{
+    display:none;
+    background:#eef7ff;
+    color:#087cff;
+    border:1px solid #b8dcff;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.change-brand-btn{
+    display:none;
+    width:100%;
+    margin:3px 0 7px;
+    border:0;
+    background:#f1f1f1;
+    color:#087cff;
+    padding:9px;
+    border-radius:7px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.change-brand-btn:hover{
+    background:#e5e5e5;
+}
+
 .submit{
     width:100%;
     border:0;
@@ -1209,6 +1378,10 @@ footer{
     font-weight:bold;
     margin-top:10px;
     cursor:pointer;
+}
+
+.submit:hover{
+    background:#16ad57;
 }
 
 
@@ -1280,6 +1453,10 @@ footer{
 
     .social-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .brand-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
 }
@@ -1447,6 +1624,21 @@ footer{
         padding:25px 18px;
     }
 
+    .brand-popup{
+        margin:3% auto;
+    }
+
+    .brand-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+        max-height:370px;
+    }
+
+    .brand-option{
+        padding:11px 5px;
+        font-size:13px;
+    }
+
     .float-btn{
         width:52px;
         height:52px;
@@ -1488,6 +1680,10 @@ footer{
 
     .social-grid{
         grid-template-columns:1fr;
+    }
+
+    .brand-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
@@ -1541,10 +1737,6 @@ textarea:focus{
 <div class="header-inner">
 
 
-<!-- =================================================
-     LOGO
-================================================= -->
-
 <div class="logo">
 
 <span class="fast">Fast</span><span class="fix">2Fix</span>
@@ -1561,62 +1753,32 @@ Official Home Appliances Service Brand
 </div>
 
 
-<!-- =================================================
-     TOP NAVIGATION
-================================================= -->
-
 <nav class="top-nav" aria-label="Main Navigation">
 
-<a href="#home">
-🏠 Home
-</a>
+<a href="#home">🏠 Home</a>
 
-<a href="#services">
-🛠️ Services
-</a>
+<a href="#services">🛠️ Services</a>
 
-<a href="#network">
-🏢 Branches
-</a>
+<a href="#network">🏢 Branches</a>
 
-<a href="#branch-details">
-📋 Branch Details
-</a>
+<a href="#branch-details">📋 Branch Details</a>
 
-<a href="#about">
-ℹ️ About
-</a>
+<a href="#about">ℹ️ About</a>
 
-<a href="#why">
-⭐ Why Choose
-</a>
+<a href="#why">⭐ Why Choose</a>
 
-<a href="#how">
-🔧 How It Works
-</a>
+<a href="#how">🔧 How It Works</a>
 
-<a href="#business">
-🌐 Business
-</a>
+<a href="#business">🌐 Business</a>
 
-<a href="#areas">
-📍 Areas
-</a>
+<a href="#areas">📍 Areas</a>
 
-<a href="#franchise">
-🤝 Franchise
-</a>
+<a href="#franchise">🤝 Franchise</a>
 
-<a href="#contact">
-👤 Managers / Contact
-</a>
+<a href="#contact">👤 Managers / Contact</a>
 
 </nav>
 
-
-<!-- =================================================
-     HEADER CALL BUTTON
-================================================= -->
 
 <a
 class="btn btn-call header-call"
@@ -1702,6 +1864,7 @@ rel="noopener">
 </a>
 
 <button
+type="button"
 class="btn btn-book"
 onclick="openBooking()">
 
@@ -1799,11 +1962,14 @@ Professional repair and service for major home appliances
 <div class="services-grid">
 
 
-<!-- =================================================
-     AC
-================================================= -->
+<!-- AC -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('AC')"
+onkeydown="handleServiceKey(event,'AC')">
 
 <img
 src="ac1.jpeg"
@@ -1822,11 +1988,14 @@ Split, Window, Cassette, Inverter, R32, R22 & R410 AC service.
 </div>
 
 
-<!-- =================================================
-     FRIDGE
-================================================= -->
+<!-- FRIDGE -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('Refrigerator')"
+onkeydown="handleServiceKey(event,'Refrigerator')">
 
 <img
 src="fr1.jpeg"
@@ -1845,11 +2014,14 @@ Single Door, Double Door, Side-by-Side and commercial fridge.
 </div>
 
 
-<!-- =================================================
-     WASHING MACHINE
-================================================= -->
+<!-- WASHING MACHINE -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('Washing Machine')"
+onkeydown="handleServiceKey(event,'Washing Machine')">
 
 <img
 src="wm1.jpeg"
@@ -1868,11 +2040,14 @@ Top Load, Front Load, Semi Automatic and fully automatic.
 </div>
 
 
-<!-- =================================================
-     GEYSER
-================================================= -->
+<!-- GEYSER -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('Geyser')"
+onkeydown="handleServiceKey(event,'Geyser')">
 
 <img
 src="gr1.jpeg"
@@ -1891,11 +2066,14 @@ Electric, Instant, Storage and commercial geyser service.
 </div>
 
 
-<!-- =================================================
-     MICROWAVE
-================================================= -->
+<!-- MICROWAVE -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('Microwave Oven')"
+onkeydown="handleServiceKey(event,'Microwave Oven')">
 
 <img
 src="mw1.jpeg"
@@ -1914,11 +2092,14 @@ Solo, Grill, Convection and commercial microwave repair.
 </div>
 
 
-<!-- =================================================
-     CHIMNEY
-================================================= -->
+<!-- CHIMNEY -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('Chimney')"
+onkeydown="handleServiceKey(event,'Chimney')">
 
 <img
 src="chimney1.jpeg"
@@ -1937,11 +2118,14 @@ Kitchen chimney repair, service and maintenance.
 </div>
 
 
-<!-- =================================================
-     TV
-================================================= -->
+<!-- TV -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('TV')"
+onkeydown="handleServiceKey(event,'TV')">
 
 <img
 src="tv1.jpeg"
@@ -1960,11 +2144,14 @@ LED, LCD, Smart TV, 4K, QLED and other television repair.
 </div>
 
 
-<!-- =================================================
-     RO
-================================================= -->
+<!-- RO -->
 
-<div class="service-card">
+<div
+class="service-card service-clickable"
+role="button"
+tabindex="0"
+onclick="openBrandPopup('RO / Water Purifier')"
+onkeydown="handleServiceKey(event,'RO / Water Purifier')">
 
 <img
 src="aqua1.jpeg"
@@ -2023,9 +2210,7 @@ in different cities.
 <div class="network-grid">
 
 
-<!-- =================================================
-     DHANBAD
-================================================= -->
+<!-- DHANBAD -->
 
 <div class="network-card">
 
@@ -2072,9 +2257,7 @@ View Dhanbad Details
 </div>
 
 
-<!-- =================================================
-     BOKARO
-================================================= -->
+<!-- BOKARO -->
 
 <div class="network-card">
 
@@ -2121,9 +2304,7 @@ View Bokaro Details
 </div>
 
 
-<!-- =================================================
-     KHARAGPUR
-================================================= -->
+<!-- KHARAGPUR -->
 
 <div class="network-card">
 
@@ -2170,9 +2351,7 @@ View Kharagpur Details
 </div>
 
 
-<!-- =================================================
-     BIHAR SHARIF
-================================================= -->
+<!-- BIHAR SHARIF -->
 
 <div class="network-card">
 
@@ -2223,9 +2402,7 @@ View Bihar Sharif Details
 </div>
 
 
-<!-- =================================================
-     PATNA
-================================================= -->
+<!-- PATNA -->
 
 <div class="network-card">
 
@@ -2302,9 +2479,7 @@ Fast2Fix Service Centre Branch & Workshop Network
 </div>
 
 
-<!-- =================================================
-     DHANBAD DETAIL
-================================================= -->
+<!-- DHANBAD DETAIL -->
 
 <div
 class="branch-detail"
@@ -2365,9 +2540,7 @@ Head / Zonal Branch
 </div>
 
 
-<!-- =================================================
-     BOKARO DETAIL
-================================================= -->
+<!-- BOKARO DETAIL -->
 
 <div
 class="branch-detail"
@@ -2425,9 +2598,7 @@ Authorized Fast2Fix Branch
 </div>
 
 
-<!-- =================================================
-     KHARAGPUR DETAIL
-================================================= -->
+<!-- KHARAGPUR DETAIL -->
 
 <div
 class="branch-detail"
@@ -2485,9 +2656,7 @@ Authorized Fast2Fix Branch
 </div>
 
 
-<!-- =================================================
-     BIHAR SHARIF DETAIL
-================================================= -->
+<!-- BIHAR SHARIF DETAIL -->
 
 <div
 class="branch-detail"
@@ -2551,9 +2720,7 @@ Authorized Fast2Fix Workshop / Branch
 </div>
 
 
-<!-- =================================================
-     PATNA DETAIL
-================================================= -->
+<!-- PATNA DETAIL -->
 
 <div
 class="branch-detail"
@@ -2776,10 +2943,6 @@ Professional appliance service with a customer-first approach
 <div class="why-grid">
 
 
-<!-- =================================================
-     WHY BOX 1
-================================================= -->
-
 <div class="why-box">
 
 <span class="why-icon">
@@ -2796,10 +2959,6 @@ Technicians for multiple home appliance categories.
 
 </div>
 
-
-<!-- =================================================
-     WHY BOX 2
-================================================= -->
 
 <div class="why-box">
 
@@ -2818,10 +2977,6 @@ Easy booking through phone and WhatsApp.
 </div>
 
 
-<!-- =================================================
-     WHY BOX 3
-================================================= -->
-
 <div class="why-box">
 
 <span class="why-icon">
@@ -2838,10 +2993,6 @@ AC, fridge, washing machine, geyser and more.
 
 </div>
 
-
-<!-- =================================================
-     WHY BOX 4
-================================================= -->
 
 <div class="why-box">
 
@@ -2893,10 +3044,6 @@ Simple and convenient service booking
 <div class="steps">
 
 
-<!-- =================================================
-     STEP 1
-================================================= -->
-
 <div class="step">
 
 <div class="step-icon">
@@ -2913,10 +3060,6 @@ Call or WhatsApp Fast2Fix for your requirement.
 
 </div>
 
-
-<!-- =================================================
-     STEP 2
-================================================= -->
 
 <div class="step">
 
@@ -2935,10 +3078,6 @@ Technician visits your location.
 </div>
 
 
-<!-- =================================================
-     STEP 3
-================================================= -->
-
 <div class="step">
 
 <div class="step-icon">
@@ -2955,10 +3094,6 @@ Appliance is inspected and the problem is identified.
 
 </div>
 
-
-<!-- =================================================
-     STEP 4
-================================================= -->
 
 <div class="step">
 
@@ -3008,8 +3143,6 @@ Follow us for service updates, repair work and business updates.
 <div class="social-grid">
 
 
-<!-- INSTAGRAM -->
-
 <a
 class="social-card instagram"
 href="https://www.instagram.com/fast2fix_service/"
@@ -3024,8 +3157,6 @@ Instagram
 
 </a>
 
-
-<!-- FACEBOOK -->
 
 <a
 class="social-card facebook"
@@ -3042,8 +3173,6 @@ Facebook
 </a>
 
 
-<!-- YOUTUBE -->
-
 <a
 class="social-card youtube"
 href="https://www.youtube.com/@Fast2fix_service_"
@@ -3058,8 +3187,6 @@ YouTube
 
 </a>
 
-
-<!-- WHATSAPP -->
 
 <a
 class="social-card social-whatsapp"
@@ -3109,8 +3236,6 @@ Connect with our official business profiles
 <div class="business-grid">
 
 
-<!-- GOOGLE -->
-
 <div class="business-card">
 
 <div class="business-logo">
@@ -3142,8 +3267,6 @@ Open Google
 
 </div>
 
-
-<!-- JUSTDIAL -->
 
 <div class="business-card">
 
@@ -3217,61 +3340,33 @@ Microwave • Chimney • TV • RO
 
 <div class="area-list">
 
-<span class="area">
-Dhanbad
-</span>
+<span class="area">Dhanbad</span>
 
-<span class="area">
-Bokaro
-</span>
+<span class="area">Bokaro</span>
 
-<span class="area">
-Kharagpur
-</span>
+<span class="area">Kharagpur</span>
 
-<span class="area">
-Bihar Sharif
-</span>
+<span class="area">Bihar Sharif</span>
 
-<span class="area">
-Patna
-</span>
+<span class="area">Patna</span>
 
-<span class="area">
-Jharia
-</span>
+<span class="area">Jharia</span>
 
-<span class="area">
-Bank More
-</span>
+<span class="area">Bank More</span>
 
-<span class="area">
-Wasseypur
-</span>
+<span class="area">Wasseypur</span>
 
-<span class="area">
-Naya Bazar
-</span>
+<span class="area">Naya Bazar</span>
 
-<span class="area">
-Nirsa
-</span>
+<span class="area">Nirsa</span>
 
-<span class="area">
-Maithon
-</span>
+<span class="area">Maithon</span>
 
-<span class="area">
-Tundi
-</span>
+<span class="area">Tundi</span>
 
-<span class="area">
-Asansol
-</span>
+<span class="area">Asansol</span>
 
-<span class="area">
-Kulti
-</span>
+<span class="area">Kulti</span>
 
 </div>
 
@@ -3340,10 +3435,6 @@ Connect with the Fast2Fix service network
 <div class="contact-managers">
 
 
-<!-- =================================================
-     DHANBAD
-================================================= -->
-
 <div class="contact-manager">
 
 <strong>
@@ -3360,10 +3451,6 @@ Mr. Reyaan Khan
 
 </div>
 
-
-<!-- =================================================
-     BOKARO
-================================================= -->
 
 <div class="contact-manager">
 
@@ -3382,10 +3469,6 @@ Ms. Mahak
 </div>
 
 
-<!-- =================================================
-     KHARAGPUR
-================================================= -->
-
 <div class="contact-manager">
 
 <strong>
@@ -3402,10 +3485,6 @@ Mr. Sameer
 
 </div>
 
-
-<!-- =================================================
-     BIHAR SHARIF
-================================================= -->
 
 <div class="contact-manager">
 
@@ -3424,10 +3503,6 @@ Mr. Alamgir
 </div>
 
 
-<!-- =================================================
-     PATNA
-================================================= -->
-
 <div class="contact-manager">
 
 <strong>
@@ -3444,10 +3519,6 @@ Aman — Area Manager
 
 </div>
 
-
-<!-- =================================================
-     EMERGENCY
-================================================= -->
 
 <div class="contact-manager">
 
@@ -3556,6 +3627,55 @@ title="WhatsApp Fast2Fix">
 
 
 <!-- =====================================================
+     BRAND SELECTION POPUP
+===================================================== -->
+
+<div
+class="popup-overlay"
+id="brandPopup">
+
+<div class="popup brand-popup">
+
+<span
+class="close"
+onclick="closeBrandPopup()">
+
+×
+
+</span>
+
+<div class="brand-popup-badge">
+✓ FAST2FIX SERVICE
+</div>
+
+<h2 id="brandPopupTitle">
+Select Brand
+</h2>
+
+<p class="popup-subtitle">
+Select your appliance brand to continue with booking.
+</p>
+
+<div
+class="brand-grid"
+id="brandGrid">
+</div>
+
+<button
+type="button"
+class="brand-skip"
+onclick="continueWithoutBrand()">
+
+Continue Without Selecting Brand
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
      BOOKING POPUP
 ===================================================== -->
 
@@ -3563,7 +3683,7 @@ title="WhatsApp Fast2Fix">
 class="popup-overlay"
 id="bookingPopup">
 
-<div class="popup">
+<div class="popup booking-popup">
 
 <span
 class="close"
@@ -3581,6 +3701,23 @@ onclick="closeBooking()">
 <p class="popup-subtitle">
 Fast2Fix Service Centre
 </p>
+
+
+<div class="selected-info">
+
+<div
+class="selected-chip"
+id="selectedApplianceChip">
+Appliance: -
+</div>
+
+<div
+class="selected-chip"
+id="selectedBrandChip">
+Brand: -
+</div>
+
+</div>
 
 
 <form id="bookingForm">
@@ -3605,7 +3742,8 @@ Mobile Number
 type="tel"
 id="customerPhone"
 placeholder="Enter mobile number"
-required>
+required
+inputmode="tel">
 
 
 <label>
@@ -3653,6 +3791,33 @@ RO / Water Purifier
 </option>
 
 </select>
+
+
+<label>
+Select Brand
+</label>
+
+<select
+id="brand"
+required
+disabled>
+
+<option value="">
+Select Appliance First
+</option>
+
+</select>
+
+
+<button
+type="button"
+class="change-brand-btn"
+id="changeBrandBtn"
+onclick="changeBrandFromBooking()">
+
+🔄 Change Brand
+
+</button>
 
 
 <label>
@@ -3723,60 +3888,768 @@ class="submit">
 
 <script>
 
-
 /* =====================================================
-   BOOKING POPUP
+   APPLIANCE-WISE BRAND DATABASE
+
+   IMPORTANT:
+   Each appliance has its own relevant brands.
+   Brands are NOT mixed between categories.
 ===================================================== */
 
-function openBooking(){
+const applianceData = {
 
-    document.getElementById("bookingPopup").style.display="block";
+    "AC":[
+        "LG",
+        "Samsung",
+        "Voltas",
+        "Daikin",
+        "Carrier",
+        "Blue Star",
+        "Hitachi",
+        "Panasonic",
+        "O General",
+        "Haier",
+        "Godrej",
+        "Whirlpool",
+        "Lloyd",
+        "IFB",
+        "Midea",
+        "TCL",
+        "Croma",
+        "Onida",
+        "Videocon",
+        "Sharp",
+        "Kelvinator",
+        "O General",
+        "Other"
+    ],
 
-    document.body.style.overflow="hidden";
+
+    "Refrigerator":[
+        "LG",
+        "Samsung",
+        "Whirlpool",
+        "Godrej",
+        "Haier",
+        "Panasonic",
+        "Bosch",
+        "IFB",
+        "Voltas Beko",
+        "Liebherr",
+        "Hitachi",
+        "Croma",
+        "Hisense",
+        "Kelvinator",
+        "Electrolux",
+        "Onida",
+        "Videocon",
+        "Haier",
+        "Other"
+    ],
+
+
+    "Washing Machine":[
+        "LG",
+        "Samsung",
+        "IFB",
+        "Whirlpool",
+        "Bosch",
+        "Haier",
+        "Panasonic",
+        "Godrej",
+        "Voltas Beko",
+        "Lloyd",
+        "Croma",
+        "Onida",
+        "Videocon",
+        "Siemens",
+        "Midea",
+        "Other"
+    ],
+
+
+    "Geyser":[
+        "Bajaj",
+        "Racold",
+        "Havells",
+        "AO Smith",
+        "Crompton",
+        "V-Guard",
+        "Usha",
+        "Orient",
+        "Venus",
+        "Kenstar",
+        "Ola",
+        "Hindware",
+        "Jaquar",
+        "Activa",
+        "Haier",
+        "Voltas",
+        "Other"
+    ],
+
+
+    "Microwave Oven":[
+        "LG",
+        "Samsung",
+        "IFB",
+        "Panasonic",
+        "Whirlpool",
+        "Godrej",
+        "Haier",
+        "Morphy Richards",
+        "Bajaj",
+        "Crompton",
+        "Voltas Beko",
+        "Oster",
+        "Croma",
+        "Electrolux",
+        "Sharp",
+        "Other"
+    ],
+
+
+    "Chimney":[
+        "Faber",
+        "Elica",
+        "Glen",
+        "Hindware",
+        "Kaff",
+        "Bosch",
+        "Cata",
+        "Franke",
+        "Inalsa",
+        "Sunflame",
+        "Eurodomo",
+        "Carysil",
+        "Hafele",
+        "Faber Hood",
+        "Kutchina",
+        "Prestige",
+        "Butterfly",
+        "Other"
+    ],
+
+
+    "TV":[
+        "LG",
+        "Samsung",
+        "Sony",
+        "TCL",
+        "Panasonic",
+        "Hisense",
+        "Haier",
+        "Xiaomi / Mi",
+        "OnePlus",
+        "Thomson",
+        "Vu",
+        "Realme",
+        "Motorola",
+        "Kodak",
+        "Acer",
+        "Toshiba",
+        "Philips",
+        "Sharp",
+        "Onida",
+        "Sansui",
+        "Videocon",
+        "Croma",
+        "Redmi",
+        "Other"
+    ],
+
+
+    "RO / Water Purifier":[
+        "Kent",
+        "Aquaguard",
+        "Eureka Forbes",
+        "Pureit",
+        "Livpure",
+        "AO Smith",
+        "Havells",
+        "LG",
+        "Blue Star",
+        "Tata Swach",
+        "Faber",
+        "KENT Grand",
+        "Crompton",
+        "V-Guard",
+        "Nasaka",
+        "ZeroB",
+        "Aquasure",
+        "Whirlpool",
+        "Samsung",
+        "Other"
+    ]
+
+};
+
+
+/* =====================================================
+   GLOBAL SELECTION
+===================================================== */
+
+let selectedAppliance = "";
+let selectedBrand = "";
+
+
+/* =====================================================
+   OPEN BRAND POPUP
+===================================================== */
+
+function openBrandPopup(appliance){
+
+    selectedAppliance = appliance;
+    selectedBrand = "";
+
+    const brandPopup =
+    document.getElementById("brandPopup");
+
+    const brandTitle =
+    document.getElementById("brandPopupTitle");
+
+    const brandGrid =
+    document.getElementById("brandGrid");
+
+
+    brandTitle.textContent =
+    appliance + " — Select Brand";
+
+
+    brandGrid.innerHTML = "";
+
+
+    const brands =
+    applianceData[appliance] || ["Other"];
+
+
+    brands.forEach(function(brand){
+
+        const button =
+        document.createElement("button");
+
+        button.type = "button";
+
+        button.className =
+        "brand-option";
+
+        button.textContent =
+        brand;
+
+
+        button.onclick =
+        function(){
+
+            selectBrand(brand);
+
+        };
+
+
+        brandGrid.appendChild(button);
+
+    });
+
+
+    /*
+     * If booking popup is currently open,
+     * close it before showing brand popup.
+     */
+
+    document
+    .getElementById("bookingPopup")
+    .style.display = "none";
+
+
+    brandPopup.style.display = "block";
+
+    document.body.style.overflow = "hidden";
 
 }
 
+
+/* =====================================================
+   CLOSE BRAND POPUP
+===================================================== */
+
+function closeBrandPopup(){
+
+    document
+    .getElementById("brandPopup")
+    .style.display = "none";
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =====================================================
+   SELECT BRAND
+===================================================== */
+
+function selectBrand(brand){
+
+    selectedBrand = brand;
+
+    closeBrandPopup();
+
+    openBooking(
+        selectedAppliance,
+        selectedBrand
+    );
+
+}
+
+
+/* =====================================================
+   CONTINUE WITHOUT BRAND
+===================================================== */
+
+function continueWithoutBrand(){
+
+    selectedBrand = "Other / Not Sure";
+
+    closeBrandPopup();
+
+    openBooking(
+        selectedAppliance,
+        selectedBrand
+    );
+
+}
+
+
+/* =====================================================
+   SERVICE CARD KEYBOARD SUPPORT
+===================================================== */
+
+function handleServiceKey(event, appliance){
+
+    if(
+        event.key === "Enter" ||
+        event.key === " "
+    ){
+
+        event.preventDefault();
+
+        openBrandPopup(appliance);
+
+    }
+
+}
+
+
+/* =====================================================
+   POPULATE BRANDS IN BOOKING
+===================================================== */
+
+function populateBrands(
+    appliance,
+    selectedValue = ""
+){
+
+    const brandSelect =
+    document.getElementById("brand");
+
+
+    brandSelect.innerHTML =
+    '<option value="">Select Brand</option>';
+
+
+    if(!appliance){
+
+        brandSelect.disabled = true;
+
+        brandSelect.innerHTML =
+        '<option value="">Select Appliance First</option>';
+
+        return;
+
+    }
+
+
+    const brands =
+    applianceData[appliance] || ["Other"];
+
+
+    brands.forEach(function(brand){
+
+        const option =
+        document.createElement("option");
+
+        option.value =
+        brand;
+
+        option.textContent =
+        brand;
+
+        brandSelect.appendChild(option);
+
+    });
+
+
+    brandSelect.disabled = false;
+
+
+    if(selectedValue){
+
+        /*
+         * If selected brand is not in the list,
+         * add it safely.
+         */
+
+        let exists = false;
+
+
+        for(
+            let i = 0;
+            i < brandSelect.options.length;
+            i++
+        ){
+
+            if(
+                brandSelect.options[i].value ===
+                selectedValue
+            ){
+
+                exists = true;
+
+                break;
+
+            }
+
+        }
+
+
+        if(!exists){
+
+            const option =
+            document.createElement("option");
+
+            option.value =
+            selectedValue;
+
+            option.textContent =
+            selectedValue;
+
+            brandSelect.appendChild(option);
+
+        }
+
+
+        brandSelect.value =
+        selectedValue;
+
+    }
+
+}
+
+
+/* =====================================================
+   UPDATE SELECTED CHIPS
+===================================================== */
+
+function updateSelectedChips(){
+
+    const applianceChip =
+    document.getElementById("selectedApplianceChip");
+
+    const brandChip =
+    document.getElementById("selectedBrandChip");
+
+    const changeBrandBtn =
+    document.getElementById("changeBrandBtn");
+
+
+    if(selectedAppliance){
+
+        applianceChip.style.display =
+        "inline-block";
+
+        applianceChip.textContent =
+        "Appliance: " +
+        selectedAppliance;
+
+    }else{
+
+        applianceChip.style.display =
+        "none";
+
+    }
+
+
+    if(selectedBrand){
+
+        brandChip.style.display =
+        "inline-block";
+
+        brandChip.textContent =
+        "Brand: " +
+        selectedBrand;
+
+        changeBrandBtn.style.display =
+        "block";
+
+    }else{
+
+        brandChip.style.display =
+        "none";
+
+        changeBrandBtn.style.display =
+        "none";
+
+    }
+
+}
+
+
+/* =====================================================
+   OPEN BOOKING POPUP
+===================================================== */
+
+function openBooking(
+    appliance = "",
+    brand = ""
+){
+
+    if(appliance){
+
+        selectedAppliance =
+        appliance;
+
+    }
+
+
+    if(
+        brand !== ""
+    ){
+
+        selectedBrand =
+        brand;
+
+    }
+
+
+    const bookingPopup =
+    document.getElementById("bookingPopup");
+
+
+    const applianceSelect =
+    document.getElementById("appliance");
+
+
+    /*
+     * If appliance was supplied from
+     * service card, select it.
+     */
+
+    if(selectedAppliance){
+
+        applianceSelect.value =
+        selectedAppliance;
+
+    }
+
+
+    populateBrands(
+        applianceSelect.value,
+        selectedBrand
+    );
+
+
+    /*
+     * Keep selected brand synced.
+     */
+
+    if(selectedBrand){
+
+        const brandSelect =
+        document.getElementById("brand");
+
+        brandSelect.value =
+        selectedBrand;
+
+    }
+
+
+    updateSelectedChips();
+
+
+    bookingPopup.style.display =
+    "block";
+
+    document.body.style.overflow =
+    "hidden";
+
+}
+
+
+/* =====================================================
+   CLOSE BOOKING POPUP
+===================================================== */
 
 function closeBooking(){
 
-    document.getElementById("bookingPopup").style.display="none";
+    document
+    .getElementById("bookingPopup")
+    .style.display = "none";
 
-    document.body.style.overflow="";
+    document.body.style.overflow = "";
 
 }
 
 
 /* =====================================================
-   CLOSE POPUP OUTSIDE BOX
+   CHANGE BRAND FROM BOOKING
 ===================================================== */
 
-window.addEventListener("click",function(event){
+function changeBrandFromBooking(){
 
-    const popup =
-    document.getElementById("bookingPopup");
+    const appliance =
+    document
+    .getElementById("appliance")
+    .value;
 
-    if(event.target === popup){
 
-        closeBooking();
+    if(!appliance){
+
+        alert(
+            "Please select an appliance first."
+        );
+
+        return;
 
     }
 
-});
+
+    closeBooking();
+
+    openBrandPopup(appliance);
+
+}
 
 
 /* =====================================================
-   ESCAPE KEY CLOSE POPUP
+   APPLIANCE CHANGE INSIDE BOOKING
 ===================================================== */
 
-window.addEventListener("keydown",function(event){
+document
+.getElementById("appliance")
+.addEventListener(
+    "change",
+    function(){
 
-    if(event.key === "Escape"){
+        selectedAppliance =
+        this.value;
 
-        closeBooking();
+        selectedBrand =
+        "";
+
+        populateBrands(
+            this.value,
+            ""
+        );
+
+        updateSelectedChips();
 
     }
+);
 
-});
+
+/* =====================================================
+   BRAND CHANGE INSIDE BOOKING
+===================================================== */
+
+document
+.getElementById("brand")
+.addEventListener(
+    "change",
+    function(){
+
+        selectedBrand =
+        this.value;
+
+        updateSelectedChips();
+
+    }
+);
+
+
+/* =====================================================
+   CLOSE POPUPS BY CLICKING OUTSIDE
+===================================================== */
+
+window.addEventListener(
+    "click",
+    function(event){
+
+        const brandPopup =
+        document.getElementById("brandPopup");
+
+        const bookingPopup =
+        document.getElementById("bookingPopup");
+
+
+        if(
+            event.target === brandPopup
+        ){
+
+            closeBrandPopup();
+
+        }
+
+
+        if(
+            event.target === bookingPopup
+        ){
+
+            closeBooking();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+window.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Escape"
+        ){
+
+            const brandPopup =
+            document.getElementById("brandPopup");
+
+            const bookingPopup =
+            document.getElementById("bookingPopup");
+
+
+            if(
+                brandPopup.style.display ===
+                "block"
+            ){
+
+                closeBrandPopup();
+
+            }
+            else if(
+                bookingPopup.style.display ===
+                "block"
+            ){
+
+                closeBooking();
+
+            }
+
+        }
+
+    }
+);
 
 
 /* =====================================================
@@ -3785,49 +4658,68 @@ window.addEventListener("keydown",function(event){
 
 document
 .getElementById("bookingForm")
-.addEventListener("submit",function(event){
+.addEventListener(
+    "submit",
+    function(event){
 
-    event.preventDefault();
-
-
-    const name =
-    document
-    .getElementById("customerName")
-    .value
-    .trim();
+        event.preventDefault();
 
 
-    const phone =
-    document
-    .getElementById("customerPhone")
-    .value
-    .trim();
+        const name =
+        document
+        .getElementById("customerName")
+        .value
+        .trim();
 
 
-    const appliance =
-    document
-    .getElementById("appliance")
-    .value;
+        const phone =
+        document
+        .getElementById("customerPhone")
+        .value
+        .trim();
 
 
-    const service =
-    document
-    .getElementById("service")
-    .value;
+        const appliance =
+        document
+        .getElementById("appliance")
+        .value;
 
 
-    const message =
-    document
-    .getElementById("customerMessage")
-    .value
-    .trim();
+        const brand =
+        document
+        .getElementById("brand")
+        .value;
 
 
-    const whatsappNumber =
-    "918434746494";
+        const service =
+        document
+        .getElementById("service")
+        .value;
 
 
-    const text =
+        const message =
+        document
+        .getElementById("customerMessage")
+        .value
+        .trim();
+
+
+        if(!brand){
+
+            alert(
+                "Please select your appliance brand."
+            );
+
+            return;
+
+        }
+
+
+        const whatsappNumber =
+        "918434746494";
+
+
+        const text =
 `Hello Fast2Fix Service Centre,
 
 I want to book a service.
@@ -3835,25 +4727,26 @@ I want to book a service.
 Name: ${name}
 Mobile: ${phone}
 Appliance: ${appliance}
+Brand: ${brand}
 Service Required: ${service}
 Address / Problem: ${message}`;
 
 
-    const url =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(text);
+        const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(text);
 
 
-    window.open(
-        url,
-        "_blank",
-        "noopener"
-    );
+        window.open(
+            url,
+            "_blank",
+            "noopener"
+        );
 
-
-});
+    }
+);
 
 
 /* =====================================================
@@ -3864,33 +4757,39 @@ document
 .querySelectorAll('a[href="#booking"]')
 .forEach(function(link){
 
-    link.addEventListener("click",function(event){
+    link.addEventListener(
+        "click",
+        function(event){
 
-        event.preventDefault();
+            event.preventDefault();
 
-        openBooking();
+            openBooking();
 
-    });
+        }
+    );
 
 });
 
 
 /* =====================================================
-   CLOSE MOBILE NAV AFTER CLICK
+   NAVIGATION
 ===================================================== */
 
 document
 .querySelectorAll(".top-nav a")
 .forEach(function(link){
 
-    link.addEventListener("click",function(){
+    link.addEventListener(
+        "click",
+        function(){
 
-        /*
-         * Navigation remains visible.
-         * Browser smoothly scrolls to the selected section.
-         */
+            /*
+             * Navigation remains visible.
+             * Smooth scrolling is handled below.
+             */
 
-    });
+        }
+    );
 
 });
 
@@ -3903,41 +4802,71 @@ document
 .querySelectorAll('a[href^="#"]')
 .forEach(function(link){
 
-    link.addEventListener("click",function(event){
+    link.addEventListener(
+        "click",
+        function(event){
 
-        const targetId =
-        this.getAttribute("href");
+            const targetId =
+            this.getAttribute("href");
 
-        if(
-            !targetId ||
-            targetId === "#" ||
-            targetId === "#booking"
-        ){
 
-            return;
+            if(
+                !targetId ||
+                targetId === "#" ||
+                targetId === "#booking"
+            ){
+
+                return;
+
+            }
+
+
+            const target =
+            document.querySelector(targetId);
+
+
+            if(target){
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                    behavior:"smooth",
+                    block:"start"
+                });
+
+            }
 
         }
-
-
-        const target =
-        document.querySelector(targetId);
-
-
-        if(target){
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior:"smooth",
-                block:"start"
-            });
-
-        }
-
-    });
+    );
 
 });
 
+
+/* =====================================================
+   AUTOMATIC BOOKING POPUP ON WEBSITE OPEN
+===================================================== */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        /*
+         * Small delay allows the website to load first,
+         * then automatically opens the booking popup.
+         */
+
+        setTimeout(
+            function(){
+
+                openBooking();
+
+            },
+            700
+        );
+
+    }
+);
 
 </script>
 
